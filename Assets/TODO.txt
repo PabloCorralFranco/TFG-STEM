@@ -1,0 +1,64 @@
+Semana de High Concept y Anteproyecto
+ - Prototipo estético
+ - Sistema de movimiento con animaciones
+ - Golpe de espada (solo animación)
+
+Dia 06/04/20 - Terminado
+ - Se ha realizado una primera implementación de la interfaz de programación
+ - Transiciones entre interfaces y prototipado de como se vería en la versión final
+
+Dia 07/04/20 - Terminado
+ - Hacer Drag and Drop en el menu con unas reglas establecidas.
+ - Crear módulos definidos en el GDD
+Dia 08/04/20
+ - Añadir vida a la jugadora (no interface) - Hecho
+ - Crear campos para velocidad, vida y daño. Crear métodos set y get. (Hecho)
+ - Clase de mecánica de compilación. Primer prototipo con instanciado de botones según los huecos libres.
+ - Crear clase de Power Ups
+  -Arreglar poder pulsar múltiples habilidades al mismo tiempo. Necesita revisión para no usar solo las del mismo tipo.
+
+ Dia 09/04/10
+  - Creación de todos los módulos.
+  - Implementación de lógica extra para el borrado de modulos al compilar.
+  - Continuación del prototipo de compilación.
+  - Implementación de nueva interfaz para las habilidades y nuevos power-ups.
+
+Dia 10/04/20
+  - Finalización de clase Compiler junto con PowerUpManager.
+  - Creación de nuevos power-ups.
+  - Cambios en la UI. Ahora el fondo en el compilador es totalmente opaco.
+Día 11/04/20
+  - Implementación de inventario básico. Necesitará revisión para nuevos métodos
+  - Prototipado de menu de crafting de módulos.(Es funcional, pero necesita más tarjetas de crafteo y al instanciar los módulos deforma la vista y solo aparecen las letras y mal)
+
+Dia 12/04/20
+  - Arreglados los problemas de instanciado de módulos. Había que colocar el padre al mismo tiempo que la instancia
+  - Extensión y finalización del menú de crafting con módulos (Solo hace falta colocar dos tarjetas más)
+
+Dia 14/04/20
+  - Dummy Enemy
+  - Golpe de espada junto con daño a enemigo. Solucionado problema para dirigir la caja de daño.
+  - Menú general que nos enlace el compilador, el generador y la ranura de guardado.
+Dia 15/05/20
+  - Arreglar problema con el empujon al enemigo, siempre se empujaba en la misma direccion.
+  - Aumentar radio del ataque.
+  - Añadir módulos restantes.
+  - Enlazado de módulos con el generador.
+  - Añadido de formato e indices al GDD
+Día 16/04/20
+  - Creación de power-ups junto con sus enlaces a los menus y habilidades. Solo faltan kordFullSpeed y disuadeFullLife
+  - Envio al cliente del anteproyectoo firmado.
+
+
+TO DO:
+   - Crear todos los power ups definidos en el documento de diseño.
+   - Ranura para información. (Poca importancia, dependerá del estado del proyecto)
+   - Implementar guardado.
+   - Añadir cambios al documento del GDD
+   - Añadir efecto de slash en la espada
+   - Añadir efecto de muerte y drop en el enemigo.
+   - Musica ambiente, pasos y sonidos que enriquezcan la experiencia
+   
+
+  Problemas no resueltos:
+ - Seguir mirando la interfaz de programación y ver problema al scrollear, que acabas cogiendo modulos y arrastrando

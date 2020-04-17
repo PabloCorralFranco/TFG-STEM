@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Slot
+  - Mod
+  - AbilitieManager
+  - ContentBag
+  - STEM
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: first
+    uniqueID: 3972648867
+    locked: 0
+  - name: back
+    uniqueID: 2121362863
+    locked: 0
+  - name: house
+    uniqueID: 30625495
+    locked: 0
+  - name: Player
+    uniqueID: 4181048541
+    locked: 0
+  - name: Tree
+    uniqueID: 596316941
+    locked: 0
