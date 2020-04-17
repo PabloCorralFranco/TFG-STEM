@@ -9,4 +9,11 @@ public class Inventory : MonoBehaviour
     public int blueEsence = 100;
     public int redEsence = 100;
     public int greenEsence = 100;
+
+    public void addEssences(int blue, int red, int green)
+    {
+        blueEsence += blue;
+        redEsence += red;
+        greenEsence += green;
+    }
 }

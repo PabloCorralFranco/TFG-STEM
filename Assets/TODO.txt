@@ -47,11 +47,19 @@ Dia 15/05/20
   - Añadido de formato e indices al GDD
 Día 16/04/20
   - Creación de power-ups junto con sus enlaces a los menus y habilidades. Solo faltan kordFullSpeed y disuadeFullLife
-  - Envio al cliente del anteproyectoo firmado.
+  - Envio al cliente del anteproyecto firmado.
+Dia 17/04/20
+  - Arreglar iconos para habilidades y kordFullSpeed
+  - Poner limites en el rango de movimiento de cámara, para no ver fuera del mapa
+  - Arreglar errores menores en algunos power-ups
+  - Añadido de daño por disuasion.
+  - Creación de recompensas por enemigos (Esencias azules, verdes, rojas y moradas) junto con logica conectada al inventario
+  - Primera implementación de tienes/necesitas. Hay que hacer update del inventario.
 
 
 TO DO:
-   - Crear todos los power ups definidos en el documento de diseño.
+   - IMPORTANTE: INTELIGENCIA ARTIFICIAL PARA LOS SLIMES (junto con un spawner)
+   - Añadir lógica de sonido y desactivar botones cuando no puedas generar nada o no quede más espacio en la bolsa.
    - Ranura para información. (Poca importancia, dependerá del estado del proyecto)
    - Implementar guardado.
    - Añadir cambios al documento del GDD

@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     //Clase enemigo. Primera implementación Dummy.
     public float enemyLife, normalDeffense, movementSpeed, attackSpeed;
     public bool isInmune;
+    public GameObject essence;
 
     private Rigidbody2D rb;
     private Player player;
@@ -36,9 +37,21 @@ public class Enemy : MonoBehaviour
         {
             rb.AddForce(this.transform.right * -1 * thrust, ForceMode2D.Impulse);
         }
-        if (enemyLife <= 0)
+        if (enemyLife <= 0 || (!isInmune && player.getDisuade()))
         {
-            Destroy(this.gameObject);
+            deathLogic();
         }
+    }
+
+    private void deathLogic()
+    {
+        //Efecto de partículas
+
+        //Efecto de sonido
+
+        //Drop
+        GameObject instance = Instantiate(essence);
+        instance.transform.position = this.transform.position;
+        Destroy(this.gameObject);
     }
 }

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Generator : MonoBehaviour
 {
     public string genName;
     public int need;
     public GameObject modButton;
+    public TextMeshProUGUI haveTxT;
 
     private Inventory inventory;
     private ModuleSlot[] contentBag;
@@ -25,6 +27,7 @@ public class Generator : MonoBehaviour
         {
             //Si hay hueco libre lanzamos funcion
             StartCoroutine(genName,index);
+            
         }
         
     }
@@ -38,6 +41,7 @@ public class Generator : MonoBehaviour
             instantiateMod(index);
             //Quitamos del inventario need. Cambiar estos campos por metodos
             inventory.greenEsence -= need;
+            haveTxT.text = inventory.greenEsence.ToString();
         }
         yield return null;
     }
@@ -50,6 +54,7 @@ public class Generator : MonoBehaviour
             instantiateMod(index);
             //Quitamos del inventario need. Cambiar estos campos por metodos
             inventory.redEsence -= need;
+            haveTxT.text = inventory.redEsence.ToString();
         }
         yield return null;
     }
@@ -62,6 +67,7 @@ public class Generator : MonoBehaviour
             instantiateMod(index);
             //Quitamos del inventario need. Cambiar estos campos por metodos
             inventory.blueEsence -= need;
+            haveTxT.text = inventory.blueEsence.ToString();
         }
         yield return null;
     }

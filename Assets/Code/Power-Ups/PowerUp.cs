@@ -50,9 +50,10 @@ public class PowerUp : MonoBehaviour
         endProcess();
         yield return null;
     }
-    private IEnumerator lifeEmpty()
+    private IEnumerator lifeEmpty(float cuantity)
     {
-        player.setLife(-100);
+        player.setLife(-cuantity);
+        endProcess();
         yield return null;
     }
 
@@ -132,7 +133,7 @@ public class PowerUp : MonoBehaviour
     {
         //Quizas debamos crear campos constantes de vida maxima?
         //El manager de partida se hará cargo de que al morir o revivir salga lo que haga falta.
-        player.setLife(100);
+        player.setLife(cuantity);
         endProcess();
         yield return null;
     }
@@ -154,6 +155,14 @@ public class PowerUp : MonoBehaviour
     private IEnumerator disuadeFullLife(float cuantity)
     {
         yield return null;
+    }
+
+    private IEnumerator kordFullSpeed(float cuantity)
+    {
+        player.anim.speed = 3f;
+        yield return new WaitForSeconds(cuantity);
+        player.anim.speed = 1f;
+        endProcess();
     }
 
 
