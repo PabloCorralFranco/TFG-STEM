@@ -13,10 +13,33 @@ public class Generator : MonoBehaviour
     private Inventory inventory;
     private ModuleSlot[] contentBag;
     private int have;
+    private ModulesCount mc;
     // Start is called before the first frame update
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        mc = GameObject.FindGameObjectWithTag("Generator").GetComponent<ModulesCount>();
+    }
+
+    private void FixedUpdate()
+    {
+        checkInventory();
+    }
+
+    public void checkInventory()
+    {
+        if (genName.Equals("blue"))
+        {
+            haveTxT.text = inventory.blueEsence.ToString();
+        }
+        else if (genName.Equals("green"))
+        {
+            haveTxT.text = inventory.greenEsence.ToString();
+        }
+        else if (genName.Equals("red"))
+        {
+            haveTxT.text = inventory.redEsence.ToString();
+        }
     }
 
     public void GenerateModule()
@@ -27,7 +50,12 @@ public class Generator : MonoBehaviour
         {
             //Si hay hueco libre lanzamos funcion
             StartCoroutine(genName,index);
-            
+        }
+        if(index == -1)
+        {
+            //Reproducimos pitido de que no se puede crear más.
+            //Quizas una frase de que no se puede mas
+
         }
         
     }
@@ -74,6 +102,7 @@ public class Generator : MonoBehaviour
 
     private int findSlot()
     {
+        int occupiedSlots = 0;
         //Se actualizan en cada llamada
         contentBag = GameObject.FindGameObjectWithTag("ContentBag").GetComponentsInChildren<ModuleSlot>();
         int i = 0;
@@ -89,7 +118,23 @@ public class Generator : MonoBehaviour
             }
             i++;
         }
+        findOccupiedSlots();
         return index;
+    }
+
+    private void findOccupiedSlots()
+    {
+        int occupiedSlots = 1;
+        int i = 0;
+        while (i < contentBag.Length)
+        {
+            if (contentBag[i].tag == "Slot" && contentBag[i].GetComponentInChildren<DragnDrop>() != null)
+            {
+                occupiedSlots++;
+            }
+            i++;
+        }
+        mc.setTextToBagSpace(occupiedSlots);
     }
 
     private void instantiateMod(int index)

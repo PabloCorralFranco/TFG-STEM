@@ -55,6 +55,15 @@ Dia 17/04/20
   - Añadido de daño por disuasion.
   - Creación de recompensas por enemigos (Esencias azules, verdes, rojas y moradas) junto con logica conectada al inventario
   - Primera implementación de tienes/necesitas. Hay que hacer update del inventario.
+Dia 18/04/20
+  - Update del inventario que actualice todas las tarjetas al mismo tiempo.
+  - Encabezado con bolsa y números para indicar cuantos módulos se han creado.
+  - Cuando se compila y se pierden los módulos se actualiza en Generator los elementos en bolsa.
+  - Mapa de prueba para el prototipo (necesita hitboxes)
+Dia 19/04/20
+  - Terminamos el mapa y finalización de las dos semanas de sprint. Terminado prototipo. En las siguientes semanas
+    puliremos los detalles y pasaremos a la implementación de zonas (zona principal con ayuntamiento y zona 1)
+    junto con npcs y conversaciones
 
 
 TO DO:

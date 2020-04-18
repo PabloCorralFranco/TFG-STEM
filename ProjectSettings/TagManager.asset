@@ -9,6 +9,7 @@ TagManager:
   - AbilitieManager
   - ContentBag
   - STEM
+  - Generator
   layers:
   - Default
   - TransparentFX

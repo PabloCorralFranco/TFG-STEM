@@ -8,12 +8,14 @@ public class Compiler : MonoBehaviour
     private string composition = "";
     private GameObject abilityCanvas;
     private PowerUpManager manager;
-
+    private ModulesCount mc;
 
     private void Start()
     {
         abilityCanvas = GameObject.FindGameObjectsWithTag("AbilitieManager")[0]; ;
         manager = abilityCanvas.GetComponent<PowerUpManager>();
+        mc = GameObject.FindGameObjectWithTag("Generator").GetComponent<ModulesCount>();
+
     }
 
     public void startCompiling()
@@ -28,6 +30,7 @@ public class Compiler : MonoBehaviour
             Destroy(slots[i].GetComponentInChildren<Module>().gameObject);
             i++;
         }
+        mc.diffBagSpace(i);
 
         //Analizamos la composición
         GameObject temp = manager.returnPowerUpInstance(composition);
