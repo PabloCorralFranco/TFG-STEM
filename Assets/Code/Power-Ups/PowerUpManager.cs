@@ -17,8 +17,8 @@ public class PowerUpManager : MonoBehaviour
         //Inicialización de diccionario frase,instancia
         for(int i = 0; i < pinstances.Length; i++)
         {
-            GameObject ninstance = Instantiate(pinstances[i]);
-            powerups.Add(frases[i], ninstance);
+            //GameObject ninstance = Instantiate(pinstances[i]);
+            powerups.Add(frases[i], pinstances[i]);
         }
     }
 

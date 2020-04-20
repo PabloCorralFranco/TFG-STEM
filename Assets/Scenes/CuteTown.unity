@@ -1080,8 +1080,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 30625495
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 616eb0c878ec01342b2f414e724bb495, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2719,8 +2719,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 30625495
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1332841e88026c049a0280a5d9be6e3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -20854,6 +20854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930602965}
   - component: {fileID: 1930602964}
+  - component: {fileID: 1930602966}
   m_Layer: 0
   m_Name: generic-rpg-treasure-closed
   m_TagString: Untagged
@@ -20924,6 +20925,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1930602966
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930602963}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.21}
+    newSize: {x: 0.25, y: 0.21}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.21}
+  m_EdgeRadius: 0
 --- !u!1 &1936052090
 GameObject:
   m_ObjectHideFlags: 0
@@ -22464,6 +22491,51 @@ PrefabInstance:
       propertyPath: openCloseAudio
       value: 
       objectReference: {fileID: 8300000, guid: 94b8e3e37db3e8e44bf0cd5e05049131, type: 3}
+    - target: {fileID: 2237621945914321762, guid: 135835ef5dd7eef44bfcdeee89192a06,
+        type: 3}
+      propertyPath: frases.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237621945914321762, guid: 135835ef5dd7eef44bfcdeee89192a06,
+        type: 3}
+      propertyPath: pinstances.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237621945914321762, guid: 135835ef5dd7eef44bfcdeee89192a06,
+        type: 3}
+      propertyPath: frases.Array.data[9]
+      value: IFBATTERYISEMPTYREVIVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237621945914321762, guid: 135835ef5dd7eef44bfcdeee89192a06,
+        type: 3}
+      propertyPath: pinstances.Array.data[9]
+      value: 
+      objectReference: {fileID: 7310621892743467688, guid: 56f583ff8046e7f45b4b9ff99faa7ad3,
+        type: 3}
+    - target: {fileID: 393422796, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_text
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 899274051, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_text
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383147259, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_text
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442941346, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_text
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498506126, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_text
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938797487, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_text
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
 --- !u!82 &125531338154059519 stripped

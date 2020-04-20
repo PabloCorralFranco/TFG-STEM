@@ -36,7 +36,7 @@ public class DragnDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     {
         Debug.Log("OnDrag");
         //eventData.delta contine la cantidad que se ha movido el objeto desde el frame anterior
-        position.anchoredPosition += eventData.delta;
+        position.anchoredPosition += eventData.delta * 1.3f;
     }
 
     //Cuando acaba
