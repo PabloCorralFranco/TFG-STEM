@@ -6,9 +6,12 @@ using UnityEngine.EventSystems;
 public class ModuleSlot : MonoBehaviour, IDropHandler
 {
     private GameObject droppedObj;
+    public AudioSource playerAudio;
+    public AudioClip onDropAudio;
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop");
+        playerAudio.PlayOneShot(onDropAudio);
         //Cogemos el objeto que ha sido movido hasta aquí.
         droppedObj = eventData.pointerDrag;
         Debug.Log(droppedObj.GetType());

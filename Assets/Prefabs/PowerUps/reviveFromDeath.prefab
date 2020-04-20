@@ -133,5 +133,10 @@ PrefabInstance:
       propertyPath: time
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3514964715478822988, guid: e7dd29cb4e421f24c891105f392b9a4c,
+        type: 3}
+      propertyPath: powerUpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0794b630557c0074390071aa3731d7b1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7dd29cb4e421f24c891105f392b9a4c, type: 3}

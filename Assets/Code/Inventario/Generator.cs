@@ -9,7 +9,9 @@ public class Generator : MonoBehaviour
     public int need;
     public GameObject modButton;
     public TextMeshProUGUI haveTxT;
+    public AudioClip buttonAudio;
 
+    private AudioSource playerAudio;
     private Inventory inventory;
     private ModuleSlot[] contentBag;
     private int have;
@@ -19,6 +21,7 @@ public class Generator : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         mc = GameObject.FindGameObjectWithTag("Generator").GetComponent<ModulesCount>();
+        playerAudio = inventory.GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -66,6 +69,7 @@ public class Generator : MonoBehaviour
         have = inventory.greenEsence;
         if(have >= need)
         {
+            playSound();
             instantiateMod(index);
             //Quitamos del inventario need. Cambiar estos campos por metodos
             inventory.greenEsence -= need;
@@ -79,6 +83,7 @@ public class Generator : MonoBehaviour
         have = inventory.redEsence;
         if (have >= need)
         {
+            playSound();
             instantiateMod(index);
             //Quitamos del inventario need. Cambiar estos campos por metodos
             inventory.redEsence -= need;
@@ -92,6 +97,7 @@ public class Generator : MonoBehaviour
         have = inventory.blueEsence;
         if (have >= need)
         {
+            playSound();
             instantiateMod(index);
             //Quitamos del inventario need. Cambiar estos campos por metodos
             inventory.blueEsence -= need;
@@ -134,7 +140,16 @@ public class Generator : MonoBehaviour
             }
             i++;
         }
+        if (occupiedSlots > 10)
+        {
+            occupiedSlots = 10;
+        }
         mc.setTextToBagSpace(occupiedSlots);
+    }
+
+    private void playSound()
+    {
+        playerAudio.PlayOneShot(buttonAudio);
     }
 
     private void instantiateMod(int index)

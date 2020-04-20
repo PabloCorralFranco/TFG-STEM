@@ -7,6 +7,9 @@ public class DragnDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
 {
     private RectTransform position;
     public GameObject canvas, originalParent;
+    public AudioClip dragAudio;
+
+    private AudioSource playerAudio;
     private Transform originalPosition;
     private CanvasGroup canvasGroup;
     private bool inModule = false;
@@ -15,11 +18,13 @@ public class DragnDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         canvas = GameObject.FindGameObjectWithTag("STEM");
         position = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        playerAudio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
     //Cuando empieza el Drag
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
+        playerAudio.PlayOneShot(dragAudio);
         originalParent = this.transform.parent.gameObject;
         this.transform.parent = canvas.transform;
         canvasGroup.blocksRaycasts = false;

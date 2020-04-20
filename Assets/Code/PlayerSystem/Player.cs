@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public float range;
     public float thrust;
     public LayerMask enemyLabel;
+    public AudioSource mySource;
+    public AudioClip attackClip;
 
     private float movSpeed;
     private Vector2 coordinates;
@@ -87,6 +89,10 @@ public class Player : MonoBehaviour
     //ATAQUE
     public void Attack()
     {
+        if (!mySource.isPlaying)
+        {
+            mySource.PlayOneShot(attackClip);
+        }
         anim.SetTrigger("attack");
         Collider2D[] enemigos = Physics2D.OverlapCircleAll(attackZone.transform.position, range, enemyLabel);
         for(int i = 0; i < enemigos.Length; i++)

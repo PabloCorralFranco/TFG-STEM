@@ -5,17 +5,20 @@ using UnityEngine;
 public class Compiler : MonoBehaviour
 {
     public GameObject[] slots;
+    public AudioClip compilerClip;
+    public AudioSource playerAudio;
+
     private string composition = "";
     private GameObject abilityCanvas;
     private PowerUpManager manager;
     private ModulesCount mc;
+    
 
     private void Start()
     {
         abilityCanvas = GameObject.FindGameObjectsWithTag("AbilitieManager")[0]; ;
         manager = abilityCanvas.GetComponent<PowerUpManager>();
         mc = GameObject.FindGameObjectWithTag("Generator").GetComponent<ModulesCount>();
-
     }
 
     public void startCompiling()
@@ -44,6 +47,7 @@ public class Compiler : MonoBehaviour
             if (ability[i].GetComponentInChildren<PowerUp>() == null && ability[i].tag == "Slot")
             {
                 outCheck = true;
+                playerAudio.PlayOneShot(compilerClip);
                 GameObject nbutton = Instantiate(temp,ability[i].transform.position,Quaternion.identity, ability[i].transform);
                 //nbutton.transform.SetParent(ability[i].transform);
             }

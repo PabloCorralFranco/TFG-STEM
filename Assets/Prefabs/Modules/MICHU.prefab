@@ -247,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   originalParent: {fileID: 0}
+  dragAudio: {fileID: 8300000, guid: 7ba7922c6df81d94790cb0dc7c9c2e1d, type: 3}
 --- !u!225 &72474743972378369
 CanvasGroup:
   m_ObjectHideFlags: 0

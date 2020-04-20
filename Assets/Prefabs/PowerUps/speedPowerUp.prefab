@@ -144,3 +144,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpName: boi
   time: 5
+  powerUpClip: {fileID: 8300000, guid: 0794b630557c0074390071aa3731d7b1, type: 3}

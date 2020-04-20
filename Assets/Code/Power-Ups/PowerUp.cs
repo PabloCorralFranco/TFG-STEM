@@ -6,6 +6,9 @@ public class PowerUp : MonoBehaviour
 {
     public string powerUpName;
     public float time; //Also for cuantity
+    private AudioSource playerAudio;
+    public AudioClip powerUpClip;
+
     private Player player;
     private PowerUpManager manager;
     private bool state;
@@ -18,6 +21,7 @@ public class PowerUp : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("AbilitieManager").GetComponent<PowerUpManager>();
         rb = player.GetComponent<Rigidbody2D>();
         nDash = 0;
+        playerAudio = player.GetComponent<AudioSource>();
     }
 
     public void cast()
@@ -34,6 +38,7 @@ public class PowerUp : MonoBehaviour
     private IEnumerator boi(float boostTime)
     {
         Debug.Log("Boi");
+        playPowerUpAudio();
         player.incSpeed(1f);
         yield return new WaitForSeconds(boostTime);
         player.resetSpeed();
@@ -45,6 +50,7 @@ public class PowerUp : MonoBehaviour
         //No hay espera de ningún tipo
         Debug.Log("lifefull");
         Debug.Log("old life: " + player.getLife());
+        playPowerUpAudio();
         player.setLife(cuantity);
         Debug.Log("new life: " + player.getLife());
         endProcess();
@@ -52,6 +58,7 @@ public class PowerUp : MonoBehaviour
     }
     private IEnumerator lifeEmpty(float cuantity)
     {
+        playPowerUpAudio();
         player.setLife(-cuantity);
         endProcess();
         yield return null;
@@ -61,6 +68,7 @@ public class PowerUp : MonoBehaviour
     {
         if(nDash < 3)
         {
+            playPowerUpAudio();
             player.setDashing(true);
             impulse();
             nDash++;
@@ -105,8 +113,14 @@ public class PowerUp : MonoBehaviour
         
     }
 
+    private void playPowerUpAudio()
+    {
+        playerAudio.PlayOneShot(powerUpClip);
+    }
+
     private IEnumerator kordDisuade(float time)
     {
+        playPowerUpAudio();
         player.setDisuade(true);
         yield return new WaitForSeconds(time);
         player.setDisuade(false);
@@ -115,6 +129,7 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator kordFullDamage(float cuantity)
     {
+        playPowerUpAudio();
         player.setAttack(cuantity);
         yield return new WaitForSeconds(15f);
         player.resetAttack();
@@ -124,6 +139,7 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator kordRevive(float cuantity)
     {
+        playPowerUpAudio();
         player.resetAttack();
         endProcess();
         yield return null;
@@ -133,6 +149,7 @@ public class PowerUp : MonoBehaviour
     {
         //Quizas debamos crear campos constantes de vida maxima?
         //El manager de partida se hará cargo de que al morir o revivir salga lo que haga falta.
+        playPowerUpAudio();
         player.setLife(cuantity);
         endProcess();
         yield return null;
@@ -143,6 +160,7 @@ public class PowerUp : MonoBehaviour
         //Damos un margen de error en la vida
         if(player.getLife() >= cuantity)
         {
+            playPowerUpAudio();
             player.setDashing(true);
             impulse();
             yield return new WaitForSeconds(.5f);
@@ -159,6 +177,7 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator kordFullSpeed(float cuantity)
     {
+        playPowerUpAudio();
         player.anim.speed = 3f;
         yield return new WaitForSeconds(cuantity);
         player.anim.speed = 1f;

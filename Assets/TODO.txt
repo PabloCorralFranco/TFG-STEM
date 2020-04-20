@@ -61,20 +61,24 @@ Dia 18/04/20
   - Cuando se compila y se pierden los módulos se actualiza en Generator los elementos en bolsa.
   - Mapa de prueba para el prototipo (necesita hitboxes)
 Dia 19/04/20
-  - Terminamos el mapa y finalización de las dos semanas de sprint. Terminado prototipo. En las siguientes semanas
+  - Mapa de prueba acabado y finalización de las dos semanas de sprint. Terminado prototipo. En las siguientes semanas
     puliremos los detalles y pasaremos a la implementación de zonas (zona principal con ayuntamiento y zona 1)
-    junto con npcs y conversaciones
+    junto con npcs y conversaciones.
+  - Menú principal
+  - Sonido en todas las interacciones.
+  - Musica de fondo.
+
 
 
 TO DO:
    - IMPORTANTE: INTELIGENCIA ARTIFICIAL PARA LOS SLIMES (junto con un spawner)
-   - Añadir lógica de sonido y desactivar botones cuando no puedas generar nada o no quede más espacio en la bolsa.
+   - Añadir barra de vida según lo comentado en el GDD.
    - Ranura para información. (Poca importancia, dependerá del estado del proyecto)
    - Implementar guardado.
    - Añadir cambios al documento del GDD
    - Añadir efecto de slash en la espada
-   - Añadir efecto de muerte y drop en el enemigo.
-   - Musica ambiente, pasos y sonidos que enriquezcan la experiencia
+   - Añadir efecto de muerte del enemigo
+   - Sonido de pasos
    
 
   Problemas no resueltos:

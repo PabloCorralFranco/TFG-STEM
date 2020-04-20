@@ -8,18 +8,23 @@ public class Enemy : MonoBehaviour
     public float enemyLife, normalDeffense, movementSpeed, attackSpeed;
     public bool isInmune;
     public GameObject essence;
+    public AudioClip deathClip, damageClip;
 
     private Rigidbody2D rb;
     private Player player;
+    private AudioSource playerAudio;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         //Just in case we need it
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        playerAudio = player.GetComponent<AudioSource>();
     }
 
     public void takeDamage(float amount, string zoneLoc, float thrust)
     {
+        playerAudio.PlayOneShot(damageClip);
         enemyLife -= (amount - normalDeffense);
         Debug.Log(player.transform.forward);
         if (zoneLoc.Equals("bottom"))
@@ -48,7 +53,7 @@ public class Enemy : MonoBehaviour
         //Efecto de partículas
 
         //Efecto de sonido
-
+        playerAudio.PlayOneShot(deathClip);
         //Drop
         GameObject instance = Instantiate(essence);
         instance.transform.position = this.transform.position;

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7617614406468599201}
   - component: {fileID: 7617614406468599214}
   - component: {fileID: 7617614406468599200}
+  - component: {fileID: 843008919}
   m_Layer: 8
-  m_Name: slime-blue_0 (1)
+  m_Name: Slime Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +102,9 @@ MonoBehaviour:
   movementSpeed: 1
   attackSpeed: 1
   isInmune: 0
+  essence: {fileID: 5619487136178950207, guid: b3cd6c8c1c449a74093fe5ccedfbc641, type: 3}
+  deathClip: {fileID: 8300000, guid: 5eb5ba278ba60be46916f9d8136a3de6, type: 3}
+  damageClip: {fileID: 8300000, guid: 7ba7922c6df81d94790cb0dc7c9c2e1d, type: 3}
 --- !u!61 &7617614406468599214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +152,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &843008919
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7617614406468599213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3fda65727cb5be34e821a4282c8dd9fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
