@@ -90,7 +90,7 @@ public class PowerUp : MonoBehaviour
         string zoneLoc = player.getZoneLoc();
         //Aplicamos una determinada fuerza que guardaremos en time.
         //Podrá dashear tres veces
-        float thrust = player.getThrust();
+        float thrust = player.getThrust() + 12.5f;
         Debug.Log("entramos + nDash: " + zoneLoc);
         
         if (zoneLoc.Equals("bottom"))

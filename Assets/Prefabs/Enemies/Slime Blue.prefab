@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7617614406468599214}
   - component: {fileID: 7617614406468599200}
   - component: {fileID: 843008919}
+  - component: {fileID: 1098648806743445053}
   m_Layer: 8
   m_Name: Slime Blue
   m_TagString: Untagged
@@ -99,12 +100,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLife: 100
   normalDeffense: 1
-  movementSpeed: 1
+  movementSpeed: 400
   attackSpeed: 1
   isInmune: 0
   essence: {fileID: 5619487136178950207, guid: b3cd6c8c1c449a74093fe5ccedfbc641, type: 3}
   deathClip: {fileID: 8300000, guid: 5eb5ba278ba60be46916f9d8136a3de6, type: 3}
   damageClip: {fileID: 8300000, guid: 7ba7922c6df81d94790cb0dc7c9c2e1d, type: 3}
+  target: {fileID: 0}
+  nextWayPointDistance: 3
 --- !u!61 &7617614406468599214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,7 +147,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 100
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -171,3 +174,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1098648806743445053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7617614406468599213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1

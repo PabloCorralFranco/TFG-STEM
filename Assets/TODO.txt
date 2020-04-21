@@ -60,13 +60,17 @@ Dia 18/04/20
   - Encabezado con bolsa y números para indicar cuantos módulos se han creado.
   - Cuando se compila y se pierden los módulos se actualiza en Generator los elementos en bolsa.
   - Mapa de prueba para el prototipo (necesita hitboxes)
-Dia 19/04/20
+Dia 20/04/20
   - Mapa de prueba acabado y finalización de las dos semanas de sprint. Terminado prototipo. En las siguientes semanas
     puliremos los detalles y pasaremos a la implementación de zonas (zona principal con ayuntamiento y zona 1)
     junto con npcs y conversaciones.
   - Menú principal
   - Sonido en todas las interacciones.
   - Musica de fondo.
+Dia 21/04/20
+  - Añadido de A* y pruebas con distintos sprites. Decisión de quedarse con el original.
+  - Creación de grid map para el A* en el mapa de prueba.
+  - Lógica de persecución y parado con el jugador. Control de distancia de su origen. (Hay que arreglar cuando se llega al limite de su zona y de la distancia al jugador para que no este de un lado para otro cambiando de camino)
 
 
 
