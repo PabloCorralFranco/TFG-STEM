@@ -8,6 +8,7 @@ public class PowerUp : MonoBehaviour
     public float time; //Also for cuantity
     private AudioSource playerAudio;
     public AudioClip powerUpClip;
+    public GameObject fullParticles;
 
     private Player player;
     private PowerUpManager manager;
@@ -129,6 +130,9 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator kordFullDamage(float cuantity)
     {
+        //Ponemos sprite de particulas
+        GameObject particleInstance = Instantiate(fullParticles, player.transform.position, Quaternion.identity, player.transform);
+        Destroy(particleInstance, 1f);
         playPowerUpAudio();
         player.setAttack(cuantity);
         yield return new WaitForSeconds(15f);

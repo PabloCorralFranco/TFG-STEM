@@ -71,17 +71,23 @@ Dia 21/04/20
   - Añadido de A* y pruebas con distintos sprites. Decisión de quedarse con el original.
   - Creación de grid map para el A* en el mapa de prueba.
   - Lógica de persecución y parado con el jugador. Control de distancia de su origen. (Hay que arreglar cuando se llega al limite de su zona y de la distancia al jugador para que no este de un lado para otro cambiando de camino)
-
+Día 22/04/20
+  - Arreglos en la zona de accion, distancia de vuelta a su origen y otros errores relacionados. Ya persigue bien al jugador.
+  - Mecánica de ataque mediante empujon del enemigo.
+  - Añadido de nuevos efectos a algunos power ups.
+  - Añadido de sonidos y efectos para los slimes.
+  - Añadido de UI para vida (no manejado todavia).
 
 
 TO DO:
-   - IMPORTANTE: INTELIGENCIA ARTIFICIAL PARA LOS SLIMES (junto con un spawner)
-   - Añadir barra de vida según lo comentado en el GDD.
+   - Spawner de enemigos.
+   - Slime verde
+   - Añadir funcionalidad a la barra de vida
    - Ranura para información. (Poca importancia, dependerá del estado del proyecto)
    - Implementar guardado.
    - Añadir cambios al documento del GDD
-   - Añadir efecto de slash en la espada
-   - Añadir efecto de muerte del enemigo
+   - Seguir extendiendo sistemas de particulas para el resto de efectos.
+   - Añadir efecto de carga cuando el slime este telegrafiando
    - Sonido de pasos
    
 

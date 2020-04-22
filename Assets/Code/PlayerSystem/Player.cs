@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public LayerMask enemyLabel;
     public AudioSource mySource;
     public AudioClip attackClip;
+    public GameObject attackParticles;
 
     private float movSpeed;
     private Vector2 coordinates;
@@ -86,6 +87,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void instanceFromOrientation(GameObject toInstance, float time)
+    {
+
+        GameObject instanceParticle = Instantiate(toInstance);
+        instanceParticle.transform.position = this.transform.position;
+        
+        if (zoneLoc.Equals("up"))
+        {
+            instanceParticle.transform.localScale = new Vector2(-instanceParticle.transform.localScale.x, -instanceParticle.transform.localScale.y);
+        }
+        else if (zoneLoc.Equals("right"))
+        {
+            instanceParticle.transform.localScale = new Vector2(-instanceParticle.transform.localScale.x, instanceParticle.transform.localScale.y);
+        }
+
+        Destroy(instanceParticle, time);
+    }
+
+
     //ATAQUE
     public void Attack()
     {
@@ -94,6 +114,9 @@ public class Player : MonoBehaviour
             mySource.PlayOneShot(attackClip);
         }
         anim.SetTrigger("attack");
+        //Activate particle
+        instanceFromOrientation(attackParticles, .2f);
+
         Collider2D[] enemigos = Physics2D.OverlapCircleAll(attackZone.transform.position, range, enemyLabel);
         for(int i = 0; i < enemigos.Length; i++)
         {

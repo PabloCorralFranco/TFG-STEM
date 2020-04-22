@@ -124,3 +124,4 @@ MonoBehaviour:
   blue: 2
   red: 0
   green: 0
+  dropClip: {fileID: 8300000, guid: 62e31aced93c5ff4e89fe1aca0de937a, type: 3}
