@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public AudioSource mySource;
     public AudioClip attackClip;
     public GameObject attackParticles;
+    public BatteryUpdate batteryCount;
 
     private float movSpeed;
     private Vector2 coordinates;
@@ -167,6 +168,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Death");
         }
+        batteryCount.changeBattery(playerLife);
     }
 
     //VELOCIDAD

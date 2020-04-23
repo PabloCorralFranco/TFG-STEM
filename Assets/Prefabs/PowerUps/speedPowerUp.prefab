@@ -147,3 +147,7 @@ MonoBehaviour:
   powerUpClip: {fileID: 8300000, guid: 0794b630557c0074390071aa3731d7b1, type: 3}
   fullParticles: {fileID: 8496917535714790683, guid: b827b487a2604a341961bc7c7da309e8,
     type: 3}
+  abilityActive: {fileID: 2750367351385097633, guid: 56e6fa84d50c2ed43912b31d8cef9ac3,
+    type: 3}
+  batteryFullParticles: {fileID: 7220596192510694444, guid: 0ecf3d609a4fc7a4ca412f0394cfdc32,
+    type: 3}

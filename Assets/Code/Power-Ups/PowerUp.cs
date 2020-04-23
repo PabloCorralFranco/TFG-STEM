@@ -8,7 +8,7 @@ public class PowerUp : MonoBehaviour
     public float time; //Also for cuantity
     private AudioSource playerAudio;
     public AudioClip powerUpClip;
-    public GameObject fullParticles;
+    public GameObject fullParticles, abilityActive, batteryFullParticles;
 
     private Player player;
     private PowerUpManager manager;
@@ -36,8 +36,14 @@ public class PowerUp : MonoBehaviour
         
     }
 
+    private void abilitieActivation1()
+    {
+        Instantiate(abilityActive,transform.position,Quaternion.identity, this.transform);
+    }
+
     private IEnumerator boi(float boostTime)
     {
+        abilitieActivation1();
         Debug.Log("Boi");
         playPowerUpAudio();
         player.incSpeed(1f);
@@ -49,11 +55,10 @@ public class PowerUp : MonoBehaviour
     private IEnumerator lifefull(float cuantity)
     {
         //No hay espera de ningún tipo
-        Debug.Log("lifefull");
-        Debug.Log("old life: " + player.getLife());
+        GameObject shieldInstance = Instantiate(batteryFullParticles,player.transform.position,Quaternion.identity,player.transform);
+        Destroy(shieldInstance, .5f);
         playPowerUpAudio();
         player.setLife(cuantity);
-        Debug.Log("new life: " + player.getLife());
         endProcess();
         yield return null;
     }
@@ -121,6 +126,7 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator kordDisuade(float time)
     {
+        abilitieActivation1();
         playPowerUpAudio();
         player.setDisuade(true);
         yield return new WaitForSeconds(time);
@@ -130,6 +136,7 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator kordFullDamage(float cuantity)
     {
+        abilitieActivation1();
         //Ponemos sprite de particulas
         GameObject particleInstance = Instantiate(fullParticles, player.transform.position, Quaternion.identity, player.transform);
         Destroy(particleInstance, 1f);

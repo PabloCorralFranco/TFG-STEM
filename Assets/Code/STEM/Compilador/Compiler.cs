@@ -12,6 +12,7 @@ public class Compiler : MonoBehaviour
     private GameObject abilityCanvas;
     private PowerUpManager manager;
     private ModulesCount mc;
+
     
 
     private void Start()
@@ -53,7 +54,6 @@ public class Compiler : MonoBehaviour
             }
             i++;
         }
-        
     }
 
     
