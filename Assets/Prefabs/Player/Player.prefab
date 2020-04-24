@@ -1202,10 +1202,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
+  m_text: 'Modulo de igualacion. Sirve para empezar una frase de igualacion de una
+    variable a un valor.
 
 
-    Posible uso: [Ejemplo]'
+    Posible uso: SET [VARIABLE] TO [VALOR]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -1891,10 +1892,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Enlazado con modulo SET. Sirve para dar a entender a que nuevo valor pasa
+    la variable.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -2436,10 +2435,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
+  m_text: 'Modulo condicional de sentencia. Se utiliza para comprobar si un caso se
+    cumple y asi activarlo.
 
-
-    Posible uso: [Ejemplo]'
+    Posible uso: IF [CONDICION SE CUMPLE] [HACER ALGO]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -9244,10 +9243,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
+  m_text: 'Modulo de comprobacion. Va enlazado con IF y comprueba si una variable
+    posee el valor percibido.
 
 
-    Posible uso: [Ejemplo]'
+    Ejemplo: IF [VARIABLE] IS EMPTY'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -11157,10 +11157,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: "Apartado de bateria. Referencia a la bateria del movil. \n\nSe puede usar
+    para cargarla o vaciarla."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -12186,10 +12184,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Modulo de llamada. Permite llamar a ciertas funciones para darles formas
+    nunca vistas.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -15050,10 +15046,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
+  m_text: 'Modulo de llenado. Sirve para potenciar alguna variable que lo permita
+    al maximo.
 
 
-    Posible uso: [Ejemplo]'
+    Ejemplo: SET [VARIABLE] TO FULL'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -22459,10 +22456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Modulo de Velocidad. Se usa para modificar la velocidad de Olivia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -22762,10 +22756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Referencia a Michu, querido vendedor de Redilia.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -28100,7 +28091,7 @@ MonoBehaviour:
   attackClip: {fileID: 8300000, guid: 8245f2a3a8d24554cb15b398a3abf7a2, type: 3}
   attackParticles: {fileID: 6636077744870195048, guid: 4e0299dc1a9b5c64f8a4b5b4063daabd,
     type: 3}
-  batteryCount: {fileID: 0}
+  batteryCount: {fileID: 1273605494}
   originalSpeed: 1
   originalAttack: 35
 --- !u!114 &52423601
@@ -31420,10 +31411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Modulo de espada. Referencia a la espada que Koke nos entrega.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -33003,10 +32991,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Modulo de resurreccion. Cuando nuestra bateria se haya acabado podremos
+    activar combinaciones de este modulo para volver a la vida.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -33319,10 +33305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Modulo de disuasion. Obliga a los enemigos de voluntad mas fragil a desaparecer.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -35233,10 +35216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Este apartado ira rellenado con informacion sobre los modulos y su funcionamiento
-
-
-    Posible uso: [Ejemplo]'
+  m_text: Modulo de vaciado. Destruye cualquier capacidad que la variable tuviera.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -37368,8 +37348,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Modulo de salto cuantico. Imbuye energ\xE9ticamente tu cuerpo para saltar
-    a estados menos energ\xE9ticos a los que apuntes."
+  m_text: Modulo de salto cuantico. Imbuye energeticamente tu cuerpo para saltar a
+    estados menos energeticos a los que apuntes.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -40238,17 +40218,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.876072
       objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: deadZone
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 48c0d4d6bebaa934384b07aa1e2f8184,
         type: 3}
-    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: deadZone
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_Sprite
