@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     private Vector2 coordinates;
     private string zoneLoc;
     private bool isDashing;
+    private bool wannaTalk = false;
+    private NPC npcToTalk;
 
     public float originalSpeed, originalAttack;
 
@@ -106,10 +108,24 @@ public class Player : MonoBehaviour
         Destroy(instanceParticle, time);
     }
 
+    //CONVERSACION
+    public void setToTalk(bool talkState, NPC npc)
+    {
+        wannaTalk = talkState;
+        npcToTalk = npc;
+    }
+
 
     //ATAQUE
     public void Attack()
     {
+        Debug.Log(wannaTalk);
+        if (wannaTalk)
+        {
+            wannaTalk = false;
+            npcToTalk.awakeConversationMethods();
+            return;
+        }
         if (!mySource.isPlaying)
         {
             mySource.PlayOneShot(attackClip);

@@ -8,6 +8,7 @@ public class ModuleSlot : MonoBehaviour, IDropHandler
     private GameObject droppedObj;
     public AudioSource playerAudio;
     public AudioClip onDropAudio;
+
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop");

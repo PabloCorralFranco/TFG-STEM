@@ -27,6 +27,7 @@ public class Generator : MonoBehaviour
     private void FixedUpdate()
     {
         checkInventory();
+        findOccupiedSlots();
     }
 
     public void checkInventory()
@@ -108,7 +109,6 @@ public class Generator : MonoBehaviour
 
     private int findSlot()
     {
-        int occupiedSlots = 0;
         //Se actualizan en cada llamada
         contentBag = GameObject.FindGameObjectWithTag("ContentBag").GetComponentsInChildren<ModuleSlot>();
         int i = 0;
@@ -124,14 +124,15 @@ public class Generator : MonoBehaviour
             }
             i++;
         }
-        findOccupiedSlots();
+        //findOccupiedSlots();
         return index;
     }
 
     private void findOccupiedSlots()
     {
-        int occupiedSlots = 1;
+        int occupiedSlots = 0;
         int i = 0;
+        contentBag = GameObject.FindGameObjectWithTag("ContentBag").GetComponentsInChildren<ModuleSlot>();
         while (i < contentBag.Length)
         {
             if (contentBag[i].tag == "Slot" && contentBag[i].GetComponentInChildren<DragnDrop>() != null)

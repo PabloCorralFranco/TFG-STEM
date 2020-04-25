@@ -11,6 +11,8 @@ TagManager:
   - STEM
   - Generator
   - Conversation
+  - Movement
+  - ModulesCompiler
   layers:
   - Default
   - TransparentFX

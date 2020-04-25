@@ -27,14 +27,18 @@ public class Compiler : MonoBehaviour
         //Accedemos a la composición de palabras
         composition = "";
         int i = 0;
-        while(i < slots.Length && slots[i].GetComponentInChildren<Module>() != null) {
-            composition += slots[i].GetComponentInChildren<Module>().modName;
-            //No hay problema en borrar en una estructura de iteración, pues lo unico que hacemos es ir asignando a null el valor que leemos, sin afectar
-            //a la estructura en sí. Pero podríamos hacerlo por separado en caso de duda de integridad.
-            Destroy(slots[i].GetComponentInChildren<Module>().gameObject);
+        int slotCount = 0;
+        while(i < slots.Length) {
+            if (slots[i].GetComponentInChildren<Module>() != null)
+            {
+                composition += slots[i].GetComponentInChildren<Module>().modName;
+                //No existe problema de integridad en el borrado
+                Destroy(slots[i].GetComponentInChildren<Module>().gameObject);
+                slotCount++;
+            }
             i++;
         }
-        mc.diffBagSpace(i);
+        mc.diffBagSpace(slotCount);
 
         //Analizamos la composición
         GameObject temp = manager.returnPowerUpInstance(composition);

@@ -9,15 +9,34 @@ public class NPC : MonoBehaviour
     public TextoConver[] conversationsByPhases;
     public TextoConver[] negationByPhases;
     public TextoConver[] startingConversations;
+    public TextoConver[] repeated;
     public ConverManager manager;
-    public Button hablar, nada;
+    public Button hablar, nada, next;
+    private Player player;
 
     //UI managment to trigger the UI.
     public GameObject conversationCanvas;
+    public GameObject movementCanvas, abilityCanvas;
+    private bool extinted = false;
+    private AudioSource npcAudio;
 
     private void Start()
     {
-        //conversationCanvas = GameObject.FindGameObjectWithTag("Conversation");
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        npcAudio = GetComponent<AudioSource>();
+    }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Cogemos una referencia en Start a player.
+        //Mandamos a player la variable verdadera de que puede hablar con un NPC y a su vez asignamos el npc.
+        //Una vez se ha asignado si el jugador ataca pero esta para hablar se triggereara la conversación y no hara el slash
+        player.setToTalk(true, this);
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        player.setToTalk(false, this);
     }
 
 
@@ -31,19 +50,38 @@ public class NPC : MonoBehaviour
 
     private IEnumerator waitBeforeOnClickSettings()
     {
-        conversationCanvas.SetActive(true);
+        //Por ahora queda comentado puesto que si desactivamos el movement canvas desactivamos al npc temporal
+        movementCanvas.SetActive(!movementCanvas.activeSelf);
+        abilityCanvas.SetActive(!abilityCanvas.activeSelf);
+        conversationCanvas.SetActive(!conversationCanvas.activeSelf);
         yield return new WaitForSeconds(.1f);
-        hablar.onClick.RemoveAllListeners();
-        hablar.onClick.AddListener(delegate { startConversation(); });
-        nada.onClick.RemoveAllListeners();
-        nada.onClick.AddListener(delegate { endConversation(); });
-        if (manager.gameObject.activeSelf)
+        if (extinted)
         {
-            manager.showConversations(startingConversations[gamePhase]);
+            //changeButtonsState();
+            next.gameObject.SetActive(!next.gameObject.activeSelf);
+            manager.showConversations(repeated[gamePhase],npcAudio);
+            yield return null;
         }
-        yield return new WaitForSeconds(1f);
-        changeButtonsState();
+        else
+        {
+            hablar.onClick.RemoveAllListeners();
+            hablar.onClick.AddListener(delegate { startConversation(); });
+            nada.onClick.RemoveAllListeners();
+            nada.onClick.AddListener(delegate { endConversation(); });
+            if (manager.gameObject.activeSelf)
+            {
+                manager.showConversations(startingConversations[gamePhase],npcAudio);
+            }
+            yield return new WaitForSeconds(1f);
+            changeButtonsState();
+        }
         
+        
+    }
+    public void checkGamePhase()
+    {
+        //Aqui checkearemos el estado del juego y resetearemos extinted así como incrementaremos la fase
+
     }
 
     //Estas dos funciones nos representan los botones de HABLAR y NADA.
@@ -51,12 +89,15 @@ public class NPC : MonoBehaviour
     {
         //gamePhase tendrá que ser consultado al manager del juego. De primeras se dejará en 0.
         changeButtonsState();
-        manager.showConversations(conversationsByPhases[gamePhase]);
+        next.gameObject.SetActive(!next.gameObject.activeSelf);
+        manager.showConversations(conversationsByPhases[gamePhase],npcAudio);
+        extinted = true;
     }
     public void endConversation()
     {
         changeButtonsState();
-        manager.showConversations(negationByPhases[gamePhase]);
+        next.gameObject.SetActive(!next.gameObject.activeSelf);
+        manager.showConversations(negationByPhases[gamePhase],npcAudio);
     }
 
     private void changeButtonsState()
