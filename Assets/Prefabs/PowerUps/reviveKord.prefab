@@ -388,6 +388,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7220596192510694444, guid: 0ecf3d609a4fc7a4ca412f0394cfdc32,
         type: 3}
+    - target: {fileID: 3514964715478822988, guid: e7dd29cb4e421f24c891105f392b9a4c,
+        type: 3}
+      propertyPath: healSth
+      value: 
+      objectReference: {fileID: 7850458513939120101, guid: e53a8661edc54ca4f9f2e74a4b8aee1d,
+        type: 3}
+    - target: {fileID: 3514964715478822988, guid: e7dd29cb4e421f24c891105f392b9a4c,
+        type: 3}
+      propertyPath: dashParticles
+      value: 
+      objectReference: {fileID: 8155543106706562907, guid: c39949e5e6b8ad14d91e97f5850cfd2d,
+        type: 3}
+    - target: {fileID: 3514964715478822988, guid: e7dd29cb4e421f24c891105f392b9a4c,
+        type: 3}
+      propertyPath: magicCircle
+      value: 
+      objectReference: {fileID: 8563661877314512094, guid: 6330e87b776610643a9c1c98fd34024b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7dd29cb4e421f24c891105f392b9a4c, type: 3}
 --- !u!224 &5982520284510733103 stripped

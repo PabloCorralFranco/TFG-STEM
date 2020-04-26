@@ -151,3 +151,8 @@ MonoBehaviour:
     type: 3}
   batteryFullParticles: {fileID: 7220596192510694444, guid: 0ecf3d609a4fc7a4ca412f0394cfdc32,
     type: 3}
+  healSth: {fileID: 7850458513939120101, guid: e53a8661edc54ca4f9f2e74a4b8aee1d, type: 3}
+  dashParticles: {fileID: 8155543106706562907, guid: c39949e5e6b8ad14d91e97f5850cfd2d,
+    type: 3}
+  magicCircle: {fileID: 8563661877314512094, guid: 6330e87b776610643a9c1c98fd34024b,
+    type: 3}

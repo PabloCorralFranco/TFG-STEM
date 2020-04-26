@@ -8,7 +8,7 @@ public class PowerUp : MonoBehaviour
     public float time; //Also for cuantity
     private AudioSource playerAudio;
     public AudioClip powerUpClip;
-    public GameObject fullParticles, abilityActive, batteryFullParticles;
+    public GameObject fullParticles, abilityActive, batteryFullParticles, healSth, dashParticles, magicCircle;
 
     private Player player;
     private PowerUpManager manager;
@@ -41,6 +41,38 @@ public class PowerUp : MonoBehaviour
         Instantiate(abilityActive,transform.position,Quaternion.identity, this.transform);
     }
 
+    private void abilitieActivationHeal()
+    {
+        Debug.Log("HEAL");
+        GameObject heal = Instantiate(healSth, transform.position, Quaternion.identity,this.transform);
+        Destroy(heal, .5f);
+    }
+
+    private void dashInstance()
+    {
+        string zoneLoc = player.getZoneLoc();
+        GameObject lightning, magicBarrier;
+        Vector2 particlesPosition = player.transform.position;
+        if (zoneLoc.Equals("left"))
+        {
+            particlesPosition = (Vector2)player.transform.position + new Vector2(.3f, 0);
+        } else if (zoneLoc.Equals("right"))
+        {
+            particlesPosition = (Vector2)player.transform.position + new Vector2(-.3f, 0);
+        } else if (zoneLoc.Equals("up"))
+        {
+            particlesPosition = (Vector2)player.transform.position + new Vector2(0, -.3f);
+        } else if (zoneLoc.Equals("bottom"))
+        {
+            particlesPosition = (Vector2)player.transform.position + new Vector2(0f, .3f);
+        }
+        //arreglar rotacion en top y bottom
+        lightning = Instantiate(dashParticles, particlesPosition, Quaternion.identity, player.transform);
+        Destroy(lightning, .3f);
+        magicBarrier = Instantiate(magicCircle, player.transform.position, Quaternion.identity, player.transform);
+        Destroy(magicBarrier, .3f);
+    }
+
     private IEnumerator boi(float boostTime)
     {
         abilitieActivation1();
@@ -54,20 +86,21 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator lifefull(float cuantity)
     {
-        //No hay espera de ningún tipo
+        abilitieActivationHeal();
         GameObject shieldInstance = Instantiate(batteryFullParticles,player.transform.position,Quaternion.identity,player.transform);
         Destroy(shieldInstance, .5f);
         playPowerUpAudio();
         player.setLife(cuantity);
+        yield return new WaitForSeconds(.5f);
         endProcess();
-        yield return null;
     }
     private IEnumerator lifeEmpty(float cuantity)
     {
+        abilitieActivationHeal();
         playPowerUpAudio();
         player.setLife(-cuantity);
+        yield return new WaitForSeconds(.5f);
         endProcess();
-        yield return null;
     }
 
     private IEnumerator kordDash(float time)
@@ -76,6 +109,7 @@ public class PowerUp : MonoBehaviour
         {
             playPowerUpAudio();
             player.setDashing(true);
+            dashInstance();
             impulse();
             nDash++;
             manager.setActive(false);
@@ -150,20 +184,22 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator kordRevive(float cuantity)
     {
+        abilitieActivationHeal();
         playPowerUpAudio();
         player.resetAttack();
+        yield return new WaitForSeconds(.5f);
         endProcess();
-        yield return null;
     }
 
     private IEnumerator reviveFromDeath(float cuantity)
     {
         //Quizas debamos crear campos constantes de vida maxima?
         //El manager de partida se hará cargo de que al morir o revivir salga lo que haga falta.
+        abilitieActivationHeal();
         playPowerUpAudio();
         player.setLife(cuantity);
+        yield return new WaitForSeconds(.5f);
         endProcess();
-        yield return null;
     }
 
     private IEnumerator dashFullLife(float cuantity)
@@ -171,6 +207,7 @@ public class PowerUp : MonoBehaviour
         //Damos un margen de error en la vida
         if(player.getLife() >= cuantity)
         {
+            abilitieActivationHeal();
             playPowerUpAudio();
             player.setDashing(true);
             impulse();
