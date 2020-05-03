@@ -71,6 +71,7 @@ public class ConverManager : MonoBehaviour
 
     private IEnumerator speakEffect(string frase, Color32 color, AudioClip audio)
     {
+        Debug.Log("hehe1");
         cuerpo.text = "";
         mySource.PlayOneShot(audio);
         foreach (char c in frase)
@@ -86,6 +87,7 @@ public class ConverManager : MonoBehaviour
 
     public void EndConversation()
     {
+        GameObject.FindObjectOfType<EventManager>().isTaskPending = false;
         next.gameObject.SetActive(!next.gameObject.activeSelf);
         movementCanvas.SetActive(!movementCanvas.activeSelf);
         abilityCanvas.SetActive(!abilityCanvas.activeSelf);

@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     private bool isDashing;
     private bool wannaTalk = false;
     private NPC npcToTalk;
+    private bool cantMove = false;
 
     public float originalSpeed, originalAttack;
 
@@ -34,11 +35,17 @@ public class Player : MonoBehaviour
         movSpeed = originalSpeed;
         attackPower = originalAttack;
         isDashing = false;
+        cantMove = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (cantMove)
+        {
+            anim.SetFloat("Speed", 0);
+            return;
+        }
         //Input
         coordinates.x = joystick.Horizontal;
         coordinates.y = joystick.Vertical;
@@ -84,10 +91,20 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         //Movimiento
-        if (!isDashing)
+        if (!isDashing && !cantMove)
         {
             rb.MovePosition(rb.position + coordinates * movSpeed * Time.fixedDeltaTime);
         }
+    }
+
+    public void stopFromMoving()
+    {
+        rb.velocity = Vector2.zero;
+        cantMove = true;
+    }
+    public void continueMoving()
+    {
+        cantMove = false;
     }
 
     private void instanceFromOrientation(GameObject toInstance, float time)

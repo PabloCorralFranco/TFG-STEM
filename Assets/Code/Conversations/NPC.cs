@@ -59,7 +59,7 @@ public class NPC : MonoBehaviour
         {
             //changeButtonsState();
             next.gameObject.SetActive(!next.gameObject.activeSelf);
-            manager.showConversations(repeated[gamePhase],npcAudio);
+            manager.showConversations(repeated[gamePhase], npcAudio);
             yield return null;
         }
         else
@@ -70,7 +70,7 @@ public class NPC : MonoBehaviour
             nada.onClick.AddListener(delegate { endConversation(); });
             if (manager.gameObject.activeSelf)
             {
-                manager.showConversations(startingConversations[gamePhase],npcAudio);
+                manager.showConversations(startingConversations[gamePhase], npcAudio);
             }
             yield return new WaitForSeconds(1f);
             changeButtonsState();
@@ -78,10 +78,27 @@ public class NPC : MonoBehaviour
         
         
     }
-    public void checkGamePhase()
-    {
-        //Aqui checkearemos el estado del juego y resetearemos extinted así como incrementaremos la fase
 
+    public void popUpMeeting()
+    {
+        StartCoroutine(meetings());
+    }
+
+    private IEnumerator meetings()
+    {
+        //Por ahora queda comentado puesto que si desactivamos el movement canvas desactivamos al npc temporal
+        movementCanvas.SetActive(!movementCanvas.activeSelf);
+        abilityCanvas.SetActive(!abilityCanvas.activeSelf);
+        conversationCanvas.SetActive(!conversationCanvas.activeSelf);
+        yield return new WaitForSeconds(.1f);
+        changeButtonsState();
+        startConversation();
+    }
+
+
+    public void changeNpcPhase(int nPhase)
+    {
+        gamePhase = nPhase;
     }
 
     //Estas dos funciones nos representan los botones de HABLAR y NADA.

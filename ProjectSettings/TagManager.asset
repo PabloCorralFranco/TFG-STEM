@@ -50,18 +50,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: first
+  - name: Floor
     uniqueID: 3972648867
     locked: 0
-  - name: back
+  - name: Furniture
     uniqueID: 2121362863
     locked: 0
-  - name: house
+  - name: Architecture
     uniqueID: 30625495
     locked: 0
   - name: Player
     uniqueID: 4181048541
     locked: 0
-  - name: Tree
+  - name: TopPlayer
     uniqueID: 596316941
     locked: 0

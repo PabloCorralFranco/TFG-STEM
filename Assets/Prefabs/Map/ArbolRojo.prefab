@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aca07b6e3b6a0d42a93bffa3857a862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secondPart: {fileID: 0}
 --- !u!1 &5399091048628794521
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,5 +220,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priorityTrigger: {fileID: 5399091048628794517}
-  layerBack: Tree
-  layerFront: back
+  layerBack: TopPlayer
+  layerFront: Furniture
