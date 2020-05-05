@@ -24,7 +24,13 @@ public class Koke : NPC
         anim.SetFloat("Vertical", -1);
         rb.velocity = Vector2.zero;
         rb.AddForce(new Vector2(0, -40));
+        yield return new WaitForSeconds(2f);
+        anim.SetFloat("Horizontal", -1);
+        anim.SetFloat("Vertical", 0);
+        rb.velocity = Vector2.zero;
+        rb.AddForce(new Vector2(-40, 0));
         yield return new WaitForSeconds(1f);
+        Debug.Log("Hemos terminado");
     }
 
     public void destroyAndScalate()

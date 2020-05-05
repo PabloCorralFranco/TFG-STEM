@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 955193f7f516b9843a12d142651d0472
+guid: 9568106d848036e4b9c26703267102da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5500362623736404599
-    second: spr_blob_big_0
+      213: -1105194602933634663
+    second: town_buildings_0
   - first:
-      213: -8489975625337844553
-    second: spr_blob_big_1
+      213: -1242325133404160256
+    second: town_buildings_1
   - first:
-      213: -5652907410223772639
-    second: spr_blob_big_2
-  - first:
-      213: -925730683773955776
-    second: spr_blob_big_3
-  - first:
-      213: 8423274219074813353
-    second: spr_blob_big_4
-  - first:
-      213: 5639847684857846274
-    second: spr_blob_big_5
+      213: -6639161633977073919
+    second: town_buildings_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,127 +107,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_blob_big_0
+      name: town_buildings_0
       rect:
         serializedVersion: 2
         x: 2
-        y: 3
-        width: 24
-        height: 19
+        y: 1
+        width: 61
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52c74bb306ec08940b6de8051c9b0aff
-      internalID: 5500362623736404599
+      spriteID: 040fbc50b835eab4f97196da7c1f3205
+      internalID: -1105194602933634663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_blob_big_1
+      name: town_buildings_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 3
-        width: 22
-        height: 21
+        x: 384
+        y: 1
+        width: 29
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd8fba25ffb42724e930fb00adf28459
-      internalID: -8489975625337844553
+      spriteID: ba78a7834dbba2841bcebe3666270c7b
+      internalID: -1242325133404160256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_blob_big_2
+      name: town_buildings_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 3
-        width: 22
-        height: 22
+        x: 416
+        y: 1
+        width: 61
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0560ee0678fc513459af5c50ac438888
-      internalID: -5652907410223772639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_blob_big_3
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 3
-        width: 24
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bad8e946e91f36c41ab1a6b78085511e
-      internalID: -925730683773955776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_blob_big_4
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 3
-        width: 25
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 076f503db1ccc8b4c8938bc17f25490c
-      internalID: 8423274219074813353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_blob_big_5
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 3
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d206edd681552254ab78a9aabe6668b4
-      internalID: 5639847684857846274
+      spriteID: 960f3d6872ef94642bb45926c09f6b3a
+      internalID: -6639161633977073919
       vertices: []
       indices: 
       edges: []

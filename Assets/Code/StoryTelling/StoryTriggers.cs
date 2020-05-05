@@ -13,6 +13,19 @@ public class StoryTriggers : MonoBehaviour
             case "Phase 1":
                 Debug.Log("Story trigger succesful");
                 GameObject.FindObjectOfType<EventManager>().kokeFirstAct();
+                Destroy(this.gameObject);
+                break;
+            case "Wall Before Koke":
+                GameObject.FindObjectOfType<EventManager>().Wall("FirstWall");
+                Destroy(this.gameObject);
+                break;
+            case "Dont Come Back":
+                GameObject.FindObjectOfType<EventManager>().Wall("DontComeBack");
+                //Destroy(this.gameObject);
+                break;
+            case "Phase 1 House":
+                GameObject.FindObjectOfType<EventManager>().kokeFirstActHouse();
+                Destroy(this.gameObject);
                 break;
             default:
                 Debug.Log("error");

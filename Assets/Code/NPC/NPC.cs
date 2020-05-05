@@ -26,13 +26,13 @@ public class NPC : MonoBehaviour
         npcAudio = GetComponent<AudioSource>();
     }
 
-
+    //Revisar esta funcion - cuando se hace pop up de la historia se pone a true y da errores cuando no deberia
     private void OnTriggerStay2D(Collider2D collision)
     {
         //Cogemos una referencia en Start a player.
         //Mandamos a player la variable verdadera de que puede hablar con un NPC y a su vez asignamos el npc.
         //Una vez se ha asignado si el jugador ataca pero esta para hablar se triggereara la conversación y no hara el slash
-        player.setToTalk(true, this);
+        //player.setToTalk(true, this);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

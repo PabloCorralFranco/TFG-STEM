@@ -13,6 +13,8 @@ TagManager:
   - Conversation
   - Movement
   - ModulesCompiler
+  - FirstWall
+  - DontComeBack
   layers:
   - Default
   - TransparentFX

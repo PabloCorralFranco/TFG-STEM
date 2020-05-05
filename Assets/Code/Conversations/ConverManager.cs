@@ -88,6 +88,7 @@ public class ConverManager : MonoBehaviour
     public void EndConversation()
     {
         GameObject.FindObjectOfType<EventManager>().isTaskPending = false;
+        GameObject.FindObjectOfType<Player>().setToTalk(false, null);
         next.gameObject.SetActive(!next.gameObject.activeSelf);
         movementCanvas.SetActive(!movementCanvas.activeSelf);
         abilityCanvas.SetActive(!abilityCanvas.activeSelf);

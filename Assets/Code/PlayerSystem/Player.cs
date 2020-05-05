@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
         attackPower = originalAttack;
         isDashing = false;
         cantMove = false;
+        wannaTalk = false;
     }
 
     // Update is called once per frame

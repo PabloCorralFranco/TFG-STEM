@@ -110,6 +110,7 @@ public class PowerUp : MonoBehaviour
             playPowerUpAudio();
             player.setDashing(true);
             dashInstance();
+            Handheld.Vibrate();
             impulse();
             nDash++;
             manager.setActive(false);
