@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2207445565895496236}
   - component: {fileID: 2207445565895496237}
   - component: {fileID: 2207445565895496238}
+  - component: {fileID: 719426920}
   m_Layer: 0
   m_Name: Koke
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2207445565895496247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.305, y: 1.161, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -143,7 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac282ee790128b4590aeb7f6c2d3e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePhase: 0
+  conversationPhase: 2
+  startingPhase: 0
+  repeatedPhase: 0
+  negationPhase: 0
   conversationsByPhases:
   - characterName:
     - Olivia
@@ -171,18 +175,18 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
   - characterName:
     - Olivia
-    - Koke
+    - ???
     - Olivia
-    - Koke
+    - ???
     - Olivia
-    - Koke
+    - ???
     - Olivia
-    - Koke
+    - ???
     - Olivia
-    - Koke
-    - Koke
-    - Koke
-    - Koke
+    - ???
+    - ???
+    - ???
+    - ???
     frases:
     - "\xBFPero que...? \xBFEste es el perro? Que raro es. El alcalde no me dijo que
       el perro llevase ningun disfraz."
@@ -247,6 +251,330 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+  - characterName:
+    - ???
+    - ???
+    - Koke
+    - Koke
+    - Koke
+    - ???
+    - Koke
+    - Barbara
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Koke
+    - Koke
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Koke
+    - Olivia
+    - Koke
+    - Koke
+    - Olivia
+    - Koke
+    - Koke
+    - Koke
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Koke
+    - Barbara
+    - Barbara
+    - Olivia
+    - Barbara
+    - Barbara
+    - Koke
+    - Barbara
+    - Koke
+    - Barbara
+    - Barbara
+    - Koke
+    - Barbara
+    - Koke
+    - Barbara
+    - Olivia
+    - Olivia
+    - Koke
+    - Koke
+    - Olivia
+    - Olivia
+    - Barbara
+    frases:
+    - Ay menos mal que has venido. Unos segundos mas y me empezaba a hacer un bocadillo.
+    - "Por favor Koke \xBFPodrias dejar de intentar zamparte a mis limoncetes? Ya
+      te he dicho que no sirven para bocadillos."
+    - Bueeeeeeno vaaaaale.
+    - Pero bueno, creo que es hora de que nos presentemos a la invitada.
+    - "Yo soy Koke, fiel compa\xF1ero de Maria Wonenburger, la mejor cientifica de
+      este reino."
+    - '...'
+    - Contigo en paralelo claro...
+    - Y yo soy Barbara McClintock, cientifica especializada en la citogenetica.
+    - Hola Barbara y Koke yo soy...
+    - "\xBFOlivia verdad?"
+    - "\xBFPero como...?"
+    - Eres la razon por la que estoy aqui. Dejame contarte mi historia. Seguramente
+      acabes sacando algo en claro.
+    - "Si te empe\xF1as..."
+    - Maria me hablo de ti. Era un dia normal. Pero sus ordenadores no paraban de
+      dar lecturas inauditas sobre una tal Olivia en el arbol de busquedas de la red.
+    - "\xBFLa red?"
+    - A eso iba. Olivia ... Este no es tu mundo. Te cuentras en la capa mas externa
+      de la red. La capa de aplicacion.
+    - Nuestro mundo y el vuestro se conecta en base a capas virtuales y fisicas que
+      vosotros mismos manejais. Alguien desde este lado ha invocado...
+    - '... tu presencia por algun motivo. Maria me ordeno ir a mirar cerca de la plataforma
+      de transferencia.'
+    - Sin embargo justo al salir alguien me ataco y el resto es historia. Seguramente
+      tu eres lo que Maria queria que encontrara.
+    - "Pero...\xBFComo que otro mundo? No puede ser \xBFY encontrarme a mi? Pero si
+      ma\xF1ana tengo clase y como no llegue a casa antes de esta noche..."
+    - Tranquila Olivia. El tiempo en este mundo pasa mas lento. El unico problema
+      sera el salir de aqui.
+    - '...'
+    - Pero no te preocupes Olivia. Maria podra ayudarnos. Pero no responde a mis llamadas.
+      Me temo que algo malo le haya pasado.
+    - Necesito tu ayuda para llegar hasta mi casa y ver que pasa con Maria.
+    - "\xBFMi ayuda? Pero si solo soy una estudiante mas. Me cuesta usar las hojas
+      de calculo como para hacer cosas en este mundo tan raro."
+    - "Pues el aparatejo que llevas encima no es ninguna tonteria facil eh. Es un
+      modulo compilador de ultima generacion y encima con modificaciones que ni\r
+      conozco."
+    - Sabiendo usar eso puedes hacer maravillas. Aunque por alguna razon tiene partes
+      desactivadas.
+    - "Esto me lo dio el alcalde para que no me perdiera, suerte que se desbloquearlo.
+      \xBFPero por que el alcalde no me conto la verdad?"
+    - 'Uhm entiendo... Hace tiempo que no hablo con el alcalde, es un buen tipo. '
+    - No querria agobiarte con una informacion tan fuerte.
+    - La debilidad del alcalde es que es demasiado bueno. Ahora mismo se encuentran
+      desbordados llevando una pelea contra un enemigo desconocido.
+    - Me pregunto si estaran bien...
+    - Parece que si lo estan. Fue el quien me envio a rescatarte. Uno de sus soldados
+      cuenta que tambien fue atacado por ese misterioso ser y que un perro se vio
+      involucrado en la trifulca.
+    - Si es que el alcalde es un cacho de pan. Metaforicamente claro. Si fuera un
+      cacho de pan real hace tiempo que habria desaparecido de manera misteriosa.
+    - "\xBFSolo piensas en comer?"
+    - El 99% de las veces
+    - "Y tanto parloteo me esta dando hambre. Barbara, \xBFPodrias abrirnos las puertas
+      del bosque? Necesitamos llegar a casa."
+    - Me encantaria Koke...Pero no se si te das cuenta del desorden de esta habitacion.
+    - Llevo dos dias encerrada por un incidente que me ocurrio. Yo estaba tan tranquila
+      con mis limoncetes cuando derrepente ...
+    - '... un ser verde paso a la velocidad del rayo y le hizo algo a mis limoncetes.'
+    - No se como me altero el codigo genetico de la granja y ahora las generaciones
+      de limoncetes estan saliendo agresivas y descontroladas.
+    - Tengo mucho miedo de salir y no puedo abrir las compuertas o inundaran la capa.
+    - "\xBFDos dias?"
+    - Si... Hace dos dias.
+    - '...'
+    - Ademas no se si os habreis fijado en el cambio de vegetacion. Esa vegetacion
+      no es de esta capa, es de capas inferiores.
+    - Eso solo puede significar una brecha en la plataforma de transferencia. Creo
+      que Maria descubrio algo importante como para mandarte aqui.
+    - "\xA1Pues a que esperamos! Tenemos un misterio que resolver, unos limoncestes
+      que modificar y una cientifica que salvar."
+    - "\xA1Y asi mi confinamiento terminar!"
+    - '...'
+    - Que diga un misterio que resolver si.
+    - No os voy a mentir. No me siento preparada para esto. No soy la chica que creeis.
+    - "No creo ser capaz para superar este reto. Aunque no puedo evitar preocuparme
+      por tu compa\xF1era..."
+    - No te preocupes Olivia. Ningun viaje tiene por que recorrerse solo. Estoy aqui
+      contigo, y te demostrare que Maria nunca se equivoca con nadie.
+    - "Cuando necesites ayuda yo estare alli. Lo desconocido no tiene por que dar
+      miedo si vas acompa\xF1ado."
+    - Gracias Koke...
+    - Pues entonces manos a la obra, hay que darse prisa.
+    - Por cierto Olivia vas a necesitar que te explique unas cosas antes de salir
+      ahi a resolver nada. Pasate por mi mesa y hablamos.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4292947718
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294903558
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    sonidoFrases:
+    - {fileID: 8300000, guid: cb8060503fb99734ea376ee0e205b114, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
   negationByPhases:
   - characterName:
     - ff
@@ -259,14 +587,14 @@ MonoBehaviour:
     - {fileID: 8300000, guid: e37c281c7c43716419297bde51d2337b, type: 3}
   startingConversations:
   - characterName:
-    - hehe
+    - Koke
     frases:
-    - hehehe
+    - "\xBFTienes un momentito? Me gustaria comentarte una cosita mas."
     colorFrases:
     - serializedVersion: 2
-      rgba: 0
+      rgba: 4278190080
     sonidoFrases:
-    - {fileID: 8300000, guid: e37c281c7c43716419297bde51d2337b, type: 3}
+    - {fileID: 8300000, guid: 888c5a4c0339a394bbe8461d69957802, type: 3}
   repeated:
   - characterName:
     - gg
@@ -284,6 +612,7 @@ MonoBehaviour:
   conversationCanvas: {fileID: 0}
   movementCanvas: {fileID: 0}
   abilityCanvas: {fileID: 0}
+  extinted: 0
   effect: {fileID: 0}
 --- !u!82 &2207445565895496237
 AudioSource:
@@ -402,3 +731,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &719426920
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207445565895496247}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.025928497, y: -0.1119684}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.24}
+    newSize: {x: 0.15, y: 0.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34029007, y: 0.24407148}
+  m_EdgeRadius: 0

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
-    public int gamePhase = 0;
+    public int conversationPhase, startingPhase, repeatedPhase, negationPhase;
     public TextoConver[] conversationsByPhases;
     public TextoConver[] negationByPhases;
     public TextoConver[] startingConversations;
@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour
     //UI managment to trigger the UI.
     public GameObject conversationCanvas;
     public GameObject movementCanvas, abilityCanvas;
-    private bool extinted = false;
+    public bool extinted = false;
     private AudioSource npcAudio;
 
     private void Start()
@@ -27,16 +27,23 @@ public class NPC : MonoBehaviour
     }
 
     //Revisar esta funcion - cuando se hace pop up de la historia se pone a true y da errores cuando no deberia
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //Cogemos una referencia en Start a player.
         //Mandamos a player la variable verdadera de que puede hablar con un NPC y a su vez asignamos el npc.
         //Una vez se ha asignado si el jugador ataca pero esta para hablar se triggereara la conversación y no hara el slash
-        //player.setToTalk(true, this);
+        if(collision.tag == "Player")
+        {
+            player.setToTalk(true, this);
+        }
+        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player.setToTalk(false, this);
+        if (collision.tag == "Player")
+        {
+            player.setToTalk(false, this);
+        }
     }
 
 
@@ -59,7 +66,7 @@ public class NPC : MonoBehaviour
         {
             //changeButtonsState();
             next.gameObject.SetActive(!next.gameObject.activeSelf);
-            manager.showConversations(repeated[gamePhase], npcAudio);
+            manager.showConversations(repeated[repeatedPhase], npcAudio);
             yield return null;
         }
         else
@@ -70,7 +77,7 @@ public class NPC : MonoBehaviour
             nada.onClick.AddListener(delegate { endConversation(); });
             if (manager.gameObject.activeSelf)
             {
-                manager.showConversations(startingConversations[gamePhase], npcAudio);
+                manager.showConversations(startingConversations[startingPhase], npcAudio);
             }
             yield return new WaitForSeconds(1f);
             changeButtonsState();
@@ -96,25 +103,20 @@ public class NPC : MonoBehaviour
     }
 
 
-    public void changeNpcPhase(int nPhase)
-    {
-        gamePhase = nPhase;
-    }
-
     //Estas dos funciones nos representan los botones de HABLAR y NADA.
     public void startConversation()
     {
         //gamePhase tendrá que ser consultado al manager del juego. De primeras se dejará en 0.
         changeButtonsState();
         next.gameObject.SetActive(!next.gameObject.activeSelf);
-        manager.showConversations(conversationsByPhases[gamePhase],npcAudio);
+        manager.showConversations(conversationsByPhases[conversationPhase],npcAudio);
         extinted = true;
     }
     public void endConversation()
     {
         changeButtonsState();
         next.gameObject.SetActive(!next.gameObject.activeSelf);
-        manager.showConversations(negationByPhases[gamePhase],npcAudio);
+        manager.showConversations(negationByPhases[negationPhase],npcAudio);
     }
 
     private void changeButtonsState()

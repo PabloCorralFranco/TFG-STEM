@@ -5,7 +5,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public Dictionary<GameObject, int> npcsPhases;
-    public GameObject Koke;
+    public GameObject Koke, Barbara;
     public bool isTaskPending = true;
 
     private Player player;
@@ -37,7 +37,7 @@ public class EventManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         //Cuando acabe le cambiamos la fase de conversacion
-        npc.changeNpcPhase(npc.gamePhase + 1);
+        npc.conversationPhase += 1;
         yield return new WaitForSeconds(1f);
         npc.destroyAndScalate();
         yield return new WaitForSeconds(1f);
@@ -47,7 +47,7 @@ public class EventManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
         }
-        npc.changeNpcPhase(npc.gamePhase + 1);
+        npc.conversationPhase += 1;
         //Lo movemos fuera del mapa
         npc.MoveToPosition();
         yield return new WaitForSeconds(6f);
@@ -84,11 +84,12 @@ public class EventManager : MonoBehaviour
         //Congelamos el movimiento del jugador
         player.stopFromMoving();
         Koke npc = Koke.GetComponent<Koke>();
-        StartCoroutine(waitForTaskEndFirstActHouse(npc));
+        Barbara barbnpc = Barbara.GetComponent<Barbara>();
+        StartCoroutine(waitForTaskEndFirstActHouse(npc,barbnpc));
 
     }
 
-    private IEnumerator waitForTaskEndFirstActHouse(Koke npc)
+    private IEnumerator waitForTaskEndFirstActHouse(Koke npc, Barbara barbnpc)
     {
         //Triggereamos la primera conversación de koke.
         npc.popUpMeeting();
@@ -99,8 +100,12 @@ public class EventManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         //Cuando acabe le cambiamos la fase de conversacion
-        npc.changeNpcPhase(npc.gamePhase + 1);
+        npc.conversationPhase += 1;
+        npc.extinted = false;
         //Movemos a Koke y Barbara a sus posiciones
+        barbnpc.MoveToTable();
+        npc.MoveToBed();
+        yield return new WaitForSeconds(3f);
         player.continueMoving();
         //Termina la conversacion conjunta y ahora para desactivar las puertas de las granjas Olivia tiene que hablar con el Barbara
         yield return null;

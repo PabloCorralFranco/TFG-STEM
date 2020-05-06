@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         isDashing = false;
         cantMove = false;
         wannaTalk = false;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame

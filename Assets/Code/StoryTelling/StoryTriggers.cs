@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StoryTriggers : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class StoryTriggers : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!collision.tag.Equals("Player"))
+        {
+            return;
+        }
         switch (phase)
         {
             case "Phase 1":
@@ -26,6 +31,9 @@ public class StoryTriggers : MonoBehaviour
             case "Phase 1 House":
                 GameObject.FindObjectOfType<EventManager>().kokeFirstActHouse();
                 Destroy(this.gameObject);
+                break;
+            case "Load House":
+                SceneManager.LoadSceneAsync("FirstStageHouse", LoadSceneMode.Single);
                 break;
             default:
                 Debug.Log("error");
