@@ -15,6 +15,7 @@ TagManager:
   - ModulesCompiler
   - FirstWall
   - DontComeBack
+  - Genetics
   layers:
   - Default
   - TransparentFX
