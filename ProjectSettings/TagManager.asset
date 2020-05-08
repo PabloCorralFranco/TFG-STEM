@@ -16,6 +16,8 @@ TagManager:
   - FirstWall
   - DontComeBack
   - Genetics
+  - PilarColumn
+  - PilarRow
   layers:
   - Default
   - TransparentFX

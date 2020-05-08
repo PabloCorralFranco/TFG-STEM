@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
+    public string color;
     public int blue, red, green;
     public AudioClip dropClip;
     private AudioSource playerSource;
@@ -17,9 +18,13 @@ public class Drop : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             playerSource.PlayOneShot(dropClip);
-            Inventory playerInv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-            playerInv.addEssences(blue, red, green);
-            Destroy(this.gameObject);
+            recoverEssences();
         }
+    }
+    public void recoverEssences()
+    {
+        Inventory playerInv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        playerInv.addEssences(blue, red, green);
+        Destroy(this.gameObject);
     }
 }

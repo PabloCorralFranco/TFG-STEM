@@ -39,6 +39,7 @@ public class PilarMatrix : MonoBehaviour
     public void introduceEssence(GameObject essence)
     {
         Debug.Log("Funcionamos");
+        //Tenemos que restar la esencia correcta
         inv.blueEsence -= 2;
         Vector3 position = this.transform.position + new Vector3(0, .1f, 0);
         GameObject essenceInfo = Instantiate(essence,position,Quaternion.identity);
@@ -51,5 +52,10 @@ public class PilarMatrix : MonoBehaviour
     {
         genCanvas.SetActive(false);
         player.continueMoving();
+    }
+
+    public void reactivateCollider()
+    {
+        myCollider.enabled = true;
     }
 }
