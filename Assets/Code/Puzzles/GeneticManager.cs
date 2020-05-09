@@ -10,11 +10,20 @@ public class GeneticManager : MonoBehaviour
     private GameObject filialCanvas;
     private Player player;
     private PilarMatrix[] pilars;
+    private SpawnGeneration spawner;
+    public int genPhase;
+
+    private void Awake()
+    {
+        genPhase = 0;
+    }
     private void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();
         filialCanvas = transform.Find("FilialInformation").gameObject;
         player = GameObject.FindObjectOfType<Player>();
+        spawner = FindObjectOfType<SpawnGeneration>();
+        spawner.spawnNewGeneration(0, 1, 1,genPhase);
     }
     //Esta clase se encargara de la comprobacion de la validez de la solucion y como se va yendo paso a paso
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +46,9 @@ public class GeneticManager : MonoBehaviour
         cleanAndRecover(true);
     }
 
+    //Limitacion de colores - En una misma fila o columna solo puede estar el mismo color.
+    //Se tendran que crear los genes. Eliminas enemigos, consigues sus esencias. Las transformas en Alelos del gen.
+
     public void newGeneration()
     {
         //Aqui es donde manejamos la generacion.
@@ -58,7 +70,82 @@ public class GeneticManager : MonoBehaviour
         cleanAndRecover(false);
         //Ahora que tenemos la tabla de prunett nos hace falta interpretarla
         //Recorremos la matriz. Vemos si contiene la generacion filial F1 heterocigotica Ar
-        
+        checkSolution(matrix);
+    }
+
+    public void checkSolution(string[,] matrix)
+    {
+        int heterocigoticos, homocigoticosDominantes, homocigoticosRecesivos;
+        //Primera solucion
+        if (genPhase == 0)
+        {
+            heterocigoticos = 0;
+            for(int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for(int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j].Equals("Ar"))
+                    {
+                        heterocigoticos += 1;
+                    }
+                }
+            }
+            if(heterocigoticos == 4)
+            {
+                genPhase++;
+                //Llamar al spawnManager, crear segunda generacion y poner efectos y musica.
+                Debug.Log("Primera Generacion CORRECTA");
+                spawner.spawnNewGeneration(0, 0, 2,genPhase);
+            }
+            else
+            {
+                //Llamar al spawnManager con generacion erronea y no moverse de fase.
+                Debug.Log("Primera Generacion INCORRECTA. SE VUELVE A GENERACION INICIAL");
+                spawner.spawnNewGeneration(0, 1, 1,genPhase);
+            }
+            return;
+        }
+        //Segunda Solucion
+
+        if(genPhase == 1)
+        {
+            heterocigoticos = 0;
+            homocigoticosDominantes = 0;
+            homocigoticosRecesivos = 0;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j].Equals("Ar"))
+                    {
+                        heterocigoticos += 1;
+                    }
+                    if (matrix[i, j].Equals("AA"))
+                    {
+                        homocigoticosDominantes += 1;
+                    }
+                    if (matrix[i, j].Equals("rr"))
+                    {
+                        homocigoticosRecesivos += 1;
+                    }
+                }
+            }
+
+            if(heterocigoticos == 2 && homocigoticosRecesivos == 1 && homocigoticosDominantes == 1)
+            {
+                //Hemos alcanzado la relacion fenotipica deseada. Mandamos mensaje al event manager de que hemos ganado
+                Debug.Log("HEMOS GANADO");
+                genPhase++;
+            }
+            else
+            {
+                Debug.Log("Nos hemos equivocado, volvemos a la generacion cero");
+                genPhase = 0;
+                spawner.spawnNewGeneration(0, 1, 1, genPhase);
+            }
+
+        }
+
     }
 
     private void cleanAndRecover(bool canRecover)

@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float enemyLife, normalDeffense, movementSpeed, attackSpeed, attackPower, thrustPower;
     public bool isInmune;
     public GameObject essence, deathParticle;
+    public GameObject copyEssence;
     public AudioClip deathClip, damageClip;
 
     private Rigidbody2D rb;
@@ -37,6 +38,7 @@ public class Enemy : MonoBehaviour
         target = player.transform;
         originalTransform = this.transform.position;
         reachedEnd = false;
+        copyEssence = Instantiate(essence);
         InvokeRepeating("UpdatePath", 0f, .1f);
     }
 
@@ -204,8 +206,8 @@ public class Enemy : MonoBehaviour
         //Efecto de sonido
         playerAudio.PlayOneShot(deathClip);
         //Drop
-        GameObject instance = Instantiate(essence);
-        instance.transform.position = this.transform.position;
+        //GameObject instance = Instantiate(essence);
+        copyEssence.transform.position = this.transform.position;
         Destroy(this.gameObject);
     }
 }

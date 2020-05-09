@@ -77,17 +77,22 @@ Día 22/04/20
   - Añadido de nuevos efectos a algunos power ups.
   - Añadido de sonidos y efectos para los slimes.
   - Añadido de UI para vida (no manejado todavia).
+Semana del 23 al 9 de Mayo
+  - Primer nivel. Conversaciones con Koke y Barbara. Sistema de eventos, diseño del mapa y casa.
+  - Diseño e implementacion del puzle de genetica.
+  - Añadido de interfaces para puzle.
+
 
 
 TO DO:
-   - Spawner de enemigos.
+   - Pulir interfaz cuando se abre el puzle de genetica.
+   - Terminar conversaciones del primer nivel y añadir evento de finalizacion del primer nivel
+   - Corregir entrada a casa. Poner a la jugadora en la posicion correcta.
    - Slime verde
-   - Añadir funcionalidad a la barra de vida
-   - Ranura para información. (Poca importancia, dependerá del estado del proyecto)
+   - Ranura para información (Wiki que explique los conceptos mas duros).
+   - Evento para la muerte.
    - Implementar guardado.
    - Añadir cambios al documento del GDD
-   - Seguir extendiendo sistemas de particulas para el resto de efectos.
-   - Añadir efecto de carga cuando el slime este telegrafiando
    - Sonido de pasos
    
 
