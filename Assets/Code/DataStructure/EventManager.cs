@@ -1,20 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
     public Dictionary<GameObject, int> npcsPhases;
-    public GameObject Koke, Barbara;
+    public Koke Koke;
+    public Barbara Barbara;
     public bool isTaskPending = true;
 
     private Player player;
+    private GameObject loadScreen;
 
     private void Start()
     {
         //Añadimos al inicio del juego la fase en la que se encuentra cada npc, para mostrar las conversaciones pertinentes
-        //npcsPhases.Add(Koke, 0);
         player = GameObject.FindObjectOfType<Player>();
+        Koke = GameObject.FindObjectOfType<Koke>();
+        Barbara = GameObject.FindObjectOfType<Barbara>();
+        loadScreen = player.transform.Find("LoadScreen").gameObject;
     }
 
     public void kokeFirstAct()
@@ -110,6 +115,38 @@ public class EventManager : MonoBehaviour
         //Termina la conversacion conjunta y ahora para desactivar las puertas de las granjas Olivia tiene que hablar con el Barbara
         yield return null;
     }
+
+
+    public void LoadHouseLevel()
+    {
+        StartCoroutine(transitionToNewLevel("FirstStageHouse"));
+    }
+    public void LoadSlimesLevel()
+    {
+        StartCoroutine(transitionToNewLevel("FirstStage"));
+    }
+
+    private IEnumerator transitionToNewLevel(string lvlName)
+    {
+        player.stopFromMoving();
+        yield return new WaitForSeconds(1f);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        SceneManager.LoadSceneAsync(lvlName, LoadSceneMode.Single);
+        SceneManager.sceneLoaded += findActualNPCs;
+        yield return new WaitForSeconds(2f);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        player.continueMoving();
+        yield return null;
+    }
+
+    private void findActualNPCs(Scene scene, LoadSceneMode mode)
+    {
+        Koke = GameObject.FindObjectOfType<Koke>();
+        Barbara = GameObject.FindObjectOfType<Barbara>();
+        player.transform.position = GameObject.FindGameObjectWithTag("spawnLocation").gameObject.transform.position;
+    }
+
+    
 
 
 

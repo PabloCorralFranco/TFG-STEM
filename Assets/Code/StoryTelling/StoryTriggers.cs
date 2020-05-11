@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class StoryTriggers : MonoBehaviour
 {
@@ -33,7 +32,10 @@ public class StoryTriggers : MonoBehaviour
                 Destroy(this.gameObject);
                 break;
             case "Load House":
-                SceneManager.LoadSceneAsync("FirstStageHouse", LoadSceneMode.Single);
+                GameObject.FindObjectOfType<EventManager>().LoadHouseLevel();
+                break;
+            case "Load Slimes":
+                GameObject.FindObjectOfType<EventManager>().LoadSlimesLevel();
                 break;
             default:
                 Debug.Log("error");
@@ -42,6 +44,6 @@ public class StoryTriggers : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }

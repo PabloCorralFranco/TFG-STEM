@@ -26,8 +26,23 @@ public class Player : MonoBehaviour
     private bool wannaTalk = false;
     private NPC npcToTalk;
     private bool cantMove = false;
+    private static Player playerInstance;
 
     public float originalSpeed, originalAttack;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        if (playerInstance == null)
+        {
+            playerInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -37,7 +52,7 @@ public class Player : MonoBehaviour
         isDashing = false;
         cantMove = false;
         wannaTalk = false;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame

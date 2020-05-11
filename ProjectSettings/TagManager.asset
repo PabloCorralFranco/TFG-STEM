@@ -18,6 +18,7 @@ TagManager:
   - Genetics
   - PilarColumn
   - PilarRow
+  - spawnLocation
   layers:
   - Default
   - TransparentFX

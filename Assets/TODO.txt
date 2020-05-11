@@ -82,16 +82,21 @@ Semana del 23 al 9 de Mayo
   - Diseño e implementacion del puzle de genetica.
   - Añadido de interfaces para puzle.
 
+Dia 11/05/20
+  - Finalizacion de la interfaz y funcionalidad de la Wiki. Actualmente estan implementado los botones para genetica. Se ha reutilizado el codigo de la wiki de modulos.
+  - Sistema de carga con interfaz para dar una respuesta fluida y sencilla entre escenas.
+  - Finalizacion del diseño del mapa para la primera fase.
+  - Cambio en campos para NPC y sistema manejador de eventos. Ahora los npcs seran completamente automaticos y podran
+  acceder a los campos necesarios sin tener que añadirlos a mano. El sistema de eventos ahora esta incrustado en Player. Debido al DontDestroyOnLoad
+  podemos aprovechar esto para incrustar el sistema de carga y ademas dar una respuesta automatizada y sin repeticiones a lo largo de las distintas escenas.
+  - Corregida la entrada y salida de la casa. Ahora el sistema de carga lo maneja de manera correcta.
 
 
 TO DO:
    - Pulir interfaz cuando se abre el puzle de genetica.
    - Terminar conversaciones del primer nivel y añadir evento de finalizacion del primer nivel
-   - Corregir entrada a casa. Poner a la jugadora en la posicion correcta.
    - Slime verde
-   - Ranura para información (Wiki que explique los conceptos mas duros).
    - Evento para la muerte.
-   - Implementar guardado.
    - Añadir cambios al documento del GDD
    - Sonido de pasos
    

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     public GameObject menu;
-    public GameObject generator, compiler;
+    public GameObject generator, compiler, wiki;
     public AudioSource playerAudio;
     public AudioClip openCloseAudio;
     public void openClose()
@@ -24,6 +24,12 @@ public class MenuManager : MonoBehaviour
     {
         playAudio();
         compiler.SetActive(!compiler.activeSelf);
+        openClose();
+    }
+    public void openCloseWiki()
+    {
+        playAudio();
+        wiki.SetActive(!wiki.activeSelf);
         openClose();
     }
 

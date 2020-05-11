@@ -10,19 +10,26 @@ public class NPC : MonoBehaviour
     public TextoConver[] negationByPhases;
     public TextoConver[] startingConversations;
     public TextoConver[] repeated;
-    public ConverManager manager;
-    public Button hablar, nada, next;
-    private Player player;
 
+    private ConverManager manager;
+    private Player player;
     //UI managment to trigger the UI.
-    public GameObject conversationCanvas;
-    public GameObject movementCanvas, abilityCanvas;
+    private Button hablar, nada, next;
+    private GameObject conversationCanvas;
+    private GameObject movementCanvas, abilityCanvas;
     public bool extinted = false;
     private AudioSource npcAudio;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindObjectOfType<Player>();
+        manager = GameObject.FindObjectOfType<ConverManager>();
+        conversationCanvas = player.transform.Find("Conversations").gameObject;
+        hablar = conversationCanvas.transform.Find("Hablar").GetComponent<Button>();
+        nada = conversationCanvas.transform.Find("Nada").GetComponent<Button>();
+        next = conversationCanvas.transform.Find("NextButton").GetComponent<Button>();
+        movementCanvas = player.transform.Find("MnACanvas").gameObject;
+        abilityCanvas = player.transform.Find("Abilities").gameObject;
         npcAudio = GetComponent<AudioSource>();
     }
 
