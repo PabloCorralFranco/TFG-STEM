@@ -41,4 +41,17 @@ public class SpawnGeneration : MonoBehaviour
             myEnemyInstance.copyEssence.GetComponent<Drop>().color = "r";
         }
     }
+
+    public void spawnByPhase(int genPhase)
+    {
+        if(genPhase == 0)
+        {
+            spawnNewGeneration(0, 1, 1, genPhase);
+            return;
+        }
+        if(genPhase == 1)
+        {
+            spawnNewGeneration(0, 0, 2, genPhase);
+        }
+    }
 }

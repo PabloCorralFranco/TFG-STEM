@@ -24,6 +24,8 @@ public class PilarMatrix : MonoBehaviour
     {
         //Llamamos al canvas para que nos pida para elegir que esencia meter.
         player.stopFromMoving();
+        player.transform.Find("MnACanvas").gameObject.SetActive(false);
+        player.transform.Find("Abilities").gameObject.SetActive(false);
         //Debug.Log("Encendemos canvas segun condiciones de inventario");
         
 
@@ -91,7 +93,15 @@ public class PilarMatrix : MonoBehaviour
             inv.blueEsence -= 2;
         }else if (d.color.Equals("r"))
         {
-            inv.redEsence -= 2;
+            if(genManager.genPhase == 1)
+            {
+                inv.blueEsence -= 2;
+            }
+            else
+            {
+                inv.redEsence -= 2;
+            }
+            
         }
         else
         {
@@ -104,6 +114,8 @@ public class PilarMatrix : MonoBehaviour
 
     public void exitGenetics()
     {
+        player.transform.Find("MnACanvas").gameObject.SetActive(true);
+        player.transform.Find("Abilities").gameObject.SetActive(true);
         genCanvas.SetActive(false);
         player.continueMoving();
     }

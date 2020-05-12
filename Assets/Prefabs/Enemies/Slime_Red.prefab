@@ -149,12 +149,13 @@ MonoBehaviour:
   normalDeffense: 5
   movementSpeed: 200
   attackSpeed: 0.5
-  attackPower: 5
+  attackPower: 2.5
   thrustPower: 2
   isInmune: 1
   essence: {fileID: 4718167150791504828, guid: 103e2eae7209a43409b01885e462aa77, type: 3}
   deathParticle: {fileID: 1742794815307803959, guid: b0874c8e11c76bb4eb33702605f5dece,
     type: 3}
+  copyEssence: {fileID: 0}
   deathClip: {fileID: 8300000, guid: 5eb5ba278ba60be46916f9d8136a3de6, type: 3}
   damageClip: {fileID: 8300000, guid: 94b8e3e37db3e8e44bf0cd5e05049131, type: 3}
   target: {fileID: 0}

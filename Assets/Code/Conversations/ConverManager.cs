@@ -28,6 +28,9 @@ public class ConverManager : MonoBehaviour
     {
         //Nos aseguramos de que este vacio
         frasesQueue.Clear();
+        sonidosQueue.Clear();
+        nombresQueue.Clear();
+        coloresQueue.Clear();
         mySource = sourcePlay;
         //Encolamos las frases y nombres de texto
         foreach (string frase in texto.frases)
@@ -87,6 +90,7 @@ public class ConverManager : MonoBehaviour
 
     public void EndConversation()
     {
+        cuerpo.text = "";
         GameObject.FindObjectOfType<EventManager>().isTaskPending = false;
         GameObject.FindObjectOfType<Player>().setToTalk(false, null);
         next.gameObject.SetActive(!next.gameObject.activeSelf);

@@ -1988,7 +1988,7 @@ GameObject:
   - component: {fileID: 564504891}
   m_Layer: 0
   m_Name: StoryTriggerPhaseOneHouse
-  m_TagString: Untagged
+  m_TagString: DontComeBack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3735,6 +3735,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
         type: 3}
+      propertyPath: conversationsByPhases.Array.data[2].characterName.Array.size
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[2].frases.Array.size
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 0}
@@ -3767,6 +3777,16 @@ PrefabInstance:
         type: 3}
       propertyPath: abilityCanvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[2].characterName.Array.data[58]
+      value: Barbara
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[2].frases.Array.data[58]
+      value: 'De todas formas dejame tu '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1525f97da47a9a4aae44dc037877144, type: 3}

@@ -19,6 +19,9 @@ TagManager:
   - PilarColumn
   - PilarRow
   - spawnLocation
+  - barreraGranja
+  - BarreraBosque
+  - Confiner
   layers:
   - Default
   - TransparentFX

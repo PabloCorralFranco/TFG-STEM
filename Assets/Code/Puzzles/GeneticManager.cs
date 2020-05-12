@@ -1,21 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GeneticManager : MonoBehaviour
 {
     public GameObject column1, column2, row1, row2;
     public Sprite notPushed, pushed;
+    public TextMeshProUGUI information;
+    [TextArea(1,10)]
+    public string[] textos;
+    public AudioClip correct, incorrect;
     private SpriteRenderer mySprite;
     private GameObject filialCanvas;
     private Player player;
     private PilarMatrix[] pilars;
     private SpawnGeneration spawner;
+    private AudioSource myAudio;
     public int genPhase;
 
     private void Awake()
     {
-        genPhase = 0;
+        genPhase = 0;   
     }
     private void Start()
     {
@@ -23,7 +29,9 @@ public class GeneticManager : MonoBehaviour
         filialCanvas = transform.Find("FilialInformation").gameObject;
         player = GameObject.FindObjectOfType<Player>();
         spawner = FindObjectOfType<SpawnGeneration>();
-        spawner.spawnNewGeneration(0, 1, 1,genPhase);
+        spawner.spawnByPhase(genPhase);
+        information.text = textos[genPhase];
+        myAudio = player.GetComponent<AudioSource>();
     }
     //Esta clase se encargara de la comprobacion de la validez de la solucion y como se va yendo paso a paso
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +40,9 @@ public class GeneticManager : MonoBehaviour
         mySprite.sprite = pushed;
         //Impedimos el movimiento del jugador
         player.stopFromMoving();
-        //Mostramos canvas con información de la generación actual
+        //Mostramos canvas con información de la generación actual y desactivamos los de player
+        player.transform.Find("MnACanvas").gameObject.SetActive(false);
+        player.transform.Find("Abilities").gameObject.SetActive(false);
         filialCanvas.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -95,13 +105,17 @@ public class GeneticManager : MonoBehaviour
                 genPhase++;
                 //Llamar al spawnManager, crear segunda generacion y poner efectos y musica.
                 Debug.Log("Primera Generacion CORRECTA");
-                spawner.spawnNewGeneration(0, 0, 2,genPhase);
+                information.text = textos[genPhase];
+                spawner.spawnByPhase(genPhase);
+                myAudio.PlayOneShot(correct);
             }
             else
             {
                 //Llamar al spawnManager con generacion erronea y no moverse de fase.
                 Debug.Log("Primera Generacion INCORRECTA. SE VUELVE A GENERACION INICIAL");
-                spawner.spawnNewGeneration(0, 1, 1,genPhase);
+                information.text = textos[genPhase];
+                spawner.spawnByPhase(genPhase);
+                myAudio.PlayOneShot(incorrect);
             }
             return;
         }
@@ -136,12 +150,16 @@ public class GeneticManager : MonoBehaviour
                 //Hemos alcanzado la relacion fenotipica deseada. Mandamos mensaje al event manager de que hemos ganado
                 Debug.Log("HEMOS GANADO");
                 genPhase++;
+                information.text = textos[genPhase];
+                myAudio.PlayOneShot(correct);
             }
             else
             {
                 Debug.Log("Nos hemos equivocado, volvemos a la generacion cero");
                 genPhase = 0;
-                spawner.spawnNewGeneration(0, 1, 1, genPhase);
+                information.text = textos[genPhase];
+                spawner.spawnByPhase(genPhase);
+                myAudio.PlayOneShot(incorrect);
             }
 
         }
@@ -172,6 +190,8 @@ public class GeneticManager : MonoBehaviour
     public void getOut()
     {
         filialCanvas.SetActive(false);
+        player.transform.Find("MnACanvas").gameObject.SetActive(true);
+        player.transform.Find("Abilities").gameObject.SetActive(true);
         player.continueMoving();
     }
 

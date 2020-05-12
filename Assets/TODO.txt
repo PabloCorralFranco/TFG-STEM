@@ -90,11 +90,17 @@ Dia 11/05/20
   acceder a los campos necesarios sin tener que añadirlos a mano. El sistema de eventos ahora esta incrustado en Player. Debido al DontDestroyOnLoad
   podemos aprovechar esto para incrustar el sistema de carga y ademas dar una respuesta automatizada y sin repeticiones a lo largo de las distintas escenas.
   - Corregida la entrada y salida de la casa. Ahora el sistema de carga lo maneja de manera correcta.
-
+Dia 12/05/20
+  - Pulir interfaz cuando se abre el puzle de genetica.
+  - Puliz interfaz de pilares.
+  - Correccion de errores en la cantidad de esencias que se quitaban.
+  - Finalizacion del sistema de guardado y carga entre escenas. Ahora todo seguira segun el ultimo estado en el que lo dejaste.
 
 TO DO:
-   - Pulir interfaz cuando se abre el puzle de genetica.
-   - Terminar conversaciones del primer nivel y añadir evento de finalizacion del primer nivel
+   - Terminar conversaciones del primer nivel.
+   - Añadir evento de finalizacion del primer nivel
+   - Diseño de puzle para arbol de recubrimiento minimo usando Prim.
+   - Diseño del salto entre escenas para Prim segun el GDD
    - Slime verde
    - Evento para la muerte.
    - Añadir cambios al documento del GDD
