@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.UI;
+using TMPro;
 
 public class EventManager : MonoBehaviour
 {
@@ -73,7 +75,7 @@ public class EventManager : MonoBehaviour
         //Congelamos el movimiento del jugador
         player.stopFromMoving();
         NPC npc = GameObject.FindGameObjectWithTag(tag).GetComponent<NPC>();
-        Debug.Log(npc.name);
+        //Debug.Log(npc.name);
         StartCoroutine(cantGoThroughWall(npc));
     }
 
@@ -121,21 +123,64 @@ public class EventManager : MonoBehaviour
         //Cogemos sus posiciones para la carga.
         kokeHouse = npc.transform.position;
         barbHouse = barbnpc.transform.position;
+        //Activamos el menu para la wiki
+        GameObject.FindGameObjectWithTag("Movement").transform.Find("MenuButton").gameObject.SetActive(true);
+        GameObject.FindGameObjectWithTag("Movement").transform.Find("Life").gameObject.SetActive(true);
         player.continueMoving();
+        player.canAttack = true;
         //Termina la conversacion conjunta y ahora para desactivar las puertas de las granjas Olivia tiene que hablar con el Barbara
         yield return null;
     }
 
     public void genPuzzleFinished()
     {
-        
-        StartCoroutine(genPuzzleEvent());
+        GameObject whereToSpawn = GameObject.FindGameObjectWithTag("spawnLocation");
+        whereToSpawn.transform.Find("Koke").gameObject.SetActive(true);
+        Koke kokenpc = whereToSpawn.transform.Find("Koke").GetComponent<Koke>();
+        whereToSpawn.transform.Find("Barbara").gameObject.SetActive(true);
+        Barbara barbnpc = whereToSpawn.transform.Find("Barbara").GetComponent<Barbara>();
+        StartCoroutine(genPuzzleEvent(kokenpc,barbnpc));
     }
 
-    private IEnumerator genPuzzleEvent()
+    private IEnumerator genPuzzleEvent(Koke kokenpc, Barbara barbnpc)
     {
+        player.stopFromMoving();
+        kokenpc.conversationPhase = 4;
+        yield return new WaitForSeconds(2);
+        kokenpc.MoveToGenerator();        
+        yield return new WaitForSeconds(1.5f);
+        barbnpc.MoveToGenerator();
+        yield return new WaitForSeconds(1f);
+        kokenpc.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        kokenpc.conversationPhase += 1;
+        kokenpc.extinted = false;
+        //Metemos a Barbara en casa. Cerramos la puerta, abrimos la del bosque y mandamos a Koke al Bosque.
+        barbnpc.backToHouse();
+        kokenpc.MoveToForest();
+        yield return new WaitForSeconds(3f);
+        barbnpc.gameObject.SetActive(false);
+        kokenpc.gameObject.SetActive(false);
+        GameObject barreras = GameObject.FindGameObjectWithTag("barrerasHolder");
+        for(int i = 0; i < barreras.transform.childCount; i++)
+        {
+            barreras.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        GameObject.FindGameObjectWithTag("BarreraBosque").SetActive(false);
+        player.continueMoving();
+        //Cuando acabemos le damos los modulos de generador y compilador
+        GameObject generalMenu = player.transform.Find("GeneralMenu").gameObject;
+        Button generator = generalMenu.transform.Find("BotonGenerador").GetComponent<Button>();
+        generator.interactable = true;
+        generator.GetComponentInChildren<TextMeshProUGUI>().text = "GENERADOR";
+        Button compilador = generalMenu.transform.Find("BotonCompilador").GetComponent<Button>();
+        compilador.interactable = true;
+        compilador.GetComponentInChildren<TextMeshProUGUI>().text = "COMPILADOR";
 
-        yield return null;
     }
 
 
@@ -170,7 +215,7 @@ public class EventManager : MonoBehaviour
         loadScreen.SetActive(!loadScreen.activeSelf);
         SceneManager.LoadSceneAsync(lvlName, LoadSceneMode.Single);
         SceneManager.sceneLoaded += findActualNPCs;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         loadScreen.SetActive(!loadScreen.activeSelf);
         player.continueMoving();
         yield return null;
@@ -201,13 +246,23 @@ public class EventManager : MonoBehaviour
             {
                 storyTriggers[i].SetActive(!storyTriggers[i].gameObject.activeSelf);
             }
-            GameObject.FindGameObjectWithTag("FirstWall").SetActive(false);
-            Koke = GameObject.FindObjectOfType<Koke>();
-            Koke.gameObject.SetActive(false);
+            GameObject[] firstWalls = GameObject.FindGameObjectsWithTag("FirstWall");
+            for(int i = 0; i < firstWalls.Length; i++)
+            {
+                firstWalls[i].SetActive(false);
+            }
+            //Koke = GameObject.FindObjectOfType<Koke>();
+            //Koke.gameObject.SetActive(false);
             FindObjectOfType<GeneticManager>().genPhase = puzzleGen;
             player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
+            //Ponemos a koke en su sitio para el evento de finalizacion
+            Koke = GameObject.FindObjectOfType<Koke>();
+            Koke.gameObject.SetActive(false);
+            GameObject whereToSpawn = GameObject.FindGameObjectWithTag("spawnLocation");
+            Koke.gameObject.transform.position = whereToSpawn.transform.position;
+            Koke.gameObject.transform.SetParent(whereToSpawn.transform);
             //canActivatePuzzle = false;
-            
+
         }
         if(canActivatePuzzle && scene.name.Equals("FirstStageHouse"))
         {
@@ -237,6 +292,19 @@ public class EventManager : MonoBehaviour
         if(!canActivatePuzzle && scene.name.Equals("FirstStage"))
         {
             player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
+            GameObject[] storyTriggers = GameObject.FindGameObjectsWithTag("DontComeBack");
+            for (int i = 0; i < storyTriggers.Length; i++)
+            {
+                storyTriggers[i].SetActive(!storyTriggers[i].gameObject.activeSelf);
+            }
+            GameObject[] firstWalls = GameObject.FindGameObjectsWithTag("FirstWall");
+            for (int i = 0; i < firstWalls.Length; i++)
+            {
+                firstWalls[i].SetActive(false);
+            }
+            Koke = GameObject.FindObjectOfType<Koke>();
+            Koke.gameObject.SetActive(false);
+
         }
         player.transform.position = GameObject.FindGameObjectWithTag("spawnLocation").gameObject.transform.position;
     }

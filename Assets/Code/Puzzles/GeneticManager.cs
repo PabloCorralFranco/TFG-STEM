@@ -152,6 +152,7 @@ public class GeneticManager : MonoBehaviour
                 genPhase++;
                 information.text = textos[genPhase];
                 myAudio.PlayOneShot(correct);
+                FindObjectOfType<EventManager>().genPuzzleFinished();
             }
             else
             {
@@ -176,7 +177,16 @@ public class GeneticManager : MonoBehaviour
             Drop d = p.GetComponentInChildren<Drop>();
             if (d && canRecover)
             {
-                d.recoverEssences();
+                if(genPhase == 1 && d.color == "r")
+                {
+                    FindObjectOfType<Inventory>().blueEsence += 2;
+                    Destroy(d.gameObject);
+                }
+                else
+                {
+                    d.recoverEssences();
+                }
+                
                 
             }else if (d)
             {

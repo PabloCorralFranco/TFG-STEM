@@ -1,0 +1,475 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7785094006833706880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7785094006833706882}
+  - component: {fileID: 7785094006833706881}
+  - component: {fileID: 7785094006833706883}
+  - component: {fileID: 7785094006833706884}
+  - component: {fileID: 7785094006833706885}
+  - component: {fileID: 7785094006833706886}
+  - component: {fileID: 7785094006833706887}
+  - component: {fileID: 7785094006833706904}
+  m_Layer: 0
+  m_Name: Barbara
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7785094006833706882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.346, y: -1.266, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7785094006833706881
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 30625495
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -4178046375966092550, guid: 44667ec3348a57a4ea34dcfb84815ecf,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.25, y: 0.45}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &7785094006833706883
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.068415254}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.45}
+    newSize: {x: 0.25, y: 0.45}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.31316948}
+  m_EdgeRadius: 0
+--- !u!50 &7785094006833706884
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!95 &7785094006833706885
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18a285fba17d20f48b0f87b8f2180764, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7785094006833706886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045bcfda606013841a7a99262996fe6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationPhase: 0
+  startingPhase: 0
+  repeatedPhase: 0
+  negationPhase: 0
+  conversationsByPhases:
+  - characterName:
+    - Olivia
+    - Barbara
+    - Barbara
+    - Barbara
+    - Barbara
+    - Olivia
+    - Barbara
+    - Barbara
+    - Olivia
+    - Barbara
+    - Barbara
+    - Barbara
+    - Barbara
+    - Barbara
+    - Olivia
+    - Barbara
+    - Barbara
+    - Barbara
+    - Olivia
+    - Barbara
+    - Olivia
+    - Barbara
+    - Barbara
+    - Barbara
+    - Barbara
+    frases:
+    - "Soy todo oidos. Pero una pregunta te queria hacer. Tu nombre me suena, \xBFNo
+      eres de mi mundo?"
+    - Sabia que eras una chica lista. Digamos que si, y no.
+    - "Soy el esp\xEDritu inventivo de Barbara McClintock, su ideal personificado.
+      Yo tengo mi propia personalidad muy distina a la suya."
+    - Aunque no se como era realmente, pero me hubiera encantado conocerla. Dicen
+      que era una mujer fuerte y con una increible capacidad de estar sola y ser resolutiva.
+    - Y fijate en mi, asustada de mis propios limoncetes...
+    - No te martirices Barbara... Todos tenemos miedo a algo.
+    - Cierto, pero aunque tenga miedo no puedo caer en la autocomplacencia. Barbara
+      era una mujer fuerte y debo seguir su ejemplo.
+    - El generador que te he comentado tiene una funcionalidad mas importante que
+      la de crear limoncetes.
+    - "\xBFY cual es?"
+    - Veras... Hace tiempo que esta capa esta siendo atacada por un virus. Este virus
+      se mueve por protocolos nunca vistos y esta dejando inutilizados a los habitantes.
+    - Gracias al campo en el que soy experta encontre una cura. Una vacuna capaz de
+      neutralizar el ataque que realizaba a nuestra unidad de pensamiento.
+    - Esta vacuna es posible gracias a esos pobres limoncetes que has visto fuera.
+      El generador es capaz de alterar su codigo genetico de manera inocua ...
+    - Y generar caracteristicas que permiten la creacion de la vacuna de la que te
+      he hablado.
+    - Pero desde que se descontrolaron no puedo hacer nada. Ahora hay genes que no
+      he visto nunca y si abro las compuertas inundaran el resto de capas y cualquier
+      posibilidad de vacuna desapareceria.
+    - Vaya... Suena peor de lo que parecia.
+    - 'Lo es. '
+    - He dejado en la wiki que te active antes informacion sobre la vacuna y como
+      realizar las generaciones en la maquina.
+    - Si no lo has ojeado ya te recomiendo encarecidamente que lo mires.
+    - Suena a que es un toston.
+    - Puede que lo sea visto desde fuera. Pero cuando ves que tus conocimientos ayudan
+      de manera directa a las personas ... Es impagable.
+    - Visto de esa manera no te quito la razon...
+    - Y para terminar Olivia, te recomiendo que empieces por los puntos basicos, que
+      te familiarices con los terminos.
+    - De ahi pasa a las leyes de Mendel y luego al generador. La solucion la tendras
+      en el apartado de Vacuna.
+    - Y si te apetece te he dejado una biografia sobre mi, puede que te inspire en
+      algo.
+    - "\xA1Que la prueba y el error te acompa\xF1en!"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    sonidoFrases:
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+    - {fileID: 8300000, guid: a77387acf58199e4098aca180a6afd20, type: 3}
+  negationByPhases:
+  - characterName:
+    - Barbara
+    frases:
+    - Claro no te preocupes. Todo esto debe de ser demasiada informacion de golpe.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294575241
+    sonidoFrases:
+    - {fileID: 0}
+  startingConversations:
+  - characterName:
+    - Barbara
+    frases:
+    - "Hola Olivia \xBFTienes un momento?"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294575241
+    sonidoFrases:
+    - {fileID: 8300000, guid: fb48eeea46540684681c0f5b57e13995, type: 3}
+  repeated:
+  - characterName:
+    - Barbara
+    - Barbara
+    frases:
+    - "Ya sabes, si tienes alguna duda consulta la wiki que te he activado. \xA1Animo!"
+    - Por mi bien espero ...
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    sonidoFrases:
+    - {fileID: 8300000, guid: fb48eeea46540684681c0f5b57e13995, type: 3}
+    - {fileID: 8300000, guid: e37c281c7c43716419297bde51d2337b, type: 3}
+  extinted: 0
+--- !u!61 &7785094006833706887
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.014533162, y: -0.23461139}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.45}
+    newSize: {x: 0.25, y: 0.45}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.49499393, y: 0.2133125}
+  m_EdgeRadius: 0
+--- !u!82 &7785094006833706904
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785094006833706880}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

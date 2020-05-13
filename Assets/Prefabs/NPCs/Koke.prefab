@@ -161,13 +161,13 @@ MonoBehaviour:
     - "Un momento...Cuanto mas acerco el movil mas suena \xBFSera algun juego?"
     colorFrases:
     - serializedVersion: 2
-      rgba: 4288151807
+      rgba: 4288217343
     - serializedVersion: 2
       rgba: 4286709860
     - serializedVersion: 2
-      rgba: 4285400317
+      rgba: 4288217343
     - serializedVersion: 2
-      rgba: 4285400317
+      rgba: 4288217343
     sonidoFrases:
     - {fileID: 8300000, guid: cb8060503fb99734ea376ee0e205b114, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
@@ -185,8 +185,7 @@ MonoBehaviour:
     - Olivia
     - ???
     - ???
-    - ???
-    - ???
+    - Olivia
     frases:
     - "\xBFPero que...? \xBFEste es el perro? Que raro es. El alcalde no me dijo que
       el perro llevase ningun disfraz."
@@ -200,22 +199,15 @@ MonoBehaviour:
     - Dame un momento...
     - Si tranquila. Oye y gracias por salvarme de verdad. Estaba cruzando el bosque
       y justo cuando...
-    - "Vale tranquila Olivia, para nada tienes a un perro hablando delante tuya. Sigues
-      dormida en el autobus y estas teniendo un mal sue\xF1o."
+    - "Vale tranquila, para nada tienes a un perro hablando delante tuya. Sigues dormida
+      en el autobus y estas teniendo un mal sue\xF1o."
     - Uy si una siestita ahora me vendria de escandalo, estar encerrado ahi me ha
       dado dolor de patas.
-    - Pero un momento...Tu...Tu eres...Maria tenia razon. Puede que sea algo precipitado
-      pero ven a verme a la casa a la izquierda del puente.
-    - Tengo una amiga que creo que nos puede ayudar. Y de paso toma.
-    - Por si acaso ten esta espada de juguete, puede que este un poco modisqueada
-      por los lados pero no es que la mordisquee cuando me aburro ni nada parecido
-      ehh...
+    - Pero un momento...Tu cara me suena... Puede que sea algo precipitado pero necesito
+      que vengas a la casa de la izquierda del puente.
+    - "\xA1Pero un momento que yo habia venido a por ti!"
     colorFrases:
     - serializedVersion: 2
-      rgba: 4286054655
-    - serializedVersion: 2
-      rgba: 4294913798
-    - serializedVersion: 2
       rgba: 4288217343
     - serializedVersion: 2
       rgba: 4294913798
@@ -232,14 +224,15 @@ MonoBehaviour:
     - serializedVersion: 2
       rgba: 4294913798
     - serializedVersion: 2
-      rgba: 4294913798
+      rgba: 4288217343
     - serializedVersion: 2
       rgba: 4294913798
     - serializedVersion: 2
       rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
     sonidoFrases:
     - {fileID: 8300000, guid: cb8060503fb99734ea376ee0e205b114, type: 3}
-    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
@@ -308,6 +301,19 @@ MonoBehaviour:
     - Koke
     - Koke
     - Olivia
+    - Olivia
+    - Barbara
+    - Barbara
+    - Olivia
+    - Barbara
+    - Barbara
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
     - Olivia
     - Barbara
     frases:
@@ -397,8 +403,26 @@ MonoBehaviour:
       miedo si vas acompa\xF1ado."
     - Gracias Koke...
     - Pues entonces manos a la obra, hay que darse prisa.
-    - Por cierto Olivia vas a necesitar que te explique unas cosas antes de salir
-      ahi a resolver nada. Pasate por mi mesa y hablamos.
+    - Pero antes de hacer nada, dejame tu movil Olivia.
+    - Si claro... Toma.
+    - '...'
+    - Vale ya esta. He activado un modulo de Wiki. Con este modulo podras consultar
+      cualquier duda que se te plantee sobre las generaciones. Cuando termines quizas
+      tenga una sorpresa para ti.
+    - "Y koke... Ya veo que has empezado a hacerte un bocadillo pero \xBFNo hablamos
+      que tenias que darle algo mas?"
+    - "Ay va... El hambre me ha podido... Toma Olivia, esta es mi espada. Te dije
+      que te acompa\xF1aria y no mentia. Pero ahora mismo me encuentro muy debil despues
+      de estar dos dias encerrado en ese sitio."
+    - "\xBFUna espada de madera? Y ademas mordisqueada..."
+    - Pero no me mires asi mujer... Que no son mios.
+    - '...'
+    - "\xA1En serio! No son mios. Fue de una feroz pelea contra un dientes de sable."
+    - Pues mas que mordiscos grandes lo que tiene son mordisquitos como de raton.
+    - Pues si no la quieres ya sabes, te enfrentas a los limoncetes con las manos...
+    - Era broma Koke, la aceptare con mucho gusto.
+    - Olivia, si tienes alguna duda sobre la espada, sobre algo relacionado o quieres
+      hablar con nosotros acercate e intentaremos resolver lo que podamos.
     colorFrases:
     - serializedVersion: 2
       rgba: 4294913798
@@ -516,6 +540,32 @@ MonoBehaviour:
       rgba: 4288217343
     - serializedVersion: 2
       rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
     sonidoFrases:
     - {fileID: 8300000, guid: cb8060503fb99734ea376ee0e205b114, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
@@ -575,43 +625,174 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
     - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
-  negationByPhases:
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
+    - {fileID: 8300000, guid: 917e862248e4f9c438115d09d25265eb, type: 3}
   - characterName:
-    - ff
+    - Olivia
+    - Koke
+    - Koke
+    - Koke
+    - Koke
     frases:
-    - fff
+    - "Si claro, \xBFpasa algo?"
+    - No, nada en especial. Solo me gustaria comentarte un poco mas sobre el manejo
+      de la espada.
+    - "Como ya te comente, no te preocupes por hacerles da\xF1o, esta espada solo
+      les devuelve a su forma original."
+    - Aunque estos limoncetes sean agresivos sus tacticas son predecibles. Te recomiendo
+      que esquives antes de que cargen hacia ti y despues les golpees.
+    - Asi que ya sabes, generando que es gerundio.
     colorFrases:
     - serializedVersion: 2
-      rgba: 0
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Koke
+    - Olivia
+    - Olivia
+    - Barbara
+    - Barbara
+    - Barbara
+    - Koke
+    - Koke
+    - Barbara
+    - Barbara
+    - Barbara
+    - Barbara
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    frases:
+    - "\xA1Lo has conseguido Olivia! Ya se te veia de lejos lo capaz que eras."
+    - Hehe... Gracias Koke.
+    - Ha sido un poco raro tanto alelo y tanto gen. Pero al final con la ayuda de
+      la Wiki y razonandolo lo he conseguido.
+    - Al final no eras tan negada como pensabas Olivia. Como se suele decir, no sabes
+      lo que te espera hasta que lo haces.
+    - Pero ahora es mi turno. Voy a volver al laboratorio. Debo seguir con la produccion
+      de la vacuna.
+    - Olivia ... Ha sido un placer conocerte. Tu valor me ha inspirado y espero que
+      las respuestas que hoy has encontrado te sirvan para un futuro.
+    - Pues nosotros tambien tenemos que irnos.
+    - La compuerta esta abierta, asi que ya podemos pasar.
+    - Ah pero antes de que os vayais... Cuando paseis por esa compuerta la volvere
+      a cerrar. No podemos echar a perder este gran esfuerzo y que vuelva ese ser.
+    - Y con todo gran esfuerzo viene una gran recompensa. Olivia, he logrado descifrar
+      que eran esos modulos desconocidos. Solo puedo concluir que son fantasticos
+    - Tienes una explicacion mas detallada de como usarlos en la Wiki. Echale un ojo
+      porque los vas a necesitar en el viaje.
+    - Seguro que estas herramientas te ayudan a desatar esa cientifica que llevas
+      dentro.
+    - "Lo comprendo Barbara, pero no te preocupes, nuestro camino esta en la direccion
+      opuesta. Tenemos que salvar a Maria, \xBFVerdad Koke?"
+    - Olivia...
+    - Y muchas gracias por ese regalo Barbara. Les dare buen uso.
+    - "Pues no se hable mas \xA1A la aventura! "
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4294575241
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  negationByPhases:
+  - characterName:
+    - Koke
+    frases:
+    - Claro sin problema. Si sabes usarla no hay mas de que hablar.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
     sonidoFrases:
     - {fileID: 8300000, guid: e37c281c7c43716419297bde51d2337b, type: 3}
   startingConversations:
   - characterName:
     - Koke
     frases:
-    - "\xBFTienes un momentito? Me gustaria comentarte una cosita mas."
+    - "\xBFTienes un momentito? Me gustaria comentarte una cosita mas sobre la espada."
     colorFrases:
     - serializedVersion: 2
-      rgba: 4278190080
+      rgba: 4294913798
     sonidoFrases:
     - {fileID: 8300000, guid: 888c5a4c0339a394bbe8461d69957802, type: 3}
   repeated:
   - characterName:
-    - gg
+    - Koke
     frases:
-    - fgg
+    - "\xA1A menear esa A!"
     colorFrases:
     - serializedVersion: 2
-      rgba: 0
+      rgba: 4294913798
     sonidoFrases:
     - {fileID: 8300000, guid: 92ca82621bc9e9342895a249aa662ed6, type: 3}
-  manager: {fileID: 0}
-  hablar: {fileID: 0}
-  nada: {fileID: 0}
-  next: {fileID: 0}
-  conversationCanvas: {fileID: 0}
-  movementCanvas: {fileID: 0}
-  abilityCanvas: {fileID: 0}
   extinted: 0
   effect: {fileID: 0}
 --- !u!82 &2207445565895496237

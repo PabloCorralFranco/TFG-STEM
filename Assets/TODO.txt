@@ -95,10 +95,13 @@ Dia 12/05/20
   - Puliz interfaz de pilares.
   - Correccion de errores en la cantidad de esencias que se quitaban.
   - Finalizacion del sistema de guardado y carga entre escenas. Ahora todo seguira segun el ultimo estado en el que lo dejaste.
+Dia 13/05/20
+  - Añadir evento de finalizacion del primer nivel y conversaciones al mismo
 
-TO DO:
+
+  TO DO:
    - Terminar conversaciones del primer nivel.
-   - Añadir evento de finalizacion del primer nivel
+   
    - Diseño de puzle para arbol de recubrimiento minimo usando Prim.
    - Diseño del salto entre escenas para Prim segun el GDD
    - Slime verde

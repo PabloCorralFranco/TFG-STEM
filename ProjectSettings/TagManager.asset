@@ -22,6 +22,7 @@ TagManager:
   - barreraGranja
   - BarreraBosque
   - Confiner
+  - barrerasHolder
   layers:
   - Default
   - TransparentFX

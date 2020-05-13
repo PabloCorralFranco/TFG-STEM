@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float playerLife;
     public float range;
     public float thrust;
+    public bool canAttack;
     public LayerMask enemyLabel;
     public AudioSource mySource;
     public AudioClip attackClip;
@@ -52,6 +53,7 @@ public class Player : MonoBehaviour
         isDashing = false;
         cantMove = false;
         wannaTalk = false;
+        canAttack = false;
         //DontDestroyOnLoad(this.gameObject);
     }
 
@@ -153,6 +155,7 @@ public class Player : MonoBehaviour
     //ATAQUE
     public void Attack()
     {
+        
         Debug.Log(wannaTalk);
         if (wannaTalk)
         {
@@ -160,6 +163,8 @@ public class Player : MonoBehaviour
             npcToTalk.awakeConversationMethods();
             return;
         }
+        if (!canAttack) return;
+
         if (!mySource.isPlaying)
         {
             mySource.PlayOneShot(attackClip);
