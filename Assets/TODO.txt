@@ -97,12 +97,14 @@ Dia 12/05/20
   - Finalizacion del sistema de guardado y carga entre escenas. Ahora todo seguira segun el ultimo estado en el que lo dejaste.
 Dia 13/05/20
   - Añadir evento de finalizacion del primer nivel y conversaciones al mismo
-
+  - Terminar conversaciones del primer nivel.
+Dia 14/05/20
+  - Clase Grafo, PrimManager, Cable y Arista.
+  - Sistema que vaya comprobando paso a paso la solucion del arbol recubridor minimal.
 
   TO DO:
-   - Terminar conversaciones del primer nivel.
-   
-   - Diseño de puzle para arbol de recubrimiento minimo usando Prim.
+   - Pendiente corregir ciclos en la deteccion de la siguiente arista
+   - Añadir que el boton del extremo de la arista tambien este activo junto con activacion del cable de manera manual y no pasando por encima.
    - Diseño del salto entre escenas para Prim segun el GDD
    - Slime verde
    - Evento para la muerte.
