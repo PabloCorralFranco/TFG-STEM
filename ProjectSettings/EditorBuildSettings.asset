@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstStageHouse.unity
     guid: 1b95818dc1f08114d9ad276571f3f3fc
+  - enabled: 1
+    path: Assets/Scenes/Bosque.unity
+    guid: 78b73322b99021848a238f323530fbf6
+  - enabled: 1
+    path: Assets/Scenes/SecondStage.unity
+    guid: 90ba7bf7704fdf847bd7bff57c5306f0
   m_configObjects: {}

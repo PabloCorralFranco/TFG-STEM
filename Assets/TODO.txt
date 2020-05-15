@@ -101,10 +101,12 @@ Dia 13/05/20
 Dia 14/05/20
   - Clase Grafo, PrimManager, Cable y Arista.
   - Sistema que vaya comprobando paso a paso la solucion del arbol recubridor minimal.
-
+Dia 15/05/20
+  - Problema con ciclos solucionado.
+  - Asimilacion del problema a uno de electronica/matemáticas.
+  - Puzzle de Prim terminado.
+  - 
   TO DO:
-   - Pendiente corregir ciclos en la deteccion de la siguiente arista
-   - Añadir que el boton del extremo de la arista tambien este activo junto con activacion del cable de manera manual y no pasando por encima.
    - Diseño del salto entre escenas para Prim segun el GDD
    - Slime verde
    - Evento para la muerte.

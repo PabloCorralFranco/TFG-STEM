@@ -37,6 +37,10 @@ public class StoryTriggers : MonoBehaviour
             case "Load Slimes":
                 GameObject.FindObjectOfType<EventManager>().LoadSlimesLevel();
                 break;
+            case "Portal to Maria":
+                Debug.Log("Entramos");
+                GameObject.FindObjectOfType<EventManager>().transportToMaria();
+                break;
             default:
                 Debug.Log("error");
                 break;

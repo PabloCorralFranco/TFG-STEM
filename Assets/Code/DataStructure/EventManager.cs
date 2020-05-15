@@ -309,6 +309,11 @@ public class EventManager : MonoBehaviour
         player.transform.position = GameObject.FindGameObjectWithTag("spawnLocation").gameObject.transform.position;
     }
 
+    public void transportToMaria()
+    {
+        StartCoroutine(transitionToNewLevel("SecondStage"));
+    }
+
     
 
 

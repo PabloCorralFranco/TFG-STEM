@@ -15,18 +15,26 @@ public class PrimManager : MonoBehaviour
     /// Cuando el jugador crea que ha terminado le daria a un boton para comprobar la solucion. Si acierta sale del bosque, y si no es transportado a una zona de enemigos que debe derrotar para poder salir.
     /// Tenemos que tener en cuenta que no se produzcan ciclos, es un arbol no un grafo.
     /// </summary>
+    public GameObject portal;
     private List<Arista> visited, notVisited;
+    private List<string> conjuntoVertices;
+    private List<string> connectedPorts;
     private string initialVertex;
     private Arista nextCorrectArista;
     private Graph graph;
-    private int aristarActivadas;
+    private int aristasActivadas;
+    private GameObject cableToActive;
+    private EventManager eventManager;
     // Start is called before the first frame update
     void Start()
     {
         visited = new List<Arista>();
         notVisited = new List<Arista>();
+        conjuntoVertices = new List<string>();
+        connectedPorts = new List<string>();
         graph = FindObjectOfType<Graph>();
-        aristarActivadas = 0;
+        aristasActivadas = 0;
+        eventManager = FindObjectOfType<EventManager>();
     }
 
     public void setInitialVertex(string v1)
@@ -37,6 +45,15 @@ public class PrimManager : MonoBehaviour
 
     private void calculateNextCorrectArista(string v)
     {
+        //Añadimos el vertice que nos ayudara a comprobar si existen ciclos.
+        if (!conjuntoVertices.Contains(v))
+        {
+            conjuntoVertices.Add(v);
+        }
+        foreach(string s in conjuntoVertices)
+        {
+            Debug.Log("vertice explorado:" + s);
+        }
         Arista[] aristas = graph.getAristas(v);
         //Introduciomos nuevas aristas a las no visitadas
         for(int i = 0; i < aristas.Length; i++)
@@ -52,7 +69,7 @@ public class PrimManager : MonoBehaviour
         nextCorrectArista = notVisited[0];
         foreach(Arista a in notVisited)
         {
-            if(a._3() < nextCorrectArista._3())
+            if(a._3() <= nextCorrectArista._3() && (!conjuntoVertices.Contains(a._1()) || !conjuntoVertices.Contains(a._2()) ))
             {
                 nextCorrectArista = a;
             }
@@ -62,13 +79,15 @@ public class PrimManager : MonoBehaviour
 
     public void tryAristaActivation(Arista a)
     {
-        if(a._1().Equals(nextCorrectArista._1()) && a._2().Equals(nextCorrectArista._2()) && a._3() == nextCorrectArista._3())
+        if(a._1().Equals(nextCorrectArista._1()) && a._2().Equals(nextCorrectArista._2()) && a._3() == nextCorrectArista._3() && connectedPorts.Contains(a._1()) && connectedPorts.Contains(a._2()))
         {
             Debug.Log("Hemos accedido a la siguiente arista correcta" + a.toString());
+
+            changeEffectsState(a,false);
             visitArista(a);
             //Debug.Log("Visitados: " + visited.ToString());
             //Debug.Log("No Visitados: " + notVisited.ToString());
-            aristarActivadas += 1;
+            aristasActivadas += 1;
             if (checkEnd()) return;
             calculateNextCorrectArista(a._1());
             calculateNextCorrectArista(a._2());
@@ -76,6 +95,45 @@ public class PrimManager : MonoBehaviour
         else
         {
             Debug.Log("Se reinicia el puzzle");
+            visited.Clear();
+            notVisited.Clear();
+            conjuntoVertices.Clear();
+            connectedPorts.Clear();
+            initialVertex = null;
+            aristasActivadas = 0;
+            changeEffectsState(a,true);
+        }
+    }
+
+    private void changeEffectsState(Arista a, bool canDeactivate)
+    {
+        Cable spriteToActive = cableToActive.GetComponent<Cable>();
+        if (spriteToActive.arista._1().Equals(a._1()) && spriteToActive.arista._2().Equals(a._2()) && !canDeactivate)
+        {
+            spriteToActive.changeColliderState(false);
+            for (int i = 0; i < spriteToActive.transform.childCount; i++)
+            {
+                spriteToActive.transform.GetChild(i).gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            Debug.Log("Desactivamos los efectos");
+            //Desactivamos todos los efectos porque nos hemos equivocado
+            Vertex[] vert = FindObjectsOfType<Vertex>();
+            for (int i = 0; i < vert.Length; i++)
+            {
+                vert[i].depush();
+            }
+            Cable[] allCables = FindObjectsOfType<Cable>();
+            for(int i = 0; i < allCables.Length; i++)
+            {
+                allCables[i].changeColliderState(true);
+                for (int j = 0; j < allCables[i].transform.childCount; j++)
+                {
+                    allCables[i].transform.GetChild(j).gameObject.SetActive(false);
+                }
+            }
         }
     }
 
@@ -90,9 +148,10 @@ public class PrimManager : MonoBehaviour
 
     private bool checkEnd()
     {
-        if (aristarActivadas == 6)
+        if (aristasActivadas == 6)
         {
             Debug.Log("Hemos Ganado!");
+            portal.SetActive(true);
             return true;
         }
 
@@ -152,7 +211,25 @@ public class PrimManager : MonoBehaviour
         return contains;
     }
 
+    public void connectedPort(string vertexName, bool isConnected)
+    {
+        if (isConnected)
+        {
+            connectedPorts.Add(vertexName);
+        }
+        else
+        {
+            connectedPorts.Remove(vertexName);
+        }
+    }
 
+    public bool isInitialVertexNull()
+    {
+        return (initialVertex == null);
+    }
 
-
+    public void setCableToActive(GameObject cable)
+    {
+        cableToActive = cable;
+    }
 }

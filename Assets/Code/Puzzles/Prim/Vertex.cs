@@ -8,11 +8,13 @@ public class Vertex : MonoBehaviour
     public Sprite pushed, notPushed;
     private bool isPushed;
     private SpriteRenderer myRender;
+    private PrimManager primManager;
 
     private void Start()
     {
         isPushed = false;
         myRender = GetComponent<SpriteRenderer>();
+        primManager = FindObjectOfType<PrimManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,12 +23,14 @@ public class Vertex : MonoBehaviour
         {
             myRender.sprite = pushed;
             isPushed = true;
+            if(primManager.isInitialVertexNull()) primManager.setInitialVertex(vertexName);
+            primManager.connectedPort(vertexName, true);
         }
         else
         {
             isPushed = false;
         }
-        FindObjectOfType<PrimManager>().setInitialVertex(vertexName);
+        
     }
 
     //Se hace con motivo de dar un efecto mas realista
@@ -34,7 +38,13 @@ public class Vertex : MonoBehaviour
     {
         if (!isPushed)
         {
-            myRender.sprite = notPushed;
+            depush();
+            primManager.connectedPort(vertexName, false);
         }
+    }
+
+    public void depush()
+    {
+        myRender.sprite = notPushed;
     }
 }

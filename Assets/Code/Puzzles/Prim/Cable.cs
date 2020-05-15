@@ -5,9 +5,17 @@ using UnityEngine;
 public class Cable : MonoBehaviour
 {
     public Arista arista;
+    private Collider2D myCollider;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        FindObjectOfType<PrimManager>().tryAristaActivation(arista);
+        myCollider = GetComponent<Collider2D>();
     }
+
+    public void changeColliderState(bool isActive)
+    {
+        myCollider.enabled = isActive;
+    }
+
+    
 }

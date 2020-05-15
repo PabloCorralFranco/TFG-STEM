@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public float range;
     public float thrust;
     public bool canAttack;
-    public LayerMask enemyLabel;
+    public LayerMask enemyLabel, cableLayer;
     public AudioSource mySource;
     public AudioClip attackClip;
     public GameObject attackParticles;
@@ -178,6 +178,16 @@ public class Player : MonoBehaviour
         {
             enemigos[i].GetComponent<Enemy>().takeDamage(this.getAttack(),zoneLoc, thrust);
         }
+
+        //Para el puzzle de electricidad y Prim
+        Collider2D[] cables = Physics2D.OverlapCircleAll(attackZone.transform.position, range, cableLayer);
+        PrimManager pm = FindObjectOfType<PrimManager>();
+        if (pm != null && cables.Length != 0)
+        {
+            pm.setCableToActive(cables[0].gameObject);
+            pm.tryAristaActivation(cables[0].GetComponent<Cable>().arista);
+        }
+        
     }
     public float getAttack()
     {
