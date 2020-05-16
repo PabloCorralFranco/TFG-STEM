@@ -46,5 +46,6 @@ public class Vertex : MonoBehaviour
     public void depush()
     {
         myRender.sprite = notPushed;
+        isPushed = false;
     }
 }

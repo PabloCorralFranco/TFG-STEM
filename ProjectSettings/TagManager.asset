@@ -23,6 +23,7 @@ TagManager:
   - BarreraBosque
   - Confiner
   - barrerasHolder
+  - enemySpawnZoneForest
   layers:
   - Default
   - TransparentFX

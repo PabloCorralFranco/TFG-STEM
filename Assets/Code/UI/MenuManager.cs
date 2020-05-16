@@ -12,6 +12,14 @@ public class MenuManager : MonoBehaviour
     {
         playAudio();
         menu.SetActive(!menu.activeSelf);
+        if(menu.activeSelf == true)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
     public void openCloseGenerator()
     {

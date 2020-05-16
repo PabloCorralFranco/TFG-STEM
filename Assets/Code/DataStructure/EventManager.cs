@@ -12,6 +12,7 @@ public class EventManager : MonoBehaviour
     public Koke Koke;
     public Barbara Barbara;
     public bool isTaskPending = true;
+    public GameObject punishEffect;
 
     private Player player;
     private GameObject loadScreen;
@@ -304,7 +305,13 @@ public class EventManager : MonoBehaviour
             }
             Koke = GameObject.FindObjectOfType<Koke>();
             Koke.gameObject.SetActive(false);
-
+        }
+        if (scene.name.Equals("Bosque"))
+        {
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
+            Koke = GameObject.FindObjectOfType<Koke>();
+            Koke.GetComponent<Animator>().SetFloat("Horizontal", 1);
+            Koke.GetComponent<Animator>().SetFloat("Vertical", 0);
         }
         player.transform.position = GameObject.FindGameObjectWithTag("spawnLocation").gameObject.transform.position;
     }
@@ -314,7 +321,73 @@ public class EventManager : MonoBehaviour
         StartCoroutine(transitionToNewLevel("SecondStage"));
     }
 
-    
+    public void transportToEnemyZone()
+    {
+        StartCoroutine(enemyZone());
+    }
+
+    private IEnumerator enemyZone()
+    {
+        player.stopFromMoving();
+        Destroy(Instantiate(punishEffect, player.transform.position, Quaternion.identity),1f);
+        yield return new WaitForSeconds(1f);
+        Vector3 myLastPosition = player.transform.position;
+        primEnemySpawner spawner = GameObject.FindGameObjectWithTag("enemySpawnZoneForest").GetComponent<primEnemySpawner>();
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        player.transform.position = spawner.gameObject.transform.position;
+        yield return new WaitForSeconds(1f);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        spawner.canSpawn = true;
+        player.continueMoving();
+        //Hacemos que la jugadora este 30 segundos peleando.
+        yield return new WaitForSeconds(30f);
+        spawner.canSpawn = false;
+        player.stopFromMoving();
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        yield return new WaitForSeconds(1f);
+        player.transform.position = myLastPosition;
+        yield return new WaitForSeconds(1f);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        player.continueMoving();
+
+    }
+
+    public void kokeInTheWoods()
+    {
+        StartCoroutine(woodsConversation());
+    }
+
+    private IEnumerator woodsConversation()
+    {
+        player.stopFromMoving();
+        Koke kokenpc = FindObjectOfType<Koke>();
+        kokenpc.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        kokenpc.conversationPhase += 1;
+        kokenpc.extinted = false;
+        //Ahora se iria y desapareceria
+        kokenpc.exitForest();
+        GameObject wiki = player.transform.Find("Wiki").gameObject;
+        wiki.transform.Find("Circuito").gameObject.SetActive(true);
+        wiki.transform.Find("Grafos").gameObject.SetActive(true);
+        wiki.transform.Find("Prim").gameObject.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        kokenpc.gameObject.SetActive(false);
+        player.continueMoving();
+        yield return null;
+    }
+
+    public void LoadBosque()
+    {
+        StartCoroutine(transitionToNewLevel("Bosque"));
+    }
+
+
+
 
 
 

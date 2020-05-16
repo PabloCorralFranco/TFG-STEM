@@ -38,8 +38,14 @@ public class StoryTriggers : MonoBehaviour
                 GameObject.FindObjectOfType<EventManager>().LoadSlimesLevel();
                 break;
             case "Portal to Maria":
-                Debug.Log("Entramos");
                 GameObject.FindObjectOfType<EventManager>().transportToMaria();
+                break;
+            case "Koke in the Woods":
+                GameObject.FindObjectOfType<EventManager>().kokeInTheWoods();
+                Destroy(this.gameObject);
+                break;
+            case "Load Bosque":
+                GameObject.FindObjectOfType<EventManager>().LoadBosque();
                 break;
             default:
                 Debug.Log("error");

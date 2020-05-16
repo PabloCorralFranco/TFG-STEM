@@ -22,7 +22,7 @@ public class PrimManager : MonoBehaviour
     private string initialVertex;
     private Arista nextCorrectArista;
     private Graph graph;
-    private int aristasActivadas;
+    private int aristasActivadas, failed;
     private GameObject cableToActive;
     private EventManager eventManager;
     // Start is called before the first frame update
@@ -34,6 +34,7 @@ public class PrimManager : MonoBehaviour
         connectedPorts = new List<string>();
         graph = FindObjectOfType<Graph>();
         aristasActivadas = 0;
+        failed = 0;
         eventManager = FindObjectOfType<EventManager>();
     }
 
@@ -79,7 +80,7 @@ public class PrimManager : MonoBehaviour
 
     public void tryAristaActivation(Arista a)
     {
-        if(a._1().Equals(nextCorrectArista._1()) && a._2().Equals(nextCorrectArista._2()) && a._3() == nextCorrectArista._3() && connectedPorts.Contains(a._1()) && connectedPorts.Contains(a._2()))
+        if(nextCorrectArista != null && a._1().Equals(nextCorrectArista._1()) && a._2().Equals(nextCorrectArista._2()) && a._3() == nextCorrectArista._3() && connectedPorts.Contains(a._1()) && connectedPorts.Contains(a._2()))
         {
             Debug.Log("Hemos accedido a la siguiente arista correcta" + a.toString());
 
@@ -102,6 +103,13 @@ public class PrimManager : MonoBehaviour
             initialVertex = null;
             aristasActivadas = 0;
             changeEffectsState(a,true);
+            failed += 1;
+            //Se ha equivocado 3 veces, la mandamos a una zona de enemigos.
+            if(failed == 3)
+            {
+                eventManager.transportToEnemyZone();
+                failed = 0;
+            }
         }
     }
 

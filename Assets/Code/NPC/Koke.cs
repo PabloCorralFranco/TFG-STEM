@@ -122,5 +122,26 @@ public class Koke : NPC
         yield return new WaitForSeconds(4f);
     }
 
+    public void exitForest()
+    {
+        StartCoroutine(exitForestRoute());
+    }
+
+    private IEnumerator exitForestRoute()
+    {
+        //izquierda
+        Animator anim = GetComponent<Animator>();
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        anim.SetFloat("Horizontal", -1);
+        anim.SetFloat("Vertical", 0);
+        rb.AddForce(new Vector2(-40, 0));
+        yield return new WaitForSeconds(1f);
+        rb.velocity = Vector2.zero;
+        anim.SetFloat("Horizontal", 0);
+        anim.SetFloat("Vertical", 1);
+        rb.AddForce(new Vector2(0, 40));
+        yield return new WaitForSeconds(2f);
+    }
+
 
 }
