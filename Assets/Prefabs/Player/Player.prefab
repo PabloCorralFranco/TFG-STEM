@@ -36231,7 +36231,8 @@ MonoBehaviour:
   Koke: {fileID: 0}
   Barbara: {fileID: 0}
   isTaskPending: 0
-  punishEffect: {fileID: 0}
+  punishEffect: {fileID: 5194815513439117098, guid: 93487b9b4b204e64e98b43533d23566c,
+    type: 3}
 --- !u!1 &1415128902
 GameObject:
   m_ObjectHideFlags: 0

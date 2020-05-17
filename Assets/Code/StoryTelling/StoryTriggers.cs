@@ -47,6 +47,9 @@ public class StoryTriggers : MonoBehaviour
             case "Load Bosque":
                 GameObject.FindObjectOfType<EventManager>().LoadBosque();
                 break;
+            case "Botas":
+                GameObject.FindObjectOfType<EventManager>().botasConversation();
+                break;
             default:
                 Debug.Log("error");
                 break;

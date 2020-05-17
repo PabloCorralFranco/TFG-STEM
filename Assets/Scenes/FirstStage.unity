@@ -15702,6 +15702,55 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1588496144}
+    - target: {fileID: 202764620, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151173510, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412500890, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_text
+      value: 'Cada linea verde del circuito representa una arista y cada boton rojo
+        representa un vertice. Para mas informacion acceder al apendice Grafos.
+
+
+        Aviso: Es necesario seguir la seleccion de vertices a raja tabla segun el
+        algoritmo de Prim, el sistema de seguridad se activara si falla tres veces.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 412500890, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 292
+      objectReference: {fileID: 0}
+    - target: {fileID: 412500890, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 412500890, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 412500890, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 412500890, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275457751, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 923473453, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939948557, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 135835ef5dd7eef44bfcdeee89192a06, type: 3}
 --- !u!1001 &857548591

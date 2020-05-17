@@ -386,6 +386,37 @@ public class EventManager : MonoBehaviour
         StartCoroutine(transitionToNewLevel("Bosque"));
     }
 
+    public void botasConversation()
+    {
+        StartCoroutine(botasDialogue());
+    }
+
+    private IEnumerator botasDialogue()
+    {
+        player.stopFromMoving();
+        NPC botas = FindObjectOfType<NPC>();
+        botas.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        //Ahora transportamos a Olivia a la zona de la casa de Maria
+        Destroy(Instantiate(punishEffect, player.transform.position + new Vector3(0,0.1f,0), Quaternion.identity), 1f);
+        yield return new WaitForSeconds(1f);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        Vector3 nposition = GameObject.FindGameObjectWithTag("enemySpawnZoneForest").transform.position;
+        player.transform.position = nposition;
+        Inventory inv = FindObjectOfType<Inventory>();
+        inv.blueEsence += 50;
+        inv.redEsence += 50;
+        inv.greenEsence += 50;
+        yield return new WaitForSeconds(1f);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        player.continueMoving();
+        yield return null;
+    }
+
 
 
 
