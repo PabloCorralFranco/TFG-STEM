@@ -143,5 +143,24 @@ public class Koke : NPC
         yield return new WaitForSeconds(2f);
     }
 
+    public void enterBurnedHouse()
+    {
+        StartCoroutine(routeToBurnedHouse());
+    }
+
+    private IEnumerator routeToBurnedHouse()
+    {
+        Animator anim = GetComponent<Animator>();
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        anim.SetFloat("Horizontal", 0);
+        anim.SetFloat("Vertical", 1);
+        rb.AddForce(new Vector2(0, 40));
+        yield return new WaitForSeconds(.8f);
+        rb.velocity = Vector3.zero;
+        transform.position = new Vector3(100, 100, 0);
+        anim.SetFloat("Horizontal", -1);
+        anim.SetFloat("Vertical", 0);
+    }
+
 
 }

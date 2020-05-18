@@ -39,6 +39,7 @@ public class Enemy : MonoBehaviour
         originalTransform = this.transform.position;
         reachedEnd = false;
         copyEssence = Instantiate(essence);
+        copyEssence.transform.position = new Vector3(1000, 1000, 0);
         InvokeRepeating("UpdatePath", 0f, .1f);
     }
 

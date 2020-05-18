@@ -394,7 +394,7 @@ public class EventManager : MonoBehaviour
     private IEnumerator botasDialogue()
     {
         player.stopFromMoving();
-        NPC botas = FindObjectOfType<NPC>();
+        NPC botas = GameObject.FindGameObjectWithTag("Botas").GetComponent<NPC>(); ;
         botas.popUpMeeting();
         isTaskPending = true;
         while (isTaskPending)
@@ -417,7 +417,160 @@ public class EventManager : MonoBehaviour
         yield return null;
     }
 
+    public void houseOnFire()
+    {
+        StartCoroutine(SecondActHouseFire());
+    }
 
+    private IEnumerator SecondActHouseFire()
+    {
+        //Conversacion con Koke a las puertas de la casa en llamas.
+        player.stopFromMoving();
+        Koke = FindObjectOfType<Koke>();
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        //Moveriamos a Koke
+        Koke.enterBurnedHouse();
+        yield return new WaitForSeconds(1f);
+        //Ahora es conversacion sola Olivia.
+        Koke.conversationPhase += 1;
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        Koke.conversationPhase += 1;
+        //Teletransportamos a Olivia con un gradiente blanco.
+        //Reaprovechamos Loading Screen y lo ponemos en blanco a 0 de transparencia
+        loadScreen.transform.Find("LoadingSprite").gameObject.SetActive(false);
+        Image fondoBlanco = loadScreen.transform.Find("FondoNegro").GetComponent<Image>();
+        fondoBlanco.color = new Color(255, 255, 255, 0);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        float transparency = 0.05f;
+        while (fondoBlanco.color.a < 1)
+        {
+            fondoBlanco.color = new Color(255, 255, 255, transparency);
+            transparency += 0.05f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        //Termina el fade y transportamos a Olivia
+        player.transform.position = GameObject.FindGameObjectWithTag("revelation").transform.position;
+        //Buscamos el confiner
+        PolygonCollider2D confinador = GameObject.FindGameObjectWithTag("Confiner").transform.Find("confinerRevelation").GetComponent<PolygonCollider2D>();
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = confinador;
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Llegamos");
+        while (fondoBlanco.color.a > 0)
+        {
+            transparency -= 0.05f;
+            fondoBlanco.color = new Color(255, 255, 255, transparency);
+            yield return new WaitForSeconds(0.1f);
+        }
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        player.continueMoving();
+        yield return null;
+    }
+
+    public void mariaReturn()
+    {
+        StartCoroutine(SecondActMaria());
+    }
+
+    private IEnumerator SecondActMaria()
+    {
+        GameObject[] marias = GameObject.FindGameObjectsWithTag("Maria");
+        marias[0].transform.position = new Vector3(-4.779f,4.418f,0);
+        marias[1].transform.position = new Vector3(-4.779f, 4.418f, 0);
+        Animator anim = player.GetComponent<Animator>();
+        anim.SetFloat("IdleState", 1);
+        anim.SetFloat("IdleStateY", 0.5f);
+        Image fondoBlanco = loadScreen.transform.Find("FondoNegro").GetComponent<Image>();
+        float transparency = 1f;
+        //Triggereamos conversacion nueva con Koke
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            if (fondoBlanco.color.a > 0)
+            {
+                transparency -= 0.05f;
+                fondoBlanco.color = new Color(255, 255, 255, transparency);
+                yield return new WaitForSeconds(0.2f);
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+        Koke.conversationPhase += 1;
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        loadScreen.transform.Find("LoadingSprite").gameObject.SetActive(true);
+        fondoBlanco.color = new Color(0, 0, 0, 255);
+        //Despertamos a Maria y conversacion con Koke
+        for(int  i = 0; i < marias.Length; i++)
+        {
+            if (marias[i].name.Equals("cifradoMaria"))
+            {
+                marias[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                while(marias[i].transform.localScale.x < 0.75)
+                {
+                    marias[i].transform.localScale = new Vector3(marias[i].transform.localScale.x + 0.1f, marias[i].transform.localScale.y + 0.1f, 0);
+                    yield return new WaitForSeconds(0.1f);
+                }
+            }
+        }
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        //Teletransportamos a Olivia a la plataforma
+
+        //player.continueMoving();
+        yield return null;
+    }
+
+    public void revelationArc()
+    {
+        StartCoroutine(revelation());
+    }
+
+    private IEnumerator revelation()
+    {
+        player.stopFromMoving();
+        NPC revelation = GameObject.FindGameObjectWithTag("revelationNPC").GetComponent<NPC>();
+        revelation.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        loadScreen.transform.Find("LoadingSprite").gameObject.SetActive(false);
+        Image fondoBlanco = loadScreen.transform.Find("FondoNegro").GetComponent<Image>();
+        fondoBlanco.color = new Color(255, 255, 255, 0);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        float transparency = 0.05f;
+        while (fondoBlanco.color.a < 1)
+        {
+            fondoBlanco.color = new Color(255, 255, 255, transparency);
+            transparency += 0.05f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        //Colocamos al player en su posicion nueva
+        player.transform.position = new Vector3(-5.089f, 4.146f, 0);
+        Koke.transform.position = new Vector3(-4.51f, 4.155f, 0);
+        PolygonCollider2D confinador = GameObject.FindGameObjectWithTag("Confiner").transform.Find("confinerMaria").GetComponent<PolygonCollider2D>();
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = confinador;
+        yield return new WaitForSeconds(2f);
+        mariaReturn();
+        yield return null;
+    }
 
 
 

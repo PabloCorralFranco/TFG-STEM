@@ -24,6 +24,10 @@ TagManager:
   - Confiner
   - barrerasHolder
   - enemySpawnZoneForest
+  - Botas
+  - revelation
+  - revelationNPC
+  - Maria
   layers:
   - Default
   - TransparentFX

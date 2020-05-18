@@ -50,6 +50,13 @@ public class StoryTriggers : MonoBehaviour
             case "Botas":
                 GameObject.FindObjectOfType<EventManager>().botasConversation();
                 break;
+            case "Fire House":
+                GameObject.FindObjectOfType<EventManager>().houseOnFire();
+                Destroy(this.gameObject);
+                break;
+            case "Revelation":
+                GameObject.FindObjectOfType<EventManager>().revelationArc();
+                break;
             default:
                 Debug.Log("error");
                 break;

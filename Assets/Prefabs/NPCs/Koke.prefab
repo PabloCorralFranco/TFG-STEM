@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac282ee790128b4590aeb7f6c2d3e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationPhase: 2
+  conversationPhase: 5
   startingPhase: 0
   repeatedPhase: 0
   negationPhase: 0
@@ -747,6 +747,137 @@ MonoBehaviour:
     - serializedVersion: 2
       rgba: 4294913798
     sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Olivia
+    - Koke
+    - Koke
+    - Koke
+    - Olivia
+    frases:
+    - Bueno Olivia, ya hemos llegado al bosque.
+    - "\xBFY como llegamos hasta tu casa?"
+    - Activando el cerrojo electronico que tengo detras mia para abrir un portal a
+      la seccion donde se encuentra Maria.
+    - "Pues bueno, \xBFActivala no?"
+    - Es que no se.
+    - "\xBFCOMO?"
+    - "\xBFNunca te ha pasado que vas en el coche y estas constantemente mirando por
+      la ventana pero cuando llegas a tu destino no te acuerdas de ni una sola calle?"
+    - Es un ejemplo muy especifico, pero si.
+    - Pues igual con esto, siempre ha resuelto Maria el puzle pero yo me quedaba embobado
+      mirando, pensando en el mendrugo de pan que me esperaba en mi cuarto.
+    - Pero por suerte Maria sabia que algun dia iba a necesitarlo y me dio unos archivos
+      con el mapa del cerrojo y algunos consejos.
+    - "Pues entonces, \xBFPor que no usas esos documentos y lo resuelves?"
+    - No te rias, pero es que no entiendo ni papa.
+    - Me lo imaginaba... Dame esos documentos anda.
+    - Hehe ... Toma Olivia.
+    - Esperame aqui y en nada nos vamos.
+    - Si bueno... En cuanto a eso... Es cierto que no se abrir la cerradura, pero
+      eso no quiere decir que tenga mis medios para volver a casa.
+    - "\xBFY entonces por que no vamos por ahi en vez de complicarnos?"
+    - Porque me descompongo en mil pedazos y viajo por una red de nodos a la velocidad
+      de la luz que convergen en la seccion de mi casa.
+    - Anda... Pues no, se ve que no.
+    - "\xBFY me vas a dejar sola aqui? \xBFNo te puedes esperar?"
+    - Ay... Es que hay un ser en este bosque que me da mal rollo y no quiero encontrarmelo...
+    - "Ademas, has demostrado valia y fuerza antes con esos limoncetes \xA1Todo estara
+      bien!"
+    - Tu revisa bien las notas y nos volveremos a ver en menos que canta un Timer.
+    - "\xBFUn...?"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
