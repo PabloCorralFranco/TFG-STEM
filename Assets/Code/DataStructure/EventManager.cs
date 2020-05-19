@@ -313,6 +313,16 @@ public class EventManager : MonoBehaviour
             Koke.GetComponent<Animator>().SetFloat("Horizontal", 1);
             Koke.GetComponent<Animator>().SetFloat("Vertical", 0);
         }
+        if (scene.name.Equals("SecondStage"))
+        {
+
+        }
+        if (scene.name.Equals("FinalBoss"))
+        {
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
+
+        }
         player.transform.position = GameObject.FindGameObjectWithTag("spawnLocation").gameObject.transform.position;
     }
 
@@ -531,7 +541,7 @@ public class EventManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         //Teletransportamos a Olivia a la plataforma
-
+        StartCoroutine(transitionToNewLevel("FinalBoss"));
         //player.continueMoving();
         yield return null;
     }
@@ -567,9 +577,46 @@ public class EventManager : MonoBehaviour
         Koke.transform.position = new Vector3(-4.51f, 4.155f, 0);
         PolygonCollider2D confinador = GameObject.FindGameObjectWithTag("Confiner").transform.Find("confinerMaria").GetComponent<PolygonCollider2D>();
         player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = confinador;
+        player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.8f;
         yield return new WaitForSeconds(2f);
         mariaReturn();
         yield return null;
+    }
+
+    public void finalBossAct()
+    {
+        StartCoroutine(finalBoss());
+    }
+
+    private IEnumerator finalBoss()
+    {
+        player.stopFromMoving();
+        Koke = FindObjectOfType<Koke>();
+        Koke.moveToArcaelum();
+        yield return new WaitForSeconds(1f);
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        Koke.conversationPhase += 1;
+        Destroy(Instantiate(punishEffect, Koke.transform.position, Quaternion.identity),1f);
+        yield return new WaitForSeconds(1f);
+        Koke.transform.position = new Vector2(1000, 1000);
+        yield return new WaitForSeconds(2f);
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        backgroundRepetion br = FindObjectOfType<backgroundRepetion>();
+        br.ascensionSpeed = 1f;
+        br.canStartScrolling = true;
+        player.continueMoving();
+        yield return new WaitForSeconds(3f);
+        br.ascensionSpeed = 5f;
     }
 
 

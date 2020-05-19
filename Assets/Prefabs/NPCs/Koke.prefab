@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac282ee790128b4590aeb7f6c2d3e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationPhase: 5
+  conversationPhase: 6
   startingPhase: 0
   repeatedPhase: 0
   negationPhase: 0
@@ -867,6 +867,248 @@ MonoBehaviour:
       rgba: 4294913798
     - serializedVersion: 2
       rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Koke
+    - Koke
+    - Olivia
+    frases:
+    - "\xA1Olivia! \xA1Ayudame! \xA1La casa esta en llamas!"
+    - "Maria sigue dentro, \xA1Tengo que salvarla!"
+    - "Koke espera, \xA1No puedes entrar!"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Olivia
+    - Olivia
+    - Olivia
+    frases:
+    - "\xBFQue hago?... \xBFQue hago?... \xBFQue hago?"
+    - "\xBFComo se para un fuego? Piensa...Piensa... \xA1Piensa!"
+    - "\xA1KOKEEEEE!"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - ???
+    - ???
+    - ???
+    - Koke
+    - Olivia
+    - Koke
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    - Koke
+    - Olivia
+    frases:
+    - Olivia...
+    - "\xA1Olivia responde!"
+    - "\xA1OLIVIA!"
+    - Por fin Olivia que susto me has dado.
+    - "\xBFQue...ha pasado?"
+    - No lo se. Justo cuando entre en la casa me quede inmovilizado. El tiempo se
+      paro y un relampago nos saco a todos de aqui.
+    - Cuando desperte solo estabas tu enfrente con los ojos desvanecidos.
+    - Vaya... Que raro.
+    - Olivia aqui esta Maria. Esta muy debil y no se como liberarla de este cifrado.
+    - '...'
+    - "\xBFEstas bien Olivia? No te fuerces, pareces cansada."
+    - No te preocupes Koke, dejamelo a mi.
+    - Mira Olivia, el movil. Esta vibrando.
+    - Otra vez igual...
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Koke
+    - Maria
+    - Koke
+    - Olivia
+    - Maria
+    - Koke
+    - Maria
+    - Maria
+    - Koke
+    - Koke
+    - Olivia
+    - Maria
+    - Maria
+    - Maria
+    - Maria
+    - Maria
+    - Maria
+    - Koke
+    - Maria
+    - Maria
+    - Maria
+    - Maria
+    - Maria
+    - Olivia
+    frases:
+    - "\xA1Maria! \xA1Estas bien! Que susto me has dado."
+    - Si Koke estoy bien, siento haberte preocupado.
+    - Maria, esta es Olivia. Gracias a ella hemos podido llegar hasta aqui.
+    - Bueno no creo que sea para tanto...
+    - Gracias Olivia. Si Koke ha dicho algo asi, estoy segura de que mentira no es.
+    - "\xBFPero que ha pasado Maria?\xBF Por que esta la casa en llamas?"
+    - '...'
+    - Arcaelum ha vuelto.
+    - "\xA1\xBFArcaelum?!"
+    - No puede ser... Con que era el.
+    - "Perdonad que os corte... \xBFPero quien es Arcaelum?"
+    - Arcaelum es una maldicion. Es la causa de todos nuestros problemas.
+    - "Llevos a\xF1os investigando el protocolo Arcaelum. Solo he podido sacar en
+      claro que nacio en la capa fisica de la red."
+    - "Con los a\xF1os muto a un virus y desde entonces su destino esta encadenado
+      a subir hasta el final de las capas."
+    - Como si buscase algun tipo de libertad...
+    - El otro dia mis monitorizadores no paraban de dar lecturas inauditas en la plataforma
+      de transferencia.
+    - Llevo desde entonces investigando, pero parece ser que me acerque demasiado
+      y acabo atacando.
+    - Ese maldito Arcaelum, me las pagara...
+    - Olivia...
+    - No se cual es la razon de tu presencia en este mundo.
+    - Lo unico que tengo claro es que sea cual sea, estas aqui por un motivo que enlaza
+      con Arcaelum.
+    - Del camino que escojas dependera este mundo, por favor...
+    - Derrota a Arcaelum.
+    - "\xA1Espera ...!"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
+    - serializedVersion: 2
+      rgba: 4287988522
     - serializedVersion: 2
       rgba: 4288217343
     sonidoFrases:

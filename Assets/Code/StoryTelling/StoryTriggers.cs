@@ -57,6 +57,10 @@ public class StoryTriggers : MonoBehaviour
             case "Revelation":
                 GameObject.FindObjectOfType<EventManager>().revelationArc();
                 break;
+            case "Final Boss":
+                GameObject.FindObjectOfType<EventManager>().finalBossAct();
+                Destroy(this.gameObject);
+                break;
             default:
                 Debug.Log("error");
                 break;

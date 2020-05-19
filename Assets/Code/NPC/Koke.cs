@@ -162,5 +162,20 @@ public class Koke : NPC
         anim.SetFloat("Vertical", 0);
     }
 
+    public void moveToArcaelum()
+    {
+        StartCoroutine(routeToArcaelum());
 
-}
+    }
+    private IEnumerator routeToArcaelum()
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.SetFloat("Horizontal", 0);
+        anim.SetFloat("Vertical", 1);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(new Vector2(0, 40));
+        yield return new WaitForSeconds(.8f);
+        rb.velocity = Vector3.zero;
+    }
+
+    }

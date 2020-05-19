@@ -105,14 +105,19 @@ Dia 15/05/20
   - Problema con ciclos solucionado.
   - Asimilacion del problema a uno de electronica/matemáticas.
   - Puzzle de Prim terminado.
-  - 
+Dias 16 al 18 05/20
+  - Segunda escena.
+  - Conversacion con Botas, regalo del mismo.
+  - Graviton y escena de combate normal final.
+  - Historia con Koke y Maria
+Dia 19/05/20
+  - Escenario final de combate.
+  - Conversacion con Arcaelum.
+  - Fondo infinito para dar la sensacion de ascenso, dandole profundidad a la historia.
+  - Prototipo de jefe final Arcaelum.
+
+
   TO DO:
-   - Diseño del salto entre escenas para Prim segun el GDD
    - Slime verde
    - Evento para la muerte.
    - Añadir cambios al documento del GDD
-   - Sonido de pasos
-   
-
-  Problemas no resueltos:
- - Seguir mirando la interfaz de programación y ver problema al scrollear, que acabas cogiendo modulos y arrastrando
