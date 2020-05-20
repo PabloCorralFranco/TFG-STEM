@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac282ee790128b4590aeb7f6c2d3e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationPhase: 6
+  conversationPhase: 10
   startingPhase: 0
   repeatedPhase: 0
   negationPhase: 0
@@ -1132,6 +1132,304 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Koke
+    - Koke
+    - Olivia
+    - Koke
+    - Alcalde
+    - Koke
+    - Arcaelum
+    frases:
+    - "\xBFAlcalde?"
+    - "\xBFQue hace usted aqui?"
+    - Koke, alejate de ahi.
+    - Pero...El alcalde...
+    - Hace tiempo que deje de ser el Alcalde, querido Koke.
+    - "No puede ser...tu... \xBFeres Arcaelum?"
+    - "\xA1NO MENCIONES ESE NOMBRE!"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4294913798
+    - serializedVersion: 2
+      rgba: 4278190080
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Olivia
+    - Arcaelum
+    - Arcaelum
+    - Olivia
+    - Arcaelum
+    - Arcaelum
+    - Olivia
+    - Arcaelum
+    - Olivia
+    - Arcaelum
+    - Arcaelum
+    - Arcaelum
+    - Arcaelum
+    - Olivia
+    - Olivia
+    - Arcaelum
+    - Arcaelum
+    - Arcaelum
+    - Arcaelum
+    - Olivia
+    - Olivia
+    - Olivia
+    - Olivia
+    - Olivia
+    - Arcaelum
+    - Olivia
+    frases:
+    - "\xA1KOKE!"
+    - "Hahaha...No te preocupes peque\xF1a, solo lo he apartado un rato. Queria hablar
+      contigo."
+    - Me has servido de mucho Olivia.
+    - Yo no he hecho nada por ti.
+    - "Te puedo asegurar que si peque\xF1a. Seguramente la entrometida de Maria te
+      haya contado mi plan, pero asi mejor."
+    - Mi deseo...desde que naci... es subir al mundo humano.
+    - "\xBFPara que quieres ir al mundo humano? \xA1Alli nadie te espera!"
+    - "\xBFEstas segura? ... \xBFComo crees que naci entonces?"
+    - No te entiendo...
+    - "Odio. Ira. Confrontacion. Desigualdad. Soy todas estas emociones personificadas
+      ... \xBFO es que creias que solo tus cientificas representaban algo?"
+    - Mi meta es subir hasta los cielos y alcanzar a mis creadores. Pero cuando suplante
+      la identidad del Alcalde y entre a esta camara...
+    - '... me di cuenta de una cosa. No podia acceder sin la tarjeta de transferencia
+      sincronizada.'
+    - Y sin un humano que la sincronizase.
+    - Por eso me invocaste...
+    - "\xBFPero por que yo?"
+    - Porque eres una negada. Necesitaba un objetivo facil, obviamente.
+    - Te di la tarjeta, eso a lo que tu llamas movil, esperando a que Koke te guiase
+      por las cientificas y desbloqueasen los modulos para la sincronizacion.
+    - Y aqui te tengo. Una humana fragil y debil con la tarjeta sincronizada a la
+      perfeccion.
+    - "\xA1Por fin podre ascender!"
+    - '...'
+    - "\xBFDebil?"
+    - "\xBFMe llamas a mi debil?"
+    - "\xBFEl que tenia que atacar a seres indefensos y a personas de corazon bondadoso
+      para urdir un plan por su propia inutilidad?"
+    - Es gracioso viniendo del que no podia activar un patetico ascensor.
+    - Rebaja esas palabras enana. Si no quieres que sea por las buenas...
+    - Que sea por las malas.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4278190080
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Arcaelum
+    frases:
+    - "\xA1Ya basta! \xA1No pensaba usarlo pero contempla mi poder!"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4278190080
+    sonidoFrases:
+    - {fileID: 0}
+  - characterName:
+    - Olivia
+    frases:
+    - "Uh... \xBFDonde estoy? No veo nada..."
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+  - characterName:
+    - Mama
+    frases:
+    - No se por que te he ayudado tanto.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4278190080
+    sonidoFrases:
+    - {fileID: 0}
+  - characterName:
+    - Papa
+    frases:
+    - Ya sabia yo que no podrias.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4278190080
+    sonidoFrases:
+    - {fileID: 0}
+  - characterName:
+    - Maria
+    frases:
+    - No deberia haber confiado en ti.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4278190080
+    sonidoFrases:
+    - {fileID: 0}
+  - characterName:
+    - Hermano
+    frases:
+    - Da igual cuantas veces te lo explique nunca lo entiendes.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4278190080
+    sonidoFrases:
+    - {fileID: 0}
+  - characterName:
+    - Barbara
+    frases:
+    - Tanto esfuerzo para nada.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4278190080
+    sonidoFrases:
+    - {fileID: 0}
+  - characterName:
+    - Koke
+    frases:
+    - Ojala nunca hubieras venido.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4286709860
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - Olivia
+    - Olivia
+    - Olivia
+    frases:
+    - "\xA1Ya basta!"
+    - No es verdad... No es verdad...
+    - He luchado por vosotros.
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - characterName:
+    - ???
+    - ???
+    - ???
+    - ???
+    frases:
+    - Y aun asi sigues infravalorandote.
+    - Olivia, demuestra lo contrario
+    - Cumple tu destino.
+    - Sincronizate conmigo...
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4286709860
+    - serializedVersion: 2
+      rgba: 4286709860
+    - serializedVersion: 2
+      rgba: 4286709860
+    - serializedVersion: 2
+      rgba: 4286709860
+    sonidoFrases:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}

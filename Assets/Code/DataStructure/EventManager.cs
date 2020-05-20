@@ -12,7 +12,7 @@ public class EventManager : MonoBehaviour
     public Koke Koke;
     public Barbara Barbara;
     public bool isTaskPending = true;
-    public GameObject punishEffect;
+    public GameObject punishEffect, bossSpawnEffect, arcaelum, playerPrison;
 
     private Player player;
     private GameObject loadScreen;
@@ -75,14 +75,15 @@ public class EventManager : MonoBehaviour
     {
         //Congelamos el movimiento del jugador
         player.stopFromMoving();
-        NPC npc = GameObject.FindGameObjectWithTag(tag).GetComponent<NPC>();
+        Debug.Log(tag);
         //Debug.Log(npc.name);
-        StartCoroutine(cantGoThroughWall(npc));
+        StartCoroutine(cantGoThroughWall(tag));
     }
 
-    private IEnumerator cantGoThroughWall(NPC npc)
+    private IEnumerator cantGoThroughWall(string tag)
     {
-        npc.popUpMeeting();
+        GameObject[] npc = GameObject.FindGameObjectsWithTag("FirstWall");
+        npc[1].GetComponent<NPC>().popUpMeeting();
         isTaskPending = true;
         while (isTaskPending)
         {
@@ -321,7 +322,7 @@ public class EventManager : MonoBehaviour
         {
             player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
             player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
-
+            player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.8f;
         }
         player.transform.position = GameObject.FindGameObjectWithTag("spawnLocation").gameObject.transform.position;
     }
@@ -577,7 +578,6 @@ public class EventManager : MonoBehaviour
         Koke.transform.position = new Vector3(-4.51f, 4.155f, 0);
         PolygonCollider2D confinador = GameObject.FindGameObjectWithTag("Confiner").transform.Find("confinerMaria").GetComponent<PolygonCollider2D>();
         player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = confinador;
-        player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.8f;
         yield return new WaitForSeconds(2f);
         mariaReturn();
         yield return null;
@@ -611,6 +611,12 @@ public class EventManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
         }
+        Koke.conversationPhase += 1;
+        GameObject finalBoss = GameObject.FindGameObjectWithTag("FinalBoss");
+        finalBoss.SetActive(false);
+        Destroy(Instantiate(bossSpawnEffect, finalBoss.transform.position, Quaternion.identity),1.1f);
+        yield return new WaitForSeconds(1f);
+        Instantiate(arcaelum, finalBoss.transform.position, Quaternion.identity);
         backgroundRepetion br = FindObjectOfType<backgroundRepetion>();
         br.ascensionSpeed = 1f;
         br.canStartScrolling = true;
@@ -619,6 +625,65 @@ public class EventManager : MonoBehaviour
         br.ascensionSpeed = 5f;
     }
 
+    public void awakenEvent()
+    {
+        StartCoroutine(Awaken());
+    }
+
+    private IEnumerator Awaken()
+    {
+        player.stopFromMoving();
+        player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.4f;
+        yield return new WaitForSeconds(1f);
+        
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        Koke.conversationPhase += 1;
+        GameObject revelationNPCS = GameObject.FindGameObjectWithTag("revelationNPC");
+        revelationNPCS.transform.GetChild(0).gameObject.SetActive(true);
+        GameObject prison = Instantiate(playerPrison, player.transform.position, Quaternion.identity);
+        prison.transform.SetParent(player.transform);
+        player.transform.position = GameObject.FindGameObjectWithTag("revelation").transform.position;
+        revelationNPCS.transform.position = player.transform.position + new Vector3(-0.177f, 0.327f, 0);
+        int childCount = revelationNPCS.transform.childCount;
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        Koke.conversationPhase += 1;
+        yield return new WaitForSeconds(1f);
+        for (int i = 1; i < childCount; i++)
+        {
+            revelationNPCS.transform.GetChild(i).gameObject.SetActive(true);
+            Koke.popUpMeeting();
+            isTaskPending = true;
+            while (isTaskPending)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            Koke.conversationPhase += 1;
+        }
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        Koke.conversationPhase += 1;
+        revelationNPCS.SetActive(false);
+        Destroy(prison);
+        player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.8f;
+        player.continueMoving();
+        FindObjectOfType<Arcaelum>().dead = false;
+        //Le damos el nuevo estado sync Mode
+        yield return null;
+    }
 
 
 

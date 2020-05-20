@@ -30,6 +30,9 @@ public class Arcaelum : MonoBehaviour
     bool attacking = false;
     bool physical = true;
     bool range = false;
+    public bool dead = false;
+    int timesDead = 0;
+    float timePassed;
 
 
     private void Start()
@@ -42,21 +45,29 @@ public class Arcaelum : MonoBehaviour
         target = player.transform;
         originalTransform = this.transform.position;
         reachedEnd = false;
+        timePassed = 0;
         anim = GetComponent<Animator>();
         InvokeRepeating("UpdatePath", 0f, .1f);
     }
 
     void UpdatePath()
     {
+        if (dead) return;
         float distanceToPlayer = Vector2.Distance(rb.position, player.transform.position);
         //Debug.Log("We found player");
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
-        if (distanceToPlayer <= .5f && !attacking && physical)
+        Debug.Log("calling");
+        seeker.StartPath(rb.position, (Vector2) target.position, OnPathComplete);
+        if(!attacking && range)
+        {
+            timePassed += Time.fixedDeltaTime;
+        }
+        if (distanceToPlayer <= 1f && !attacking && physical)
         {
             StartCoroutine("attackPlayer");
             attacking = true;
-        }else if(distanceToPlayer >= 2.5 && !attacking && range)
+        }else if(timePassed >= .5f && !attacking && range)
         {
+            timePassed = 0;
             StartCoroutine("attackPlayer");
             attacking = true;
         }
@@ -70,6 +81,7 @@ public class Arcaelum : MonoBehaviour
 
     void OnPathComplete(Path p)
     {
+        Debug.Log("entramos en PathComplete");
         //Comprobamos que no haya ningun error y si es así nuestro camino nuevo es el calculado
         if (!p.error)
         {
@@ -82,6 +94,7 @@ public class Arcaelum : MonoBehaviour
     {
         if (path == null)
         {
+            Debug.Log("error en el path");
             return;
         }
 
@@ -106,6 +119,7 @@ public class Arcaelum : MonoBehaviour
         }
         
         Vector2 force = direction * movementSpeed * Time.deltaTime;
+        Debug.Log("Estamos aplicando fuerza");
         rb.AddForce(force);
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
         if (distance < nextWayPointDistance)
@@ -122,6 +136,7 @@ public class Arcaelum : MonoBehaviour
             float originalSpeed = movementSpeed;
             movementSpeed = 0;
             rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
             anim.SetTrigger("attack");
             yield return new WaitForSeconds(.8f);
             Collider2D[] objectives = Physics2D.OverlapCircleAll(transform.position, attackRange, playerLabel);
@@ -130,6 +145,7 @@ public class Arcaelum : MonoBehaviour
                 objectives[i].GetComponent<Player>().setLife(-attackPower);
             }
             yield return new WaitForSeconds(.2f);
+            rb.isKinematic = false;
             movementSpeed = originalSpeed;
             attacking = false;
             physical = false;
@@ -141,14 +157,46 @@ public class Arcaelum : MonoBehaviour
             movementSpeed = 0;
             rb.velocity = Vector3.zero;
             Vector2 direction = ((Vector2) rb.position - (Vector2) player.transform.position).normalized;
-            Instantiate(graviton, (Vector2) transform.position - direction, Quaternion.identity);
-            yield return new WaitForSeconds(5f);
+            GameObject bounceGraviton = Instantiate(graviton, (Vector2) transform.position - direction, Quaternion.identity);
+            Destroy(bounceGraviton, 8);
+            Vector2 force = -direction * Time.deltaTime * 50;
+            bounceGraviton.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+            yield return new WaitForSeconds(3f);
+            bounceGraviton.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             attacking = false;
             physical = true;
             range = false;
             movementSpeed = originalSpeed;
         }
        
+    }
+
+    public void drainLife(float cuantity)
+    {
+        if(!physical) anim.SetTrigger("flinch");
+        enemyLife -= cuantity;
+        if(enemyLife <= 0 && !dead)
+        {
+            timesDead += 1;
+            Debug.Log(timesDead);
+            if(timesDead == 2)
+            {
+                anim.SetTrigger("death");
+                Destroy(gameObject, 1);
+                //Llamamos al evento de los creditos.
+                Debug.Log("muerte definitiva");
+            }
+            else
+            {
+                dead = true;
+                enemyLife = 100;
+                //Llamamos a evento de muerte Arcaelum.
+                Debug.Log("Llamamos a Awaken");
+                movementSpeed = 0;
+                rb.velocity = Vector3.zero;
+                FindObjectOfType<EventManager>().awakenEvent();
+            }
+        }
     }
 
 }

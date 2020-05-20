@@ -28,6 +28,7 @@ TagManager:
   - revelation
   - revelationNPC
   - Maria
+  - FinalBoss
   layers:
   - Default
   - TransparentFX
@@ -41,8 +42,8 @@ TagManager:
   - Obstacle
   - Cable
   - Player
-  - 
-  - 
+  - Graviton
+  - Arcaelum
   - 
   - 
   - 

@@ -12450,7 +12450,7 @@ MonoBehaviour:
 
 
     Aviso: Es necesario seguir la seleccion de vertices a raja tabla segun el algoritmo
-    de Prim.'
+    de Prim, el sistema de seguridad se activara si falla tres veces.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
@@ -12520,13 +12520,13 @@ MonoBehaviour:
   m_margin: {x: -129.8496, y: -316.1227, z: -306.66626, w: -1.3121392}
   m_textInfo:
     textComponent: {fileID: 412500890}
-    characterCount: 0
+    characterCount: 292
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 48
+    wordCount: 48
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 13
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -18960,7 +18960,7 @@ RectTransform:
   m_GameObject: {fileID: 650246956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2386444, y: 1.6177742, z: 1.0719501}
+  m_LocalScale: {x: 2.5247357, y: 1.8245205, z: 1.2089418}
   m_Children:
   - {fileID: 304103071}
   m_Father: {fileID: 2059138451}
@@ -19064,7 +19064,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -514.73456, y: -133.55592, z: -213.07114, w: -16.315424}
+  m_margin: {x: -514.73456, y: -133.55592, z: -232.9512, w: -28.10534}
   m_textInfo:
     textComponent: {fileID: 650246958}
     characterCount: 0
@@ -19422,7 +19422,7 @@ RectTransform:
   m_GameObject: {fileID: 709854511}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.6406898, y: 7.08375, z: 7.8038297}
+  m_LocalScale: {x: 4.105958, y: 7.9890294, z: 8.801133}
   m_Children:
   - {fileID: 1980302771}
   m_Father: {fileID: 2059138451}
@@ -24106,7 +24106,7 @@ RectTransform:
   m_GameObject: {fileID: 952314961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.77607626, y: 0.3566916, z: 0.39295}
+  m_LocalScale: {x: 0.87525624, y: 0.40227562, z: 0.44316772}
   m_Children: []
   m_Father: {fileID: 2059138451}
   m_RootOrder: 0
@@ -24335,7 +24335,7 @@ RectTransform:
   m_GameObject: {fileID: 965538064}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.038769156, y: 0.3214358, z: 0.17856553}
+  m_LocalScale: {x: 0.043723725, y: 0.36251423, z: 0.20138562}
   m_Children:
   - {fileID: 1195475926}
   m_Father: {fileID: 2059138451}
@@ -24343,7 +24343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -844.4, y: -149}
+  m_AnchoredPosition: {x: -962, y: -119}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &965538067
@@ -29760,8 +29760,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -29798,7 +29798,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -18.078222, y: 0, z: 6.0260725, w: 0}
   m_textInfo:
     textComponent: {fileID: 1195475927}
     characterCount: 0
@@ -36233,6 +36233,12 @@ MonoBehaviour:
   isTaskPending: 0
   punishEffect: {fileID: 5194815513439117098, guid: 93487b9b4b204e64e98b43533d23566c,
     type: 3}
+  bossSpawnEffect: {fileID: 7017570180993686627, guid: 49f4076f2eefe594287b37300ef97521,
+    type: 3}
+  arcaelum: {fileID: 1152183291577592003, guid: 7c5eb7a06087feb4a87063bb9df0056a,
+    type: 3}
+  playerPrison: {fileID: 1518224934579065789, guid: 7b584abbbe84fb844a69ab52ea8d4944,
+    type: 3}
 --- !u!1 &1415128902
 GameObject:
   m_ObjectHideFlags: 0
@@ -38111,7 +38117,7 @@ RectTransform:
   m_GameObject: {fileID: 1485160354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.927328, y: 4.215515, z: 4.64403}
+  m_LocalScale: {x: 1.0458375, y: 4.754244, z: 5.2375216}
   m_Children: []
   m_Father: {fileID: 2059138451}
   m_RootOrder: 1
@@ -42376,7 +42382,7 @@ RectTransform:
   m_GameObject: {fileID: 1635460379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.640687, y: 7.083753, z: 7.8038306}
+  m_LocalScale: {x: 4.1059546, y: 7.9890337, z: 8.801134}
   m_Children:
   - {fileID: 1323301257}
   m_Father: {fileID: 2059138451}
@@ -51442,7 +51448,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &2059138453
 MonoBehaviour:
@@ -53197,7 +53203,7 @@ GameObject:
   - component: {fileID: 52423601}
   - component: {fileID: 125531338154059519}
   - component: {fileID: 469051921}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -53375,6 +53381,12 @@ MonoBehaviour:
   cableLayer:
     serializedVersion: 2
     m_Bits: 1024
+  gravitonLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  arcLayer:
+    serializedVersion: 2
+    m_Bits: 8192
   mySource: {fileID: 469051921}
   attackClip: {fileID: 8300000, guid: 8245f2a3a8d24554cb15b398a3abf7a2, type: 3}
   attackParticles: {fileID: 6636077744870195048, guid: 4e0299dc1a9b5c64f8a4b5b4063daabd,
@@ -53396,7 +53408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueEsence: 0
   redEsence: 0
-  greenEsence: 100
+  greenEsence: 0
 --- !u!82 &125531338154059519
 AudioSource:
   m_ObjectHideFlags: 0

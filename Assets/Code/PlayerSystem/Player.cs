@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public float range;
     public float thrust;
     public bool canAttack;
-    public LayerMask enemyLabel, cableLayer;
+    public LayerMask enemyLabel, cableLayer, gravitonLayer, arcLayer;
     public AudioSource mySource;
     public AudioClip attackClip;
     public GameObject attackParticles;
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
         isDashing = false;
         cantMove = false;
         wannaTalk = false;
-        canAttack = false;
+        //canAttack = false;
         //DontDestroyOnLoad(this.gameObject);
     }
 
@@ -187,7 +187,20 @@ public class Player : MonoBehaviour
             pm.setCableToActive(cables[0].gameObject);
             pm.tryAristaActivation(cables[0].GetComponent<Cable>().arista);
         }
-        
+        //Para el graviton de Arcaelum
+        Collider2D[] graviton = Physics2D.OverlapCircleAll(attackZone.transform.position, range, gravitonLayer);
+        for(int i = 0; i < graviton.Length; i++)
+        {
+            Debug.Log("Deflecting");
+            graviton[i].GetComponent<GravitonArcaelum>().deflect();
+        }
+        //Para el daño a Arcaelum
+        Collider2D[] arc = Physics2D.OverlapCircleAll(attackZone.transform.position, range, arcLayer);
+        for (int i = 0; i < arc.Length; i++)
+        {
+            arc[i].GetComponent<Arcaelum>().drainLife(attackPower);
+        }
+
     }
     public float getAttack()
     {
