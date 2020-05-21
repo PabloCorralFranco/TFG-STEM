@@ -19,8 +19,9 @@ public class EventManager : MonoBehaviour
     private bool canActivatePuzzle;
     private Vector3 barbHouse, kokeHouse;
     private int[] kokePhases, barbaraPhases;
-    private bool barbExtinted, kokeExtinted;
+    private bool barbExtinted, kokeExtinted, firstTime;
     private int puzzleGen;
+    private SoundManager soundManager;
 
     private void Start()
     {
@@ -29,7 +30,59 @@ public class EventManager : MonoBehaviour
         Koke = GameObject.FindObjectOfType<Koke>();
         Barbara = GameObject.FindObjectOfType<Barbara>();
         loadScreen = player.transform.Find("LoadScreen").gameObject;
+        soundManager = FindObjectOfType<SoundManager>();
+        firstTime = true;
     }
+
+    public void oliviaHouse()
+    {
+        StartCoroutine(oliviaTask());
+    }
+
+    private IEnumerator oliviaTask()
+    {
+        player.stopFromMoving();
+        NPC npc = GameObject.FindGameObjectWithTag("Respawn").GetComponent<NPC>();
+        npc.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        GameObject.FindGameObjectWithTag("spawnLocation").GetComponent<BoxCollider2D>().enabled = true;
+        player.continueMoving();
+        yield return null;
+    }
+
+    public void LoadCuteTownLevel()
+    {
+        StartCoroutine(transitionToNewLevel("CuteTown"));
+    }
+
+    public void alcaldeCuteTown()
+    {
+        StartCoroutine(ayudaAlcalde());
+    }
+
+    private IEnumerator ayudaAlcalde()
+    {
+        player.stopFromMoving();
+        NPC npc = GameObject.FindGameObjectWithTag("Respawn").GetComponent<NPC>();
+        npc.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        GameObject.FindGameObjectWithTag("FirstWall").GetComponent<BoxCollider2D>().enabled = true;
+        player.continueMoving();
+        yield return null;
+    }
+    public void loadFirstStage()
+    {
+        StartCoroutine(transitionToNewLevel("FirstStageFirstTime"));
+    }
+
 
     public void kokeFirstAct()
     {
@@ -161,7 +214,12 @@ public class EventManager : MonoBehaviour
         }
         kokenpc.conversationPhase += 1;
         kokenpc.extinted = false;
-        //Metemos a Barbara en casa. Cerramos la puerta, abrimos la del bosque y mandamos a Koke al Bosque.
+        //Metemos a Barbara en casa. Cerramos la puerta, abrimos la del bosque y mandamos a Koke al Bosque. Ponemos las habilidades activas
+        GameObject abilities = GameObject.FindGameObjectWithTag("AbilitieManager");
+        for(int i = 0; i < abilities.transform.childCount; i++)
+        {
+            abilities.transform.GetChild(i).gameObject.SetActive(true);
+        }
         barbnpc.backToHouse();
         kokenpc.MoveToForest();
         yield return new WaitForSeconds(3f);
@@ -198,7 +256,7 @@ public class EventManager : MonoBehaviour
     private IEnumerator transitionToNewLevel(string lvlName)
     {
         player.stopFromMoving();
-
+        soundManager.stopAllAudios();
         //Antes de salir cogemos en que estado de conversacion se han quedado
         if (lvlName.Equals("FirstStage"))
         {
@@ -213,11 +271,17 @@ public class EventManager : MonoBehaviour
         {
             puzzleGen = FindObjectOfType<GeneticManager>().genPhase;
         }
+        if (lvlName.Equals("FirstStageFirstTime"))
+        {
+            lvlName = "FirstStage";
+        }
         yield return new WaitForSeconds(1f);
         loadScreen.SetActive(!loadScreen.activeSelf);
         SceneManager.LoadSceneAsync(lvlName, LoadSceneMode.Single);
         SceneManager.sceneLoaded += findActualNPCs;
         yield return new WaitForSeconds(3f);
+        //Ponemos la musica segun el nivel
+        soundManager.playAudioByScene(lvlName);
         loadScreen.SetActive(!loadScreen.activeSelf);
         player.continueMoving();
         yield return null;
@@ -225,8 +289,18 @@ public class EventManager : MonoBehaviour
 
     private void findActualNPCs(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name.Equals("CuteTown")) {
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
+        }
+        if (scene.name.Equals("FirstStage") && firstTime)
+        {
+            Koke = GameObject.FindObjectOfType<Koke>();
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
+        }
         //Con esto mantenemos el estado de la escena abierta
-        if (canActivatePuzzle && scene.name.Equals("FirstStage"))
+        if (canActivatePuzzle && scene.name.Equals("FirstStage") && !firstTime)
         {
             //Reactivamos los colisionadores para los pilares
             Debug.Log("Conseguimos los pilares");
@@ -290,9 +364,13 @@ public class EventManager : MonoBehaviour
         {
             Koke = GameObject.FindObjectOfType<Koke>();
             Barbara = GameObject.FindObjectOfType<Barbara>();
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
+            firstTime = false;
         }
-        if(!canActivatePuzzle && scene.name.Equals("FirstStage"))
+        if(!canActivatePuzzle && scene.name.Equals("FirstStage") && !firstTime)
         {
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
             player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
             GameObject[] storyTriggers = GameObject.FindGameObjectsWithTag("DontComeBack");
             for (int i = 0; i < storyTriggers.Length; i++)
@@ -309,14 +387,17 @@ public class EventManager : MonoBehaviour
         }
         if (scene.name.Equals("Bosque"))
         {
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
             player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("Confiner").GetComponent<PolygonCollider2D>();
-            Koke = GameObject.FindObjectOfType<Koke>();
+            Koke = FindObjectOfType<Koke>();
             Koke.GetComponent<Animator>().SetFloat("Horizontal", 1);
             Koke.GetComponent<Animator>().SetFloat("Vertical", 0);
         }
         if (scene.name.Equals("SecondStage"))
         {
-
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+            PolygonCollider2D collider = GameObject.FindGameObjectWithTag("Confiner").transform.Find("confinerBotas").GetComponent<PolygonCollider2D>();
+            player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = collider;
         }
         if (scene.name.Equals("FinalBoss"))
         {
@@ -325,6 +406,10 @@ public class EventManager : MonoBehaviour
             player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.8f;
         }
         player.transform.position = GameObject.FindGameObjectWithTag("spawnLocation").gameObject.transform.position;
+        if(scene.name.Equals("FirstStage") && firstTime)
+        {
+            player.transform.position = GameObject.FindGameObjectWithTag("Respawn").gameObject.transform.position;
+        }
     }
 
     public void transportToMaria()
@@ -422,7 +507,13 @@ public class EventManager : MonoBehaviour
         inv.blueEsence += 50;
         inv.redEsence += 50;
         inv.greenEsence += 50;
+        GameObject wiki = player.transform.Find("Wiki").gameObject;
+        wiki.transform.Find("Botas").gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+        PolygonCollider2D collider = GameObject.FindGameObjectWithTag("Confiner").transform.Find("confinerMaria").GetComponent<PolygonCollider2D>();
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = collider;
+        soundManager.playAudioByScene("SecondStageHouse");
         loadScreen.SetActive(!loadScreen.activeSelf);
         player.continueMoving();
         yield return null;
@@ -456,6 +547,8 @@ public class EventManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         Koke.conversationPhase += 1;
+        soundManager.stopAllAudios();
+        soundManager.playAudioByScene("SecondStageRevelation");
         //Teletransportamos a Olivia con un gradiente blanco.
         //Reaprovechamos Loading Screen y lo ponemos en blanco a 0 de transparencia
         loadScreen.transform.Find("LoadingSprite").gameObject.SetActive(false);
@@ -494,6 +587,9 @@ public class EventManager : MonoBehaviour
 
     private IEnumerator SecondActMaria()
     {
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+        PolygonCollider2D collider = GameObject.FindGameObjectWithTag("Confiner").transform.Find("confinerMaria").GetComponent<PolygonCollider2D>();
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = collider;
         GameObject[] marias = GameObject.FindGameObjectsWithTag("Maria");
         marias[0].transform.position = new Vector3(-4.779f,4.418f,0);
         marias[1].transform.position = new Vector3(-4.779f, 4.418f, 0);
@@ -617,6 +713,7 @@ public class EventManager : MonoBehaviour
         Destroy(Instantiate(bossSpawnEffect, finalBoss.transform.position, Quaternion.identity),1.1f);
         yield return new WaitForSeconds(1f);
         Instantiate(arcaelum, finalBoss.transform.position, Quaternion.identity);
+        soundManager.playAudioByScene("FinalBossPhaseOne");
         backgroundRepetion br = FindObjectOfType<backgroundRepetion>();
         br.ascensionSpeed = 1f;
         br.canStartScrolling = true;
@@ -635,13 +732,13 @@ public class EventManager : MonoBehaviour
         player.stopFromMoving();
         player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.4f;
         yield return new WaitForSeconds(1f);
-        
         Koke.popUpMeeting();
         isTaskPending = true;
         while (isTaskPending)
         {
             yield return new WaitForSeconds(0.1f);
         }
+        soundManager.stopAllAudios();
         Koke.conversationPhase += 1;
         GameObject revelationNPCS = GameObject.FindGameObjectWithTag("revelationNPC");
         revelationNPCS.transform.GetChild(0).gameObject.SetActive(true);
@@ -658,7 +755,9 @@ public class EventManager : MonoBehaviour
         }
         Koke.conversationPhase += 1;
         yield return new WaitForSeconds(1f);
-        for (int i = 1; i < childCount; i++)
+        soundManager.stopAllAudios();
+        soundManager.playAudioByScene("Sync");
+        for (int i = 1; i < childCount-1; i++)
         {
             revelationNPCS.transform.GetChild(i).gameObject.SetActive(true);
             Koke.popUpMeeting();
@@ -669,6 +768,8 @@ public class EventManager : MonoBehaviour
             }
             Koke.conversationPhase += 1;
         }
+        //Invocamos el movil
+        
         Koke.popUpMeeting();
         isTaskPending = true;
         while (isTaskPending)
@@ -676,6 +777,18 @@ public class EventManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         Koke.conversationPhase += 1;
+        soundManager.stopAllAudios();
+        soundManager.playAudioByScene("FinalBossPhaseTwo");
+        revelationNPCS.transform.GetChild(childCount - 1).gameObject.SetActive(true);
+        Koke.popUpMeeting();
+        isTaskPending = true;
+        while (isTaskPending)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        Koke.conversationPhase += 1;
+        //Podemos añadir efectos de power up para darle mas potencia
+        yield return new WaitForSeconds(7);
         revelationNPCS.SetActive(false);
         Destroy(prison);
         player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.8f;

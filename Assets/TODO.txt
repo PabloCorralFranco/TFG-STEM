@@ -115,9 +115,19 @@ Dia 19/05/20
   - Conversacion con Arcaelum.
   - Fondo infinito para dar la sensacion de ascenso, dandole profundidad a la historia.
   - Prototipo de jefe final Arcaelum.
-
+Dia 20/05/20
+  - IA de Arcaelum completada.
+  - Graviton especial para Arcaelum.
+  - Evento final con conversaciones.
+Dia 21/05/20
+  - Repaso a todos los pequeños fallos que habia.
+  - Sistema de sonido entre cargas.
+  - Nivel del alcalde y tu casa junto con conversaciones y saltos de escenas.
+  - Revision de escena final.
 
   TO DO:
    - Slime verde
    - Evento para la muerte.
+   - Añadir documento a la wiki de Maria
+   - Sync Mode
    - Añadir cambios al documento del GDD

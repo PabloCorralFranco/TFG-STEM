@@ -14,6 +14,20 @@ public class StoryTriggers : MonoBehaviour
         }
         switch (phase)
         {
+            case "Olivia House":
+                GameObject.FindObjectOfType<EventManager>().oliviaHouse();
+                Destroy(this.gameObject);
+                break;
+            case "Go to CuteTown":
+                GameObject.FindObjectOfType<EventManager>().LoadCuteTownLevel();
+                break;
+            case "Alcalde":
+                GameObject.FindObjectOfType<EventManager>().alcaldeCuteTown();
+                Destroy(this.gameObject);
+                break;
+            case "Load First Stage":
+                GameObject.FindObjectOfType<EventManager>().loadFirstStage();
+                break;
             case "Phase 1":
                 Debug.Log("Story trigger succesful");
                 GameObject.FindObjectOfType<EventManager>().kokeFirstAct();

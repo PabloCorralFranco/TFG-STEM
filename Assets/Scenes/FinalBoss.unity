@@ -3461,6 +3461,142 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].frases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].characterName.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].colorFrases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].sonidoFrases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[21].frases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[19].colorFrases.Array.data[0].rgba
+      value: 4294913798
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[12].frases.Array.data[0]
+      value: "\xA1Ya basta! \xA1Este baile acaba aqui!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].frases.Array.data[1]
+      value: No puedo salir de aqui...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].frases.Array.data[2]
+      value: Tanto esfuerzo para nada...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].frases.Array.data[3]
+      value: No puedo deshacerme de esta prision.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].frases.Array.data[4]
+      value: Al final tenian razon todos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].frases.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].characterName.Array.data[1]
+      value: Olivia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].characterName.Array.data[2]
+      value: Olivia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].characterName.Array.data[3]
+      value: Olivia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].characterName.Array.data[4]
+      value: Olivia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].colorFrases.Array.data[1].rgba
+      value: 4288217343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].colorFrases.Array.data[2].rgba
+      value: 4288217343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].colorFrases.Array.data[3].rgba
+      value: 4288217343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[13].colorFrases.Array.data[4].rgba
+      value: 4288217343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[20].frases.Array.data[1]
+      value: Ya se que no encajo en nada de esto.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[20].frases.Array.data[2]
+      value: "\xA1Pero he luchado por vosotros!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[21].frases.Array.data[0]
+      value: Nuestra mente puede ser una carcel Olivia.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[21].frases.Array.data[1]
+      value: El miedo puede apoderarse de nosotras en los peores momentos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[21].frases.Array.data[2]
+      value: "Pero tu lucha. La lucha de todas las mujeres que te han acompa\xF1ado
+        en este viaje no ha sido en vano."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[21].frases.Array.data[3]
+      value: Liberate de esta prision.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[21].frases.Array.data[4]
+      value: Sincronizate conmigo.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1525f97da47a9a4aae44dc037877144, type: 3}
 --- !u!1 &1100951432

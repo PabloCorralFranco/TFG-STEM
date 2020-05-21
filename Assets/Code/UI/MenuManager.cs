@@ -8,11 +8,11 @@ public class MenuManager : MonoBehaviour
     public GameObject generator, compiler, wiki;
     public AudioSource playerAudio;
     public AudioClip openCloseAudio;
-    public void openClose()
+
+    public void stopTime()
     {
-        playAudio();
-        menu.SetActive(!menu.activeSelf);
-        if(menu.activeSelf == true)
+        openClose();
+        if (menu.activeSelf == true)
         {
             Time.timeScale = 0;
         }
@@ -20,6 +20,11 @@ public class MenuManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+    }
+    public void openClose()
+    {
+        playAudio();
+        menu.SetActive(!menu.activeSelf);
     }
     public void openCloseGenerator()
     {

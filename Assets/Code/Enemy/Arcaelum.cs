@@ -47,6 +47,7 @@ public class Arcaelum : MonoBehaviour
         reachedEnd = false;
         timePassed = 0;
         anim = GetComponent<Animator>();
+        enemyLife = 5000;
         InvokeRepeating("UpdatePath", 0f, .1f);
     }
 
@@ -186,10 +187,10 @@ public class Arcaelum : MonoBehaviour
                 //Llamamos al evento de los creditos.
                 Debug.Log("muerte definitiva");
             }
-            else
+            else if(timesDead == 1)
             {
                 dead = true;
-                enemyLife = 100;
+                enemyLife = 10000;
                 //Llamamos a evento de muerte Arcaelum.
                 Debug.Log("Llamamos a Awaken");
                 movementSpeed = 0;

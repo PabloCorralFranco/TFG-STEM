@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
         isDashing = false;
         cantMove = false;
         wannaTalk = false;
-        //canAttack = false;
+        canAttack = false;
         //DontDestroyOnLoad(this.gameObject);
     }
 

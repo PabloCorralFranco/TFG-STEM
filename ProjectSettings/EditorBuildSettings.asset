@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 359ead669ba713f47a0868f61c0c0bc2
   - enabled: 1
+    path: Assets/Scenes/House-TopDown.unity
+    guid: 86b59fc8bf2bddf468ba2ee6b6444ef9
+  - enabled: 1
+    path: Assets/Scenes/CuteTown.unity
+    guid: 065745bd52d310245bdff3678edb4811
+  - enabled: 1
     path: Assets/Scenes/FirstStage.unity
     guid: 8532814a85c22e1418c1f64f076c724a
   - enabled: 1
