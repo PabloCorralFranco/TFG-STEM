@@ -237,6 +237,9 @@ MonoBehaviour:
   bossSpawnEffect: {fileID: 0}
   arcaelum: {fileID: 0}
   playerPrison: {fileID: 0}
+  awakenDash: {fileID: 0}
+  awakenTime: {fileID: 0}
+  awakenBullet: {fileID: 0}
 --- !u!4 &22470768
 Transform:
   m_ObjectHideFlags: 0
@@ -6264,11 +6267,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.648551, y: 1.4088691}
-      - {x: -0.6620283, y: 0.25967073}
-      - {x: -0.64418125, y: -1.2883811}
-      - {x: 3.8587394, y: -1.2954304}
-      - {x: 3.8624854, y: 1.3946353}
+    - - {x: -1.4325256, y: 1.670194}
+      - {x: -1.446003, y: 0.25967097}
+      - {x: -1.4281559, y: -1.5810649}
+      - {x: 5.536302, y: -1.6040523}
+      - {x: 5.5164, y: 1.6873194}
 --- !u!4 &1709001495
 Transform:
   m_ObjectHideFlags: 0
