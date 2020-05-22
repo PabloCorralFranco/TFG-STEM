@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -245,6 +246,9 @@ public class Player : MonoBehaviour
         if(playerLife <= 0)
         {
             Debug.Log("Death");
+            playerLife = 100;
+            StartCoroutine(FindObjectOfType<EventManager>().transitionToNewLevel(SceneManager.GetActiveScene().name)); 
+            return;
         }
         batteryCount.changeBattery(playerLife);
     }

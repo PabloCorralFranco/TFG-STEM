@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnGeneration : MonoBehaviour
 {
-    public Enemy redEnemy, blueEnemy;
+    public Enemy redEnemy, blueEnemy, greenEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +13,13 @@ public class SpawnGeneration : MonoBehaviour
     public void spawnNewGeneration(int green, int red, int blue, int puzzlePhase)
     {
         int i = 0;
-        
-        
-        for(i = 0; i < red; i++)
+
+        for (i = 0; i < green; i++)
+        {
+            instantiation(-2f, -3.5f, greenEnemy, puzzlePhase, true);
+            instantiation(2f, 3.5f, greenEnemy, puzzlePhase, false);
+        }
+        for (i = 0; i < red; i++)
         {
             instantiation(-2f, -3.5f,redEnemy,puzzlePhase,true);
             instantiation(2f, 3.5f,redEnemy,puzzlePhase,false);
@@ -25,6 +29,7 @@ public class SpawnGeneration : MonoBehaviour
             instantiation(-2f, -3.5f,blueEnemy,puzzlePhase,true);
             instantiation(2f, 3.5f,blueEnemy,puzzlePhase,false);
         }
+
     }
     public void instantiation(float min, float max, Enemy toInstance, int puzzlePhase, bool canChange)
     {
@@ -46,7 +51,7 @@ public class SpawnGeneration : MonoBehaviour
     {
         if(genPhase == 0)
         {
-            spawnNewGeneration(0, 1, 1, genPhase);
+            spawnNewGeneration(1, 1, 1, genPhase);
             return;
         }
         if(genPhase == 1)

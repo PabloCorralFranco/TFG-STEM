@@ -247,6 +247,8 @@ MonoBehaviour:
     type: 3}
   blueEnemy: {fileID: 7617614406468599201, guid: 5277b33b398876946bced3e471449169,
     type: 3}
+  greenEnemy: {fileID: 4657322352996901934, guid: e6869e41058f58e469e27032a998f73d,
+    type: 3}
 --- !u!1001 &3863038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14936,20 +14938,15 @@ MonoBehaviour:
       rgba: 4288872703
     - serializedVersion: 2
       rgba: 4289003775
-    sonidoFrases:
-    - {fileID: 8300000, guid: ee7ec63a82b5ac54aa2517c1f39d6b94, type: 3}
-    - {fileID: 8300000, guid: 80bb996ab7740ad4c940d6c085ce37ac, type: 3}
   negationByPhases: []
   startingConversations:
   - characterName: []
     frases: []
     colorFrases: []
-    sonidoFrases: []
   repeated:
   - characterName: []
     frases: []
     colorFrases: []
-    sonidoFrases: []
   extinted: 0
 --- !u!82 &783506322
 AudioSource:
@@ -22535,7 +22532,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.29306793, y: 0.21348834}
@@ -22576,8 +22573,6 @@ MonoBehaviour:
     colorFrases:
     - serializedVersion: 2
       rgba: 4283629823
-    sonidoFrases:
-    - {fileID: 8300000, guid: fa201371bf1238c418d39df175674279, type: 3}
   negationByPhases: []
   startingConversations: []
   repeated: []

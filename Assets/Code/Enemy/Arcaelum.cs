@@ -183,9 +183,10 @@ public class Arcaelum : MonoBehaviour
             if(timesDead == 2)
             {
                 anim.SetTrigger("death");
-                Destroy(gameObject, 1);
+                //Destroy(gameObject, 1);
                 //Llamamos al evento de los creditos.
                 Debug.Log("muerte definitiva");
+                FindObjectOfType<EventManager>().credits();
             }
             else if(timesDead == 1)
             {

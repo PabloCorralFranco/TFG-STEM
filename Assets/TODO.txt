@@ -124,10 +124,14 @@ Dia 21/05/20
   - Sistema de sonido entre cargas.
   - Nivel del alcalde y tu casa junto con conversaciones y saltos de escenas.
   - Revision de escena final.
+Dia 22/05/20
+  - Slime Verde (Version mas rapida que el azul)
+  - Añadir documento a la wiki de Maria
+  - Efecto de sonido al hablar
+  - Sync Mode
+  - Evento para la muerte.
+  - Escena de creditos.
+  - ¡Implementacion acabada! (Quedarian cosas por pulir pero podemos dejarlo asi)
 
   TO DO:
-   - Slime verde
-   - Evento para la muerte.
-   - Añadir documento a la wiki de Maria
-   - Sync Mode
    - Añadir cambios al documento del GDD

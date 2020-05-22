@@ -16,7 +16,111 @@ MonoBehaviour:
   startingPhase: 0
   repeatedPhase: 0
   negationPhase: 0
-  conversationsByPhases: []
+  conversationsByPhases:
+  - characterName:
+    - ???
+    - Olivia
+    - Olivia
+    - ???
+    - Botas
+    - Olivia
+    - Botas
+    - Olivia
+    - Olivia
+    - Botas
+    - Botas
+    - Botas
+    - Botas
+    - Botas
+    - Botas
+    - Botas
+    - Botas
+    - Botas
+    - Botas
+    frases:
+    - Asi que tu eres la listilla que ha estado trasteando con mi cerradura.
+    - "\xBFTu cerradura? Pensaba que era de Maria. Y oye eso de listilla..."
+    - "Ademas, \xBFDonde estoy? se suponia que debia haber viajado a la casa de Maria."
+    - Si, MI cerradura. Yo soy el rey de este bosque, el ser mas poderoso y malvado
+      que ha conocido este mundo.
+    - "\xA1BOTAS!"
+    - Pues a mi me pareces una bola con cara de gato.
+    - "Pe...Pero \xBFCOMO TE ATREVES DELANTE DE MI MIAUJERCITO?"
+    - Me estoy perdiendo y acabamos de empezar.
+    - "\xBFNo tienes due\xF1o Botas?"
+    - Hehe ese ser inferior no puede controlarme, Michu siempre intenta atraparme
+      pero sus nudillos sufren la ira de mis dientes de leon.
+    - "\xA1PERO!"
+    - No desvies la atencion de lo realmente importante.
+    - 'No voy a permitir una ofensa asi, como castigo, te voy a hacer cargar con cincuenta
+      esencias de cada tipo, eso por lo menos son... '
+    - "\xA1TRES KILOS!"
+    - Pero que malvado soy.
+    - Yo que estoy miaumadisimo puedo cargarlos como si de una brisa se tratara, pero
+      viendote a ti seguro que no puedes dar ni un paso.
+    - MIAUUUHAHAHAHA.
+    - Y aqui no acaba mi maldad, te voy a dejar a un par de metros de la casa de Maria,
+      para que aprendas quien manda aqui.
+    - "\xA1MIAUSTA OTRA!"
+    colorFrases:
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4288217343
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    - serializedVersion: 2
+      rgba: 4284612745
+    sonidoFrases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   negationByPhases: []
   startingConversations: []
   repeated: []
@@ -33,15 +137,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: BotasBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 4206880263580942042, guid: 6df5ef41a7504a34a91d219789c52aa5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Botas
+      objectReference: {fileID: 0}
     - target: {fileID: 4206880263580942041, guid: 6df5ef41a7504a34a91d219789c52aa5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 13.318672
       objectReference: {fileID: 0}
     - target: {fileID: 4206880263580942041, guid: 6df5ef41a7504a34a91d219789c52aa5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.8271227
       objectReference: {fileID: 0}
     - target: {fileID: 4206880263580942041, guid: 6df5ef41a7504a34a91d219789c52aa5,
         type: 3}
@@ -87,6 +196,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206880263580942040, guid: 6df5ef41a7504a34a91d219789c52aa5,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -113918755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206880263580942040, guid: 6df5ef41a7504a34a91d219789c52aa5,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206880263580942037, guid: 6df5ef41a7504a34a91d219789c52aa5,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df5ef41a7504a34a91d219789c52aa5, type: 3}

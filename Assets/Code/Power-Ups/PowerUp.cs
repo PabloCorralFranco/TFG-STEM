@@ -8,13 +8,14 @@ public class PowerUp : MonoBehaviour
     public float time; //Also for cuantity
     private AudioSource playerAudio;
     public AudioClip powerUpClip;
-    public GameObject fullParticles, abilityActive, batteryFullParticles, healSth, dashParticles, magicCircle;
+    public GameObject fullParticles, abilityActive, batteryFullParticles, healSth, dashParticles, magicCircle, stopTimeEffect, bulletAwakenEffect;
 
     private Player player;
     private PowerUpManager manager;
     private bool state;
     private Rigidbody2D rb;
     private int nDash;
+    private bool onCoolDown = false;
 
     private void Start()
     {
@@ -27,13 +28,16 @@ public class PowerUp : MonoBehaviour
 
     public void cast()
     {
+        /*
         state = manager.getActive();
         if (!state)
         {
             manager.setActive(true);
             StartCoroutine(powerUpName, time);
         }
-        
+        */
+        StartCoroutine(powerUpName, time);
+
     }
 
     private void abilitieActivation1()
@@ -102,6 +106,53 @@ public class PowerUp : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         endProcess();
     }
+    private IEnumerator awakenDash()
+    {
+        playPowerUpAudio();
+        player.setDashing(true);
+        dashInstance();
+        Handheld.Vibrate();
+        impulse();
+        yield return new WaitForSeconds(.5f);
+        player.setDashing(false);
+    }
+    private IEnumerator stopTime()
+    {
+        if (onCoolDown)
+        {
+            StopAllCoroutines();
+        }
+        else
+        {
+            //Caso especial - solo afecta a Arcaelum y a su animator.
+            onCoolDown = true;
+            Destroy(Instantiate(stopTimeEffect, player.transform.position, Quaternion.identity, player.transform), 1);
+            Arcaelum arc = FindObjectOfType<Arcaelum>();
+            Animator arcAnim = arc.GetComponent<Animator>();
+            arc.movementSpeed = arc.movementSpeed / 2;
+            arcAnim.speed = arcAnim.speed / 2;
+            yield return new WaitForSeconds(5);
+            arc.movementSpeed = arc.movementSpeed * 2;
+            arcAnim.speed = arcAnim.speed * 2;
+            yield return new WaitForSeconds(15);
+            onCoolDown = false;
+        }
+        
+    }
+
+    private IEnumerator bulletAwaken()
+    {
+        if (!onCoolDown)
+        {
+            onCoolDown = true;
+            GameObject bullet = Instantiate(bulletAwakenEffect, player.attackZone.transform.position, Quaternion.identity);
+            bullet.GetComponent<BulletAwaken>().triggerBullet();
+            yield return new WaitForSeconds(1);
+            onCoolDown = false;
+        }
+    }
+
+
 
     private IEnumerator kordDash(float time)
     {

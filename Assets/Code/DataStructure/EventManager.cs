@@ -12,7 +12,7 @@ public class EventManager : MonoBehaviour
     public Koke Koke;
     public Barbara Barbara;
     public bool isTaskPending = true;
-    public GameObject punishEffect, bossSpawnEffect, arcaelum, playerPrison;
+    public GameObject punishEffect, bossSpawnEffect, arcaelum, playerPrison, awakenDash, awakenTime, awakenBullet;
 
     private Player player;
     private GameObject loadScreen;
@@ -253,7 +253,7 @@ public class EventManager : MonoBehaviour
         StartCoroutine(transitionToNewLevel("FirstStage"));
     }
 
-    private IEnumerator transitionToNewLevel(string lvlName)
+    public IEnumerator transitionToNewLevel(string lvlName)
     {
         player.stopFromMoving();
         soundManager.stopAllAudios();
@@ -471,6 +471,7 @@ public class EventManager : MonoBehaviour
         wiki.transform.Find("Circuito").gameObject.SetActive(true);
         wiki.transform.Find("Grafos").gameObject.SetActive(true);
         wiki.transform.Find("Prim").gameObject.SetActive(true);
+        wiki.transform.Find("MariaButton").gameObject.SetActive(true);
         yield return new WaitForSeconds(4f);
         kokenpc.gameObject.SetActive(false);
         player.continueMoving();
@@ -795,10 +796,90 @@ public class EventManager : MonoBehaviour
         player.continueMoving();
         FindObjectOfType<Arcaelum>().dead = false;
         //Le damos el nuevo estado sync Mode
+        GameObject abilities = GameObject.FindGameObjectWithTag("AbilitieManager");
+        Instantiate(awakenDash, abilities.transform.GetChild(0));
+        Instantiate(awakenBullet, abilities.transform.GetChild(1));
+        Instantiate(awakenTime, abilities.transform.GetChild(2));
+        InvokeRepeating("updateLife", 0, 5);
         yield return null;
     }
 
+    public void updateLife()
+    {
+        player.setLife(+5);
+    }
 
+    public void credits()
+    {
+        StartCoroutine(startCredits());
+    }
+
+    private IEnumerator startCredits()
+    {
+        soundManager.stopAllAudios();
+        loadScreen.transform.Find("LoadingSprite").gameObject.SetActive(false);
+        Image fondoBlanco = loadScreen.transform.Find("FondoNegro").GetComponent<Image>();
+        fondoBlanco.color = new Color(255, 255, 255, 0);
+        loadScreen.SetActive(!loadScreen.activeSelf);
+        float transparency = 0.05f;
+        while (fondoBlanco.color.a < 1)
+        {
+            fondoBlanco.color = new Color(255, 255, 255, transparency);
+            transparency += 0.05f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        //Transportamos a Olivia y Koke
+        player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        player.transform.Find("VirtualCam").GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 1.4f;
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().InvalidatePathCache();
+        player.transform.Find("VirtualCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = GameObject.FindGameObjectWithTag("barrerasHolder").GetComponent<PolygonCollider2D>();
+        Animator playerAnim = player.GetComponent<Animator>();
+        player.transform.Find("MnACanvas").gameObject.SetActive(false);
+        player.transform.Find("Abilities").gameObject.SetActive(false);
+        playerAnim.SetFloat("IdleState", 1);
+        playerAnim.SetFloat("IdleStateY", 0);
+        Koke Koke = FindObjectOfType<Koke>();
+        Koke.transform.position = new Vector3(22.147f, 23.322f, -526.798f);
+        Animator kokeAnim = Koke.GetComponent<Animator>();
+        kokeAnim.SetFloat("Horizontal", -1);
+        kokeAnim.SetFloat("Vertical", 0);
+        yield return new WaitForSeconds(3);
+        while (fondoBlanco.color.a > 0)
+        {
+            fondoBlanco.color = new Color(255, 255, 255, transparency);
+            transparency -= 0.05f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        player.setDashing(true);
+        Rigidbody2D olivRb = player.GetComponent<Rigidbody2D>();
+        olivRb.drag = 0;
+        playerAnim.SetFloat("Speed", 1);
+        playerAnim.SetFloat("Horizontal", 1);
+        playerAnim.SetFloat("Vertical", 1);
+        olivRb.AddForce(new Vector2(40, 0));
+        Rigidbody2D kokeRb = Koke.GetComponent<Rigidbody2D>();
+        kokeRb.AddForce(new Vector2(-40, 0));
+        yield return new WaitForSeconds(3.3f);
+        playerAnim.SetFloat("Speed", 0);
+        olivRb.velocity = Vector3.zero;
+        kokeRb.velocity = Vector3.zero;
+        yield return new WaitForSeconds(2f);
+        playerAnim.SetFloat("IdleState", 0);
+        playerAnim.SetFloat("IdleStateY", 1);
+        kokeAnim.SetFloat("Horizontal", 0);
+        kokeAnim.SetFloat("Vertical", 1);
+        //Activamos las letras de credito
+        GameObject canvasFinish = GameObject.FindGameObjectWithTag("Finish");
+        canvasFinish.transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(5);
+        canvasFinish.transform.GetChild(0).gameObject.SetActive(false);
+        canvasFinish.transform.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSeconds(5);
+        canvasFinish.transform.GetChild(1).gameObject.SetActive(false);
+        yield return new WaitForSeconds(2);
+        Application.Quit();
+        yield return null;
+    }
 
 
 }

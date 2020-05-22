@@ -10,6 +10,6 @@ public class MenuLoader : MonoBehaviour
     public void loadLevel()
     {
         source.PlayOneShot(clip);
-        SceneManager.LoadScene("CuteTown");
+        SceneManager.LoadScene("House-TopDown");
     }
 }

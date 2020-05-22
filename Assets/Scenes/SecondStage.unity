@@ -7406,6 +7406,7 @@ GameObject:
   - component: {fileID: 470045316}
   - component: {fileID: 470045318}
   - component: {fileID: 470045319}
+  - component: {fileID: 470045320}
   m_Layer: 0
   m_Name: revelationNPC
   m_TagString: revelationNPC
@@ -7578,6 +7579,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!82 &470045320
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470045315}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &472980495
 GameObject:
   m_ObjectHideFlags: 0
@@ -18612,327 +18709,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BotasBoss
       objectReference: {fileID: 0}
-    - target: {fileID: 2638182167263081728, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: m_TagString
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.size
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.size
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.size
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].sonidoFrases.Array.size
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[0]
-      value: ???
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[0]
-      value: Asi que tu eres la listilla que ha estado trasteando con mi cerradura.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[0].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[1]
-      value: Olivia
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[2]
-      value: Olivia
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[3]
-      value: ???
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[4]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[5]
-      value: Olivia
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[6]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[7]
-      value: Olivia
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[8]
-      value: Olivia
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[9]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[1]
-      value: "\xBFTu cerradura? Pensaba que era de Maria. Y oye eso de listilla..."
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[2]
-      value: "Ademas, \xBFDonde estoy? se suponia que debia haber viajado a la casa
-        de Maria."
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[3]
-      value: Si, MI cerradura. Yo soy el rey de este bosque, el ser mas poderoso y
-        malvado que ha conocido este mundo.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[4]
-      value: "\xA1BOTAS!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[5]
-      value: Pues a mi me pareces una bola con cara de gato.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[6]
-      value: "Pe...Pero \xBFCOMO TE ATREVES DELANTE DE MI MIAUJERCITO?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[7]
-      value: Me estoy perdiendo y acabamos de empezar.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[8]
-      value: "\xBFNo tienes due\xF1o Botas?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[9]
-      value: Hehe ese ser inferior no puede controlarme, Michu siempre intenta atraparme
-        pero sus nudillos sufren la ira de mis dientes de leon.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[1].rgba
-      value: 4288217343
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[2].rgba
-      value: 4288217343
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[3].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[4].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[5].rgba
-      value: 4288217343
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[6].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[7].rgba
-      value: 4288217343
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[8].rgba
-      value: 4288217343
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[9].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[10]
-      value: "\xA1PERO!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[11]
-      value: No desvies la atencion de lo realmente importante.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[12]
-      value: 'No voy a permitir una ofensa asi, como castigo, te voy a hacer cargar
-        con cincuenta esencias de cada tipo, eso por lo menos son... '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[13]
-      value: "\xA1TRES KILOS!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[14]
-      value: Pero que malvado soy.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[15]
-      value: Yo que estoy miaumadisimo puedo cargarlos como si de una brisa se tratara,
-        pero viendote a ti seguro que no puedes dar ni un paso.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[16]
-      value: MIAUUUHAHAHAHA.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[17]
-      value: Y aqui no acaba mi maldad, te voy a dejar a un par de metros de la casa
-        de Maria, para que aprendas quien manda aqui.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].frases.Array.data[18]
-      value: "\xA1MIAUSTA OTRA!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[10]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[11]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[12]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[13]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[14]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[15]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[16]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[17]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].characterName.Array.data[18]
-      value: Botas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[10].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[11].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[12].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[13].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[14].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[15].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[16].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[17].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992057674062310545, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: conversationsByPhases.Array.data[0].colorFrases.Array.data[18].rgba
-      value: 4284612745
-      objectReference: {fileID: 0}
     - target: {fileID: 2638182167263081731, guid: f8c04990829e82d4f8a1592b9c4c6360,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18987,16 +18763,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638182167263081730, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -113918755
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638182167263081730, guid: f8c04990829e82d4f8a1592b9c4c6360,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8c04990829e82d4f8a1592b9c4c6360, type: 3}

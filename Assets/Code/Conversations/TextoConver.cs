@@ -10,5 +10,4 @@ public class TextoConver
     [TextArea(1,10)]
     public string[] frases;
     public Color32[] colorFrases;
-    public AudioClip[] sonidoFrases;
 }
