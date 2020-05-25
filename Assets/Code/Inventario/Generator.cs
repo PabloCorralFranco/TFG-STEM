@@ -24,7 +24,7 @@ public class Generator : MonoBehaviour
         playerAudio = inventory.GetComponent<AudioSource>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         checkInventory();
         findOccupiedSlots();

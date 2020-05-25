@@ -4529,7 +4529,7 @@ MonoBehaviour:
     - Olivia
     - Olivia
     - Alcalde
-    - Olivia
+    - Alcalde
     frases:
     - "Hola perdone... Creo que me he quedado dormida en el autobus \xBFEs esta la
       ultima parada del 16?"
@@ -4555,7 +4555,8 @@ MonoBehaviour:
     - "Por cierto... \xBFQue vegetacion mas rara no?"
     - Si ... Los visitantes se suelen quedar sorprendidos, pero es algo caracteristico
       de nuestro pueblo.
-    - Pues bueno, voy tirando.
+    - "Ah y antes de que te vayas. Toma este aparatejo. No te preocupes por el, ya
+      me lo devolver\xE1s cuando vuelvas. Cuando termine te llamo"
     colorFrases:
     - serializedVersion: 2
       rgba: 4288217343
@@ -4592,7 +4593,7 @@ MonoBehaviour:
     - serializedVersion: 2
       rgba: 4278190080
     - serializedVersion: 2
-      rgba: 4288217343
+      rgba: 4278190080
   negationByPhases: []
   startingConversations: []
   repeated: []

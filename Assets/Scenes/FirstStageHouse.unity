@@ -3745,6 +3745,12 @@ PrefabInstance:
       propertyPath: conversationPhase
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2207445565895496236, guid: e1525f97da47a9a4aae44dc037877144,
+        type: 3}
+      propertyPath: conversationsByPhases.Array.data[3].frases.Array.data[2]
+      value: "No te preocupes por hacerles da\xF1o a los limoncetes, esta espada solo
+        les drena su energia y los devuelve a su forma original."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1525f97da47a9a4aae44dc037877144, type: 3}
 --- !u!1 &1061068051
