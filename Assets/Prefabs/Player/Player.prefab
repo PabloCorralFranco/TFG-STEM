@@ -939,7 +939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1071, y: -103}
+  m_AnchoredPosition: {x: 1071, y: -63}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &28564858
@@ -970,8 +970,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -997,8 +997,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1521,8 +1521,8 @@ MonoBehaviour:
     los terminos genotipo y fenotipo. Pues aunque el genotipo sea el color azul nuestro
     limoncete puede estar comiendo demasiadas remolachas."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1548,8 +1548,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1589,10 +1589,10 @@ MonoBehaviour:
   m_margin: {x: -704.78766, y: -542.61176, z: -5.2606416, w: -820.3497}
   m_textInfo:
     textComponent: {fileID: 39765256}
-    characterCount: 614
+    characterCount: 615
     spriteCount: 0
-    spaceCount: 93
-    wordCount: 92
+    spaceCount: 94
+    wordCount: 93
     linkCount: 0
     lineCount: 20
     pageCount: 1
@@ -1745,13 +1745,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 55957870}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -4803,7 +4803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1120, y: 279}
+  m_AnchoredPosition: {x: 1120, y: 306}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &152968548
@@ -4834,8 +4834,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: +
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4861,8 +4861,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5058,13 +5058,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 154036293}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -5514,13 +5514,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 167711923}
-    characterCount: 0
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -5645,7 +5645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1298, y: 0.99993896}
+  m_AnchoredPosition: {x: 1298, y: 32}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &171644573
@@ -5680,8 +5680,8 @@ MonoBehaviour:
     si en el grafo representativo de este mapa, sus vertices, salvo a lo sumo dos,
     tienen grado par.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5707,8 +5707,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5724,7 +5724,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 324
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5748,13 +5748,13 @@ MonoBehaviour:
   m_margin: {x: -704.78766, y: 139.78488, z: 49.064045, w: -648.10675}
   m_textInfo:
     textComponent: {fileID: 171644572}
-    characterCount: 0
+    characterCount: 334
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 60
+    wordCount: 61
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 10
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -7929,8 +7929,8 @@ MonoBehaviour:
     dominantes, 50% de heterocigoticos y un 25% de homocigoticos recesivos. Confio
     en que puedas descifrar la solucion.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7956,8 +7956,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8002,7 +8002,7 @@ MonoBehaviour:
     spaceCount: 102
     wordCount: 104
     linkCount: 0
-    lineCount: 18
+    lineCount: 20
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -9101,8 +9101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: +
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9128,8 +9128,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10161,8 +10161,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cada esencia posee dos alelos.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10188,8 +10188,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10942,8 +10942,8 @@ MonoBehaviour:
     los mismos mecanismos de expresion genetica que ella mismo habia descrito y postulado
     veinte a\xF1os antes.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10969,8 +10969,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11015,9 +11015,9 @@ MonoBehaviour:
     spaceCount: 139
     wordCount: 138
     linkCount: 0
-    lineCount: 25
+    lineCount: 24
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -11300,8 +11300,8 @@ MonoBehaviour:
 
     GRAFO REPRESENTATIVO DEL CIRCUITO'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -11327,8 +11327,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11344,7 +11344,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 129
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -11373,7 +11373,7 @@ MonoBehaviour:
     spaceCount: 26
     wordCount: 25
     linkCount: 0
-    lineCount: 7
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -11672,13 +11672,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -114.478775, w: 0}
   m_textInfo:
     textComponent: {fileID: 397735717}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -12455,8 +12455,8 @@ MonoBehaviour:
     Aviso: Es necesario seguir la seleccion de vertices a raja tabla segun el algoritmo
     de Prim, el sistema de seguridad se activara si falla tres veces.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -12482,8 +12482,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 73
+  m_fontSizeBase: 73
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12499,7 +12499,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 142
+  m_firstOverflowCharacterIndex: 114
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -12528,7 +12528,7 @@ MonoBehaviour:
     spaceCount: 48
     wordCount: 48
     linkCount: 0
-    lineCount: 13
+    lineCount: 15
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -12928,13 +12928,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -114.478775, w: 0}
   m_textInfo:
     textComponent: {fileID: 427590481}
-    characterCount: 0
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -13016,8 +13016,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Granos de mazorca resultado de los trasposones.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13043,8 +13043,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15355,13 +15355,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 529449788}
-    characterCount: 0
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -17158,8 +17158,8 @@ MonoBehaviour:
     el mismo caracter.\n\t- Herencia dominante: Cuando hay un alelo que no deja manifestarse
     a otro recesivo.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -17185,8 +17185,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -17202,7 +17202,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 881
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -17231,7 +17231,7 @@ MonoBehaviour:
     spaceCount: 140
     wordCount: 134
     linkCount: 0
-    lineCount: 27
+    lineCount: 26
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -18402,7 +18402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 770, y: 200}
+  m_AnchoredPosition: {x: 770, y: 248}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &641404140
@@ -18847,8 +18847,8 @@ MonoBehaviour:
     vertices y hemos seleccionado las aristas minimas. Termina el algoritmo y hemos
     obtenido el arbol recubridor minimo."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -18874,8 +18874,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18915,13 +18915,13 @@ MonoBehaviour:
   m_margin: {x: -704.78766, y: -542.61176, z: -5.2606416, w: -87.65997}
   m_textInfo:
     textComponent: {fileID: 650127660}
-    characterCount: 0
+    characterCount: 590
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 86
+    wordCount: 119
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 16
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -19004,7 +19004,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
     type: 2}
   m_fontSharedMaterials: []
@@ -19031,8 +19031,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -19083,7 +19083,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 304103072}
@@ -21086,7 +21086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 41}
+  m_AnchoredPosition: {x: -250, y: 113}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &779671952
@@ -21127,8 +21127,8 @@ MonoBehaviour:
     alelos que introduzcas y si estan en el orden correcto. En general podria decirse
     que es un cuadro de Punnett.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -21154,8 +21154,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21940,8 +21940,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Alelo V
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -21967,8 +21967,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21984,7 +21984,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -22835,8 +22835,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -22862,8 +22862,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23313,8 +23313,8 @@ MonoBehaviour:
     vertices.\n\t- Grado: Se llama grado de un vertice al numero de aristas que inciden
     en el."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -23340,8 +23340,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23357,7 +23357,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 567
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -23381,13 +23381,13 @@ MonoBehaviour:
   m_margin: {x: -704.78766, y: -542.61176, z: -5.2606416, w: -632.4555}
   m_textInfo:
     textComponent: {fileID: 899664792}
-    characterCount: 0
+    characterCount: 581
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 105
+    wordCount: 102
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 20
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -23683,13 +23683,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 907721726}
-    characterCount: 0
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -23850,8 +23850,8 @@ MonoBehaviour:
     azules con los rojos? Pues sabemos que el limoncete azul actual es homocigotico
     dominante y el limoncete rojo es homocigotico recesivo."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -23877,8 +23877,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25712,8 +25712,8 @@ MonoBehaviour:
     Repetir estos pasos teniendo en cuenta todas las nuevas aristas.\nNota: Kord esta
     cargada de electricidad, usala para cargar los cables"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -25739,8 +25739,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39
-  m_fontSizeBase: 39
+  m_fontSize: 68
+  m_fontSizeBase: 68
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25780,13 +25780,13 @@ MonoBehaviour:
   m_margin: {x: -704.78766, y: -542.61176, z: -5.2606416, w: -632.4555}
   m_textInfo:
     textComponent: {fileID: 1014169971}
-    characterCount: 0
+    characterCount: 683
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 109
+    wordCount: 106
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 22
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -25938,13 +25938,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -114.478775, w: 0}
   m_textInfo:
     textComponent: {fileID: 1020478517}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -26832,8 +26832,8 @@ MonoBehaviour:
     en la primera generacion, los caracteres antagonicos que poseen se separan y se
     reparten entre los distintos gametos, apareciendo asi varios fenotipos en la descendencia."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -26859,8 +26859,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -27176,8 +27176,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -27203,8 +27203,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28198,13 +28198,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1110925757}
-    characterCount: 0
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -29047,13 +29047,13 @@ MonoBehaviour:
   m_margin: {x: -704.78766, y: -542.61176, z: -5.2606416, w: -87.65997}
   m_textInfo:
     textComponent: {fileID: 1160103319}
-    characterCount: 0
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -29738,7 +29738,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
     type: 2}
   m_fontSharedMaterials: []
@@ -29765,8 +29765,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34
-  m_fontSizeBase: 34
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -29817,7 +29817,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -30452,8 +30452,8 @@ MonoBehaviour:
     ya que el dominante no deja manifestar al recesivo (Ar). Estudia bien la situacion
     de las generaciones."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -30479,8 +30479,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -30527,7 +30527,7 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 10
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -33411,8 +33411,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: +
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -33438,8 +33438,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -33567,7 +33567,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: HABLAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
     type: 2}
   m_fontSharedMaterials: []
@@ -33594,8 +33594,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -33646,7 +33646,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -34039,8 +34039,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -34066,8 +34066,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -34083,7 +34083,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -34409,13 +34409,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1339162785}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -35112,8 +35112,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -35139,8 +35139,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -35870,13 +35870,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1406412610}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -36513,8 +36513,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -36540,8 +36540,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -36899,8 +36899,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -36926,8 +36926,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -37369,8 +37369,8 @@ MonoBehaviour:
   m_text: 'Nota: Por lo que he podido investigar en esta generacion filial F0 corrupta
     todos los limoncestes azules tienen genes AA, los rojos rr y los verdes VV.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -37396,8 +37396,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -37442,7 +37442,7 @@ MonoBehaviour:
     spaceCount: 26
     wordCount: 27
     linkCount: 0
-    lineCount: 4
+    lineCount: 5
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -38870,8 +38870,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Barbara McClintock en su laboratorio.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -38897,8 +38897,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -40032,8 +40032,8 @@ MonoBehaviour:
     Pie de nota: Adjunto en este archivo los pesos de las aristas y el nombre de los
     vertices. No podia dejarlos al aire libre, dejaria de ser una cerradura...'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -40059,8 +40059,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -40105,7 +40105,7 @@ MonoBehaviour:
     spaceCount: 31
     wordCount: 32
     linkCount: 0
-    lineCount: 5
+    lineCount: 6
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -41318,13 +41318,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -114.478775, w: 0}
   m_textInfo:
     textComponent: {fileID: 1587439216}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -44994,8 +44994,8 @@ MonoBehaviour:
     con fenotipo verde.\nCon esto creo que lo tienes todo. \xA1Que la prueba y el
     error te acompa\xF1e!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -45021,8 +45021,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -45069,7 +45069,7 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 7
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -45981,13 +45981,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -114.478775, w: 0}
   m_textInfo:
     textComponent: {fileID: 1826460717}
-    characterCount: 0
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -47385,8 +47385,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Alelo V
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -47412,8 +47412,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -47429,7 +47429,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -49275,8 +49275,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -49302,8 +49302,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -49348,7 +49348,7 @@ MonoBehaviour:
     spaceCount: 12
     wordCount: 12
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -49874,7 +49874,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: SALIR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
   m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
     type: 2}
   m_fontSharedMaterials: []
@@ -49901,8 +49901,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -49953,7 +49953,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -50412,13 +50412,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1988680497}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -59205,8 +59205,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Diagrama de Cayley del grupo libre de orden dos.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -59232,8 +59232,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -59249,7 +59249,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: 44
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -60895,8 +60895,8 @@ MonoBehaviour:
     claustro enteramente masculino.\nDirigio la tesis de Robert Moody, dando paso
     asi a la teoria de algebras de Kac-Moody, que tuvo a Maria como inspiradora."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -60922,8 +60922,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 61
+  m_fontSizeBase: 61
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -60970,7 +60970,7 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 25
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -62185,8 +62185,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Maria Wonenburger inaugurando una placa en su honor.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef8c30a910edee64fa64bc16234f4290, type: 2}
-  m_sharedMaterial: {fileID: -4601536380641185248, guid: ef8c30a910edee64fa64bc16234f4290,
+  m_fontAsset: {fileID: 11400000, guid: 102b01f685c88164cb17deb85139af88, type: 2}
+  m_sharedMaterial: {fileID: -8109925302889158374, guid: 102b01f685c88164cb17deb85139af88,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -62212,8 +62212,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -62229,7 +62229,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: 43
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -66833,11 +66833,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fixed Joystick
       objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: deadZone
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66957,6 +66952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.876072
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: deadZone
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}

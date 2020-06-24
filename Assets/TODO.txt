@@ -39,7 +39,7 @@ Dia 14/04/20
   - Dummy Enemy
   - Golpe de espada junto con daño a enemigo. Solucionado problema para dirigir la caja de daño.
   - Menú general que nos enlace el compilador, el generador y la ranura de guardado.
-Dia 15/05/20
+Dia 15/04/20
   - Arreglar problema con el empujon al enemigo, siempre se empujaba en la misma direccion.
   - Aumentar radio del ataque.
   - Añadir módulos restantes.
